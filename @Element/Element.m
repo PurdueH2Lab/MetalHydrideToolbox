@@ -208,10 +208,12 @@ classdef Element
         function elements = ReadElements(line)
             % Read the element line from the mh file
             %
-            % This expects an input formatted like
-            %   some text   [ Element: Amount, Element: Amount ] other text
+            % This expects an input formatted like:
+            %
+            %   some text  [ Element: Amount, Element: Amount ] other text
+            %
             % and uses the position of the '[' and ']' to determine where
-            % to read.
+            % to read (things outside the brackets are ignored)
             
             ss = strfind(line,'[')+1;
             se = strfind(line,']')-1;
@@ -273,9 +275,7 @@ classdef Element
             end
                 
             %Parse the string to get its chemical composition
-            [elements,first,last] = regexp(str,...
-                                       ['[','A':'Z','][','a':'z',']?'],...
-                                       'match');
+            [elements,first,last] = regexp(str,'[A-Z][a-z]?','match');
                                    
             first = [first length(str)+1];
             Ne = length(elements);
