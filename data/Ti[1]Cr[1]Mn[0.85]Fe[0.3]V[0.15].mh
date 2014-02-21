@@ -1,0 +1,50 @@
+Name: TiCrMn.85Fe.3V.15
+Elements: [Ti:1,Cr:1,Mn:0.85,Fe:0.3,V:0.15]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.60  # Hagstrom
+
+    Dehydriding
+    {
+        DH:  -20900      # J/mol  Hagstrom
+        DS:  -86.19      # J/mol.K  Hagstrom
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Hagstrom
+    {
+        ID:      10.1016/S0925-8388(98)00213-8
+        Authors: M.T. Hagstrom, J.P. Vanhanen, P.D. Lund
+        Title:   AB2 metal hydrides for high-pressure and narrow temperature interval applications
+        Journal: J. of Alloys and Compounds
+        Year:    1998
+        Volume:  269
+        Pages:   288-293
+    }
+}

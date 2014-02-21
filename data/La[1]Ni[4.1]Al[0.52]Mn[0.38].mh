@@ -1,0 +1,68 @@
+Name: LaNi4.1AlMn
+Elements: [La:1, Ni:4.1, Al:0.52, Mn:0.38]
+Type: AB5
+ 
+Thermodynamics
+{
+    H/M: 6  #assumption 
+    
+    Dehydriding 
+    { 
+        DH: -48640		# J/mol,  ref satheesh
+        DS: -118.1   	# J/mol.K,  ref satheesh
+        slope: 0.47     # Satheesh (0.15 * pi)
+    } 
+    Hydriding
+    {
+        DH: -46110 		# J/mol,  ref satheesh
+        DS: -114.6   	# J/mol.K,  ref satheesh
+    }
+}
+ 
+Properties
+{
+    Cp: 500     # J/kg.K  satheesh
+	rho: 7500   # kg/m^3, ref satheesh, listed 4500 as "effective density". Assuming a porosity of 40% (not listed) gives rho = 7500 which is more in line with typical AB5 hydrides
+}
+ 
+Kinetics
+{
+    Hydriding
+    {   # Rates from Satheesh ("data assumed")
+        Ca: 700
+        Ea: 40000
+        
+        pFcn: log  # log from Eq 18
+        wFcn: 1st Order
+    }
+    
+    Dehydriding
+    {   # Rates from Satheesh ("data assumed")
+        Ca: 3.6
+        Ea: 48000
+        
+        pFcn: linear   # linear from Eq 8
+        wFcn: 1st Order 
+    }
+}
+ 
+Notes
+{
+    "Alloy A" in paper, keff = 6.5 was used assuming aluminum additions  
+}
+        
+References
+{
+    Satheesh
+    {
+        ID:      10.1016/j.applthermaleng.2010.07.021
+        Authors: A. Satheesh, P. Muthukumar
+        Title:   Perfomance investigation of double-stage metal hydride based heat pump
+        Journal: Applied Thermal Engineering
+        Year:    2010
+        Volume:  30
+        Pages:   2698-2707
+    }
+}
+ 
+

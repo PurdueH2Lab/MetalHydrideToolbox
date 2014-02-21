@@ -1,0 +1,51 @@
+Elements: [Ti:1, Fe:0.8, Be:0.2]
+Type: AB
+
+Thermodynamics
+{
+    H/M: 1  # Bruzzone Fig 2
+
+    Dehydriding
+    {
+        DH: -33700      # J/mol  Bruzzone fit to Peq/Teq data in abstract
+        DS: -111.8      # J/mol.K  Bruzzone fit to Peq/Teq data in abstract
+        
+        # TODO Bruzzone has isotherms
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Bruzzone
+    {
+        ID:      10.1016/0360-3199(80)90075-0
+        Authors: G. Bruzzone, G. Costa, M. Ferretti, G. L. Olcese
+        Title:   Hydrogen Storage in a Berryllium Substituted TiFe Compound
+        Journal: Int. J. of Hydrogen Energy
+        Year:    1980
+        Volume:  5
+        Pages:   317-322
+    }
+}

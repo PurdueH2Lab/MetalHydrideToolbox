@@ -1,0 +1,50 @@
+Name: TbNi4.5Al.5
+Elements: [Tb:1,Ni:4.5,Al:0.5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.10  # Sorgic
+
+    Dehydriding
+    {
+        DH:  -26900      # J/mol  Sorgic
+        DS: -110.91      # J/mol.K  Sorgic
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Sorgic
+    {
+        ID:      SandiaDBRef0635
+        Authors: B. Sorgic, A. Drasner, Z. Blazina
+        Title:   A Search for Hydrogen Storage Materials other than LaNi5-xAlx in the RENi5-xAlx (RE=Rare Earth) Intermetallic Series
+        Journal: HYDROGEN ENERGY PROGRESS XI, T.N. Veziroglu, C.-J. Winter, J.P. Baselt and G. Kreysa, Eds., Int. Assoc. of Hydrogen Energy
+        Year:    1996
+        Volume:  3
+        Pages:   2645-2650
+    }
+}

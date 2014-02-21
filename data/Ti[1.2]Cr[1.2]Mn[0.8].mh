@@ -1,0 +1,50 @@
+Elements: [Ti:1.2, Cr:1.2, Mn:0.8]
+Type: AB2
+
+Thermodynamics
+{
+    H/M:  3.2  # Osumi Table 2
+
+    Dehydriding
+    {
+        DH:  -25940      # J/mol  Osumi Table 2 (6.2 kcal)
+        DS: -117.99      # J/mol.K  Osumi Table 2 (28.2 cal)
+    }
+    Hydriding
+    {
+        ln(Pa/Pd):  0.05  # Osumi Table 3
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Osumi
+    {
+        ID:      10.1016/0022-5088(83)90277-1
+        Authors: Y. Osumi, H. Suzuki, A. Kato, K. Oguro, T. Sugioka, T. Fujita
+        Title:   Hydrogen Storage Properties of Tix+1Cr2-yMny Alloys
+        Journal: Journal of Less-Common Metals
+        Year:    1983
+        Volume:  89
+        Pages:   257-262
+    }
+}

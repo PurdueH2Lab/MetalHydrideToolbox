@@ -1,0 +1,50 @@
+Name: LaNi4Cu
+Elements: [La:1,Ni:4,Cu:1]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.00  # Gruen
+
+    Dehydriding
+    {
+        DH:  -33900      # J/mol  Gruen
+        DS: -113.28      # J/mol.K  Gruen
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Gruen
+    {
+        ID:      SandiaDBRef0168
+        Authors: D. M. Gruen, M. H. Mendelsohn, I. Sheft
+        Title:   Absorption of Hydrogen by the Intermetallics NdNi5 and LaNi4Cu and a Correlation of Cell Volumes and Desorption Pressures
+        Journal: Proc. Symp. on Electrode Materials and Processes for Energy Conversion and Storage, The Electrochem. Soc.
+        Year:    1977
+        Volume:  77-6
+        Pages:   482-488
+    }
+}

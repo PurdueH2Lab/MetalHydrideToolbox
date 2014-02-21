@@ -1,0 +1,76 @@
+Name: MmNi5
+Elements: [Mm:1, Ni:5]
+Type: AB5
+ 
+Thermodynamics
+{
+    Weight Percent: 1.46 # Sandrock Table 1
+    
+    Dehydriding 
+    { 
+        DH: -21100      # J/mol  - Sandrock Table 1
+        DS: -97         # J/mol.K - Sandrock Table 1
+        slope: 0.54     # Sandrock Table 1
+    } 
+    Hydriding
+    {
+        ln(Pa/Pd): 1.65  # Sandrock Table 1
+    }
+}
+ 
+Properties
+{
+    rho: 8600          # kg/m3 - Sandrock Table 1
+    Cp: 418            # J/kg-K - Huston table 2
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Walker
+    {
+        ID:      1845692705
+        Authors: G. Walker
+        Title:   Solid State Hydrogen Storage: Materials and Chemistry
+        Year:    2008
+        Other:   Woodhead Publishing: Cambridge, England
+    }
+    
+    Huston
+    {
+        ID:      10.1016/0022-5088(80)90182-4
+        Authors: E. Huston, G. Sandrock
+        Title:   Engineering properties of metal hydrides
+        Journal: Journal of Less Common Metals
+        Year:    1980
+        Volume:  74
+        Pages:   435-443
+    }
+    
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }
+}
+ 
+

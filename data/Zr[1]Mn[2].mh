@@ -1,0 +1,69 @@
+Elements: [Zr:1, Mn:2]
+Type: AB2
+ 
+Thermodynamics
+{
+    Weight Percent: 1.77  # Sandrock Table 1
+    
+    Dehydriding 
+    { 
+        DH: -53200		# J/mol Sandrock Table 1 (Luo has 37.4)
+        DS: -121   		# J/mol.K Sandrock Table 1 (Luo has 94)
+        slope: 0.74     # Sandrock Table 1
+        
+        # TODO Luo has isotherms (fig 3)
+    } 
+    Hydriding
+    {
+        ln(Pa/Pd): 0.99    # Sandrock Table 1
+    }
+}
+ 
+Properties
+{
+    rho: 7400	# kg/m^3 - Sandrock Table 1
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }
+    
+    Luo
+    {
+        ID:      10.1016/0925-8388(92)90480-W
+        Authors: W. Luo, J. D. Clewley, T. B. Flanagan, W. A. Oates
+        Title:   Thermodynamic characterization of the Zr-Mn-H system  Part 1. Reaction of H2 with single-phase ZrMn2+x C-14 Laves phase alloys
+        Journal: J. of Alloys and Compounds
+        Year:    1992
+        Volume:  185
+        Pages:   321-338
+    }
+}
+ 
+
+ 
+

@@ -1,0 +1,54 @@
+Name: ZrFe1.4Cr
+Elements: [Zr:1,Fe:1.4,Cr:1]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.70  # Sinha
+
+    Dehydriding
+    {
+        DH:  -21000      # J/mol  Sinha  TODO check for PCI curves
+        DS:  -70.91      # J/mol.K  Sinha
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TGV: The results from Sinha are highly suspect.
+    Every one of the hydrides from a Sinha paper has a very low enthalpy which is
+    not reproduced by other authors. The abstracts from Sinha papers also always seem
+    to note how unusually low the enthalpy value is.
+}
+
+References
+{
+    Sinha
+    {
+        ID:      SandiaDBRef0554
+        Authors: V. K. Sinha, G. Y. Yu, W. E. Wallace
+        Title:   Hydrogen Storage in some Ternary and Quaternary Zirconium-Based Alloys with the C14 Structure
+        Journal: Journal of Less-Common Metals
+        Year:    1985
+        Volume:  106
+        Pages:   67-77
+    }
+}

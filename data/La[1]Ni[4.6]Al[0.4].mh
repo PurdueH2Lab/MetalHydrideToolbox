@@ -1,0 +1,73 @@
+Name: LaNi4.6Al
+Elements: [La:1, Ni:4.6, Al:0.4]
+Type: AB5
+ 
+Thermodynamics
+{
+    H/M: 4.70  #ref walker, pg 323
+     
+    Dehydriding 
+    { 
+        DH: -35800		# J/mol, Satheesh Table 1
+        DS: -115.6   	# J/mol.K, Satheesh Table 1
+    } 
+    Hydriding
+    {
+        DH: -34800		# J/mol, Satheesh Table 1
+        DS: -113.9   	# J/mol.K, Satheesh Table 1
+    }
+}
+ 
+Properties
+{
+}
+ 
+Kinetics
+{
+    Hydriding
+    {   # Rates from Satheesh
+        Ca: 185
+        Ea: 35000
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+    
+    Dehydriding
+    {   # Rates from Satheesh
+        Ca: 20
+        Ea: 32000
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Walker
+    {
+        ID:      1845692705
+        Authors: G. Walker
+        Title:   Solid State Hydrogen Storage: Materials and Chemistry
+        Year:    2008
+        Other:   Woodhead Publishing: Cambridge, England
+    }
+    
+    Satheesh
+    {
+        ID:      10.1016/j.ijhydene.2010.04.043
+        Authors: A. Satheesh, P. Muthukumar
+        Title:   Perfomance investigation of double-stage metal hydride based heat pump
+        Journal: International Journal of Hydrogen Energy
+        Year:    2010
+        Volume:  35
+        Pages:   6950-6958
+    }
+}
+ 
+

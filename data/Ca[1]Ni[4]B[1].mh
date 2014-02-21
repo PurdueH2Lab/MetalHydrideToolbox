@@ -1,0 +1,51 @@
+Name: CaNi4B
+Elements: [Ca:1,Ni:4,B:1]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 3.5  # Oesterreicher Table 1
+
+    Dehydriding
+    {
+        DH:  -55600      # J/mol  Oesterreicher Table 1 (13.3 kcal/mol)
+        DS: -147.29      # J/mol.K  Oesterreicher TODO VERIFY!
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    Oesterreicher notes "No equilibrium pressure down to 0.01 bar could be determined at 300 K" but the Sandia database listed Peq as 0.01 atm at 27 C. This value was used to calculate DS, but it may be wrong!
+}
+
+References
+{
+    Oesterreicher
+    {
+        ID:      10.1016/0025-5408(80)90130-0
+        Authors: H. Oesterreicher, K. Ensslen, A. Kerlin, E. Buscher
+        Title:   Hydriding Behavior in Ca-Mg-Ni-B
+        Journal: Mat. Res. Bull.
+        Year:    1980
+        Volume:  15
+        Pages:   275-283
+    }
+}

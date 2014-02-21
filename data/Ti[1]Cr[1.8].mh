@@ -1,0 +1,55 @@
+Name: TiCr1.8
+Elements: [Ti:1, Cr:1.8]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 2.43  # Sandrock Table 1
+    
+    Dehydriding 
+    { 
+        DH: -20200		# J/mol Sandrock Table 1
+        DS: -111   		# J/mol.K Sandrock Table 1
+        slope: 0.12     # Sandrock Table 1
+    } 
+    Hydriding
+    {
+        ln(Pa/Pd): 0.11  # Sandrock Table 1
+    }
+}
+ 
+Properties
+{
+    rho: 6000		# kg/m^3   Sandrock Table 1
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }   
+}
+ 
+

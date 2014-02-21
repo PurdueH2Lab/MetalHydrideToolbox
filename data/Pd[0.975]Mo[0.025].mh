@@ -1,0 +1,52 @@
+Name: Pd.975Mo.025
+Elements: [Pd:0.975,Mo:0.025]
+Type: SS
+
+Thermodynamics
+{
+    H/M: 0.50  # Ura Fig 2a
+
+    Dehydriding
+    {
+        DH:  -30800      # J/mol  Ura Table 2 (x2)
+        DS:  -85.2       # J/mol.K  Ura Table 2 (x2)
+        
+        # TODO Ura has isotherms (fig 2a)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Ura
+    {
+        ID:      10.1016/0925-8388(95)01876-X
+        Authors: M. Ura, Y. Haraguchi, F. l. Chen, Y. Sakamoto
+        Title:   Hydrogen absorption characteristics of Pd-Cr and Pd-Mo solid solution alloys
+        Journal: Journal of Alloys and Compounds
+        Year:    1995
+        Volume:  231
+        Pages:   436-439
+    }
+}

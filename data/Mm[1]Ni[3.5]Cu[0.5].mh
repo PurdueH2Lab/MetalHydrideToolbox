@@ -1,0 +1,50 @@
+Name: MmNi3.5Cu.5
+Elements: [Mm:1,Ni:3.5,Cu:0.5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.13  # Sandrock
+
+    Dehydriding
+    {
+        DH:  -23400      # J/mol  Sandrock
+        DS:  -95.77      # J/mol.K  Sandrock
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Sandrock
+    {
+        ID:      SandiaDBRef0113
+        Authors: G. D. Sandrock
+        Title:   Development of Low Cost Nickel-Rare Earth Hydrides for Hydrogen Storage
+        Journal: HYDROGEN ENERGY SYSTEM, T. N. Vezeroglu and W. Seifritz, Eds., Pergamon Press
+        Year:    1978
+        Volume:  3
+        Pages:   1625-1656
+    }
+}

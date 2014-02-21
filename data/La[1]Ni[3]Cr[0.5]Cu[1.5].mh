@@ -1,0 +1,50 @@
+Name: LaNi3Cr0.5Cu1.5
+Elements: [La:1,Ni:3,Cr:0.5,Cu:1.5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.10  # Burnasheva
+
+    Dehydriding
+    {
+        DH:  -35500      # J/mol  Burnasheva
+        DS: -116.30      # J/mol.K  Burnasheva
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Burnasheva
+    {
+        ID:      SandiaDBRef1528
+        Authors: V.V. Burnasheva, L.A. Petrova, K.N. Semenenko
+        Title:   Hydrogen interaction with LaNi5-x(T1T2)x, where T1T2=Al,Ce,Fe,Cu
+        Journal: J. of Inorganic Chemistry (Russian)
+        Year:    1984
+        Volume:  29
+        Pages:   869-874
+    }
+}

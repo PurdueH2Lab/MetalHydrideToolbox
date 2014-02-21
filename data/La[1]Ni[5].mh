@@ -1,0 +1,125 @@
+Elements: [La:1, Ni:5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.49 # Sandrock Table 1
+    
+    Dehydriding 
+    { 
+        DH: -32151    # J/mol - Fit to Luo isotherms (also in Sandrock Table 1, Zhang)
+        DS: -112.8    # J/mol.K - Fit to Luo isotherms (also in Sandrock Table 1, Zhang)
+        slope: 0.13   # Sandrock Table 1, confirmed by isotherms
+        
+        From isotherms: true
+    } 
+    Hydriding
+    {
+        #ln(Pa/Pd): 0.13  # Sandrock Table 1
+        
+        DH: -31168   # J/mol - Fit to Luo isotherms 
+        DS: -111.4   # J/mol.K - Fit to Luo isotherms
+        
+        From isotherms: true
+    }
+}
+ 
+Properties
+{
+    keff: 0.1			# W/m.K
+    Cp: 355				# J/kg.K
+    rho: 8300			# kg/m^3
+}
+ 
+Kinetics
+{
+    Hydriding
+    {
+        Ca: 50
+        Ea: 20000
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+    
+    Dehydriding
+    { 
+        Ca: 9.57
+        Ea: 16420
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Laurencelle
+    {
+        ID:      10.1016/j.ijhydene.2006.12.007
+        Authors: F. Laurencelle, J. Goyette
+        Title:   Simulation of heat transfer in a metal hydride reactor with aluminium foam
+        Journal: International Journal of Hydrogen Energy
+        Year:    2007
+        Volume:  32
+        Pages:   2957-2964
+    }
+    
+    Sekhar
+    {
+        ID:      10.1016/j.ijhydene.2013.03.135
+        Authors: B. S. Sekhar, S. Pailwan, P. Muthukumar
+        Title:   Studies on metal hydride based single-stage heat transformer
+        Journal: International Journal of Hydrogen Energy
+        Year:    2013
+        Volume:  38
+        Pages:   7178-7187
+    }
+    
+    Walker
+    {
+        ID:      1845692705
+        Authors: G. Walker
+        Title:   Solid State Hydrogen Storage: Materials and Chemistry
+        Year:    2008
+        Other:   Woodhead Publishing: Cambridge, England
+    }
+    
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }
+    
+    Zhang
+    {
+        ID:      10.1016/0925-8388(96)02282-7
+        Authors: W. Zhang, M. P. S. Kumar, A. Visintin, S. Srinivasan, H. J. Ploehn
+        Title:   A microcalorimetric investigation of the thermodynamics and kinetics of hydriding-dehydriding reactions
+        Journal: J. of Alloys and Compounds
+        Year:    1996
+        Volume:  242
+        Pages:   143-152
+    }
+    Luo
+    {
+        ID:      10.1016/S0925-8388(97)00536-7
+        Authors: S. Luo, J. D. Clewley, T. B. Flanagan, R. C. Bowman, L. A. Wade
+        Title:   Further studies of the isotherms of LaNi5-xSnx-H for x=0-0.5
+        Journal: Journal of Alloys and Compounds
+        Year:    1998
+        Volume:  267
+        Pages:   171-181
+    }
+}
+ 
+

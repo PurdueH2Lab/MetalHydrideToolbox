@@ -1,0 +1,49 @@
+Elements: [Zr:1, Fe:1.4, Cr:0.6]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.50  # Ivey
+
+    Dehydriding
+    {
+        DH:  -29900      # J/mol  Ivey
+        DS: -111.13      # J/mol.K  Ivey
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Ivey
+    {
+        ID:      SandiaDBRef0029
+        Authors: D. G. Ivey, D. O. Northwood
+        Title:   Hydrogen Absorption-Desorption Characteristics of Zr(FexCr1-x)2
+        Journal: Hydrogen Energy Progress V, T. N. Veziroglu and J. B. Taylor, Eds., Pergamon, New York
+        Year:    1984
+        Volume:  3
+        Pages:   1395-1406
+    }
+}

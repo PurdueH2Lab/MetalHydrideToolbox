@@ -1,0 +1,56 @@
+Elements: [Ce:0.6, La:0.4, Ni:5]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 6  # Dayan Figure 1
+
+    Dehydriding
+    {
+        DH: -24560      # J/mol  Fit to Dayan isotherms
+        DS: -110.5      # J/mol.K  Fit to Dayan isotherms
+        slope: 0.35     # Fit to Dayan isotherms
+        
+        From Isotherms: true
+    }
+    Hydriding
+    {
+        DH: -21840      # J/mol  Fit to Dayan isotherms
+        DS: -106.5      # J/mol.K  Fit to Dayan isotherms
+        
+        From Isotherms: true
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Dayan
+    {
+        ID:      10.1016/0025-5408(81)90072-6
+        Authors: D. Dayan, M. P. Dariel
+        Title:   Anomolous Isotope Effect for Hydrogen Absorption in La0.4Ce0.6Ni5
+        Journal: Materials Research Bulletin
+        Year:    1981
+        Volume:  16
+        Pages:   137-140
+    }
+}

@@ -1,0 +1,51 @@
+Elements: [V:0.95, Cr:0.05]
+Type: SS
+
+Thermodynamics
+{
+    H/M: 1  # Lynch fig 5, reversible capacity only
+
+    Dehydriding
+    {
+        DH: -37370      # J/mol  Lynch Table 2 (B-y plateau)
+        DS: -139.4      # J/mol.K  Lynch Table 2 (B-y plateau)
+        
+        # TODO Lynch has isotherm
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Lynch
+    {
+        ID:      10.1016/0022-3697(78)90150-6
+        Authors: J. F. Lynch, J. J. Reilly, F. Millot
+        Title:   The Absorption of Hydrogen by Binary Vanadium-Chromium Alloys
+        Journal: J. Phys. Chem. Solids
+        Year:    1978
+        Volume:  39
+        Pages:   883-890
+    }
+}

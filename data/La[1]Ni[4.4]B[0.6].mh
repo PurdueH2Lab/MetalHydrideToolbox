@@ -1,0 +1,52 @@
+Elements: [La:1, Ni:4.4, B:0.6]
+Type: AB5
+
+Thermodynamics
+{
+    H/M:  4.16   # Mendelsohn text page 2
+
+    Dehydriding
+    {
+        DH: -33472      # J/mol  Mendelsohn text page 2 (8.0 kcal)
+        DS: -97.91      # J/mol.K  Mendelsohn (23.4 cal)
+        
+        TODO: Mendelsohn has isotherm (Fig 2)
+    }
+    Hydriding
+    {
+        ln(Pa/Pd): 0.01  # Mendelsohn text page 2 ('little or no hysteresis')
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Mendelsohn
+    {
+        ID:      10.1016/0022-5088(80)90236-2
+        Authors: M. H. Mendelsohn, D. M. Gruen, G. D. Sandrock
+        Title:   Hydrogen absorption in the new ternary phase LaNi4.4B0.6
+        Journal: Journal of Less-Common Metals
+        Year:    1980
+        Volume:  70
+        Pages:   273-276
+    }
+}

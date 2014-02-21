@@ -1,0 +1,51 @@
+Elements: [Zr:1, Ni:1.44, V:0.48, Mn:0.48]
+Type: AB2
+
+Thermodynamics
+{
+    H/M: 3.4  # Gao figure 2
+
+    Dehydriding
+    {
+        DH: -39900      # J/mol  Gao text section 3.1
+        DS: -125.7      # J/mol.K  Gao text section 3.1
+        
+        # TODO Gao has isotherms (fig 2), fairly sloped
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Gao
+    {
+        ID:      10.1016/0925-8388(95)01704-6
+        Authors: X. Gao, D. Song, Y. Zhang, Z. Zhou, W. Zhang, M. Wang, P. Shen
+        Title:   Electrochemical and surface properties of the Zr(V0.2Mn0.2Ni0.6)2.4 alloy electrode
+        Journal: J. of Alloys and Compounds
+        Year:    1995
+        Volume:  229
+        Pages:   268-273
+    }
+}

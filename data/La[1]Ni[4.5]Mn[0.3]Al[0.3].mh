@@ -1,0 +1,50 @@
+Name: LaNi4.5Mn0.3Al0.3
+Elements: [La:1,Ni:4.5,Mn:0.3,Al:0.3]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.30  # Filatova
+
+    Dehydriding
+    {
+        DH:  -39300      # J/mol  Filatova
+        DS: -114.15      # J/mol.K  Filatova
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Filatova
+    {
+        ID:      SandiaDBRef1524
+        Authors: E.A. Filatova, N.A. Yakolova, K.N. Semenenko
+        Title:   Calorimetric study of hydrogen interaction with LaNi4.5Mn0.3Al0.2 intermetallic compound
+        Journal: Bulletin of Moscow University, Chemistry Series
+        Year:    2000
+        Volume:  41
+        Pages:   331-334
+    }
+}

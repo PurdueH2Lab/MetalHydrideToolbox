@@ -1,0 +1,51 @@
+Name: La.5Ca.5Ni3
+Elements: [La:0.5,Ca:0.5,Ni:3]
+Type: AB3
+
+Thermodynamics
+{
+    H/M: 4.4  # Chen section 3.3.3 text (1.1 * 4)
+
+    Dehydriding
+    {
+        DH:  -43430      # J/mol  Chen - Table 5
+        DS: -114.6       # J/mol.K  Chen - Table 5
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Chen has PCI curves
+}
+
+References
+{
+    Chen
+    {
+        ID:      10.1016/S0925-8388(00)00694-0
+        Authors: J. Chen, H.T. Takeshita, H. Tanaka, N. Kuriyama, T. Sakai, I. Uehara, M. Haruta
+        Title:   Hydriding properties of LaNi3 and CaNi3 and their substitutes with PuNi3-type structure
+        Journal: J. of Alloys and Compounds
+        Year:    2000
+        Volume:  302
+        Pages:   304-313
+    }
+}

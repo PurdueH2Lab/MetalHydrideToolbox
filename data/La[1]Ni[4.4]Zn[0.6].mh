@@ -1,0 +1,53 @@
+Name: LaNi4.4Zn.6
+Elements: [La:1,Ni:4.4,Zn:0.6]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 6  # Rozdzynska-Kielbik Figure 3
+
+    Dehydriding
+    {
+        DH: -34800      # J/mol  Rozdzynska-Kielbik Table 2
+        DS: -107.8      # J/mol.K  Rozdzynska-Kielbik Table 2
+        
+        # TODO Rozdzynska-Kielbik has desorption isotherms
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO Rozdzynska-Kielbik has data on other Ni-Zn ratios in Table 2 (dH and dS)
+}
+
+References
+{
+    Rozdzynska-Kielbik
+    {
+        ID:      10.1016/S0925-8388(99)00616-7
+        Authors: B. Rozdzynska-Kielbik, W. Twasieczko, H. Drulis V.V. Pavlyuk, H. Bala
+        Title:   Hydrogenation equilibria characteristics of LaNi5-xZnx intermetallics
+        Journal: J. of Alloys and Compounds
+        Year:    2000
+        Volume:  298
+        Pages:   237-243
+    }
+}

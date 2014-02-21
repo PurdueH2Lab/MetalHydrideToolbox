@@ -1,0 +1,64 @@
+Elements: [Mm:1, Ni:4.5, Al:0.4]
+Type: AB5
+ 
+Thermodynamics
+{
+    H/M: 6  #  Mellouli Table 1
+    
+    Dehydriding 
+    { 
+        DH: -15090		# J/mol Mellouli Table 1
+        DS: -106   		# J/mol.K Mellouli Table 1
+    } 
+    Hydriding
+    {
+            
+    }
+}
+ 
+Properties
+{
+    Cp: 500	    # J/kg.K Mellouli Table 1?
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+        Ca: 1.52e4     # 1/s   Mellouli Table 1
+        Ea: 13890      # J/mol  Mellouli Table 1
+        
+        pFcn: Log         # Mellouli text
+        wFcn: 1st Order   # Mellouli text
+    }
+    
+    Dehydriding
+    { 
+        Ca: 1.42e6    # 1/s   Mellouli Table 1
+        Ea: 20330     # J/mol  Mellouli Table 1
+        
+        pFcn: Log         # Mellouli text
+        wFcn: 1st Order   # Mellouli text
+    }
+}
+ 
+Notes
+{
+    Thermal resistance = 500 W/m2-K  
+}
+        
+References
+{
+    Mellouli
+    {
+        ID:      10.1016/j.ijhydene.2009.03.010
+        Authors: S. Mellouli, F. Askri, H. Dhaou, A. Jemni, S. B. Nasrallah
+        Title:   Parametric studies on a metal-hydride cooling system
+        Journal: International Journal of Hydrogen Energy
+        Year:    2009
+        Volume:  34
+        Pages:   3945-3952
+    }
+}
+ 
+

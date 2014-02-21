@@ -1,0 +1,51 @@
+Name: ZrFeCr
+Elements: [Zr:1,Fe:1,Cr:1]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.70  # Shaltiel
+
+    Dehydriding
+    {
+        DH: -49370      # J/mol  Shaltiel Table 3 (11.8 kcal)
+        DS: -133.9      # J/mol.K  Shaltiel Table 3 (32 cal)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO Shaltiel has several other blends in table 3 too
+}
+
+References
+{
+    Shaltiel
+    {
+        ID:      10.1016/0022-5088(77)90162-X
+        Authors: D. Shaltiel, I. Jacob, D. Davidov
+        Title:   Hydrogen Absorption and Desorption Properties of AB2 Laves-Phase Pseudobinary Compounds
+        Journal: Journal of Less-Common Metals
+        Year:    1977
+        Volume:  53
+        Pages:   117-131
+    }
+}

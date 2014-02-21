@@ -1,0 +1,55 @@
+Name: LaNi4.6Mn
+Elements: [La:1, Ni:4.6, Mn:0.4]
+Type: AB5
+ 
+Thermodynamics
+{
+    Weight Percent: 1.49  #Hovland table 1
+    
+    Dehydriding 
+    { 
+        DH: -39400		# J/mol, Hovland table 1
+        DS: -117   		# J/mol.K, Hovland table 1
+        slope: 0.76     # Hovland table 1
+    } 
+    Hydriding
+    {
+        ln(Pa/Pd): 0.1  # Hovland table 1
+    }
+}
+ 
+Properties
+{
+     
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Hovland
+    {
+        ID:      NREL/CP-540-36735
+        Authors: V. Hovland
+        Title:   Integrated Cabin and Fuel Cell System Thermal Management with a Metal Hydride Heat Pump
+        Journal: Eighth International Symposium on Metal-Hydrogen Systems
+        Year:    2002
+        Volume:  September 2-6
+        Pages:   CP-540-36735
+    }
+}
+ 
+

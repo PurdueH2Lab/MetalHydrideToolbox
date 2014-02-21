@@ -1,0 +1,49 @@
+Name: ZrFeMn
+Elements: [Zr:1,Fe:1,Mn:1]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.60  # Suzuki
+
+    Dehydriding
+    {
+        DH:  -31000      # J/mol  Suzuki
+        DS:  -92.40      # J/mol.K  Suzuki
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Suzuki
+    {
+        ID:      SandiaDBRef0027
+        Authors: A. Suzuki, N. Nishimiya, S. Ono
+        Title:   Hydriding Behaviors of Zr(FexMn1-x)2 Alloys
+        Journal: Chem. Letters (Japan)
+        Year:    1982
+        Pages:   205-208
+    }
+}

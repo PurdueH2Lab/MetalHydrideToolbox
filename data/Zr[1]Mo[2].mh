@@ -1,0 +1,50 @@
+Name: ZrMo2
+Elements: [Zr:1,Mo:2]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.00  # Semenenko
+
+    Dehydriding
+    {
+        DH:  -22000      # J/mol  Semenenko
+        DS: -105.12      # J/mol.K  Semenenko
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Semenenko
+    {
+        ID:      SandiaDBRef1154
+        Authors: K. N. Semenenko, V. N. Verbetsky, V. A. Pilchenko
+        Title:   Interaction of ZrMo2 with Hydrogen at Low Temperature
+        Journal: Bulletin of Moscow University, Chemistry
+        Year:    1986
+        Volume:  27
+        Pages:   332-333
+    }
+}

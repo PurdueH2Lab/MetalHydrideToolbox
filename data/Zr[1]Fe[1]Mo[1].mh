@@ -1,0 +1,50 @@
+Name: ZrFeMo
+Elements: [Zr:1,Fe:1,Mo:1]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.20  # Semenenko
+
+    Dehydriding
+    {
+        DH:  -29800      # J/mol  Semenenko
+        DS:  -94.05      # J/mol.K  Semenenko
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Semenenko
+    {
+        ID:      SandiaDBRef0638
+        Authors: K. N. Semenenko, V. N. Verbetskii, S. V. Mitrokhin, V. V. Burnasheva
+        Title:   Reaction of Hydrogen with Intermetallic Zirconium Compounds Crystallising with Laves Phase Structure
+        Journal: Russian J. Inorganic Chemistry
+        Year:    1980
+        Volume:  25
+        Pages:   961-964
+    }
+}

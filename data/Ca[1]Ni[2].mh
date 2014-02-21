@@ -1,0 +1,52 @@
+Name: CaNi2
+Elements: [Ca:1, Ni:2]
+Type: AB2
+
+Thermodynamics
+{
+    H/M: 3.44  # Oesterreicher Table 1
+
+    Dehydriding
+    {
+        DH:  -84500      # J/mol  Oesterreicher Table 1 (20.2 kcal/mol)
+        DS: -260.18      # J/mol.K  Oesterreicher TODO VERIFY!
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    Oesterreicher states "No indication for an equilibrium pressure down to 0.05 bar was observable" but the
+    Sandia database lists Peq as 0.05 atm at 25 C.
+}
+
+References
+{
+    Oesterreicher
+    {
+        ID:      10.1016/0025-5408(80)90130-0
+        Authors: H. Oesterreicher, K. Ensslen, A. Kerlin, E. Buscher
+        Title:   Hydriding Behavior in Ca-Mg-Ni-B
+        Journal: Mat. Res. Bull.
+        Year:    1980
+        Volume:  15
+        Pages:   275-283
+    }
+}

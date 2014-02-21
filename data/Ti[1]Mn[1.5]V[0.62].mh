@@ -1,0 +1,52 @@
+Name: TiV0.62Mn1.5
+Elements: [Ti:1, V:0.62, Mn:1.5]
+Type: AB2
+ 
+Thermodynamics
+{
+    Weight Percent: 2.15  # Hovland Table 1
+    
+    Dehydriding 
+    { 
+        DH: -28600      # J/mol Hovland Table 1
+        DS: -107        # J/mol.K Hovland Table 1
+        slope: 1.4      #  Hovland Table 1
+    } 
+    Hydriding
+    {
+        # ln(Pa/Pd) listed as "n/a" in Hovland Table 1
+    }
+}
+ 
+Properties
+{
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Hovland
+    {
+        ID:      NREL/CP-540-36735
+        Authors: V. Hovland
+        Title:   Integrated Cabin and Fuel Cell System Thermal Management with a Metal Hydride Heat Pump
+        Journal: Eighth International Symposium on Metal-Hydrogen Systems
+        Year:    2002
+        Volume:  September 2-6
+        Pages:   CP-540-36735
+    }
+}

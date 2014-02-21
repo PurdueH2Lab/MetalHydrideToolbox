@@ -1,0 +1,54 @@
+Elements: [La:1,Ni:4.95,Sn:0.05]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.30  # Luo
+
+    Dehydriding
+    {
+        DH: -32000      # J/mol  Luo Table 3 (x2)
+        DS: -108.4      # J/mol.K  Luo Table 3 (x2)
+        
+        # TODO Luo has isotherms (fig 5)
+    }
+    Hydriding
+    {
+        DH: -30400      # J/mol  Luo Table 3 (x2)
+        DS: -106.2      # J/mol.K  Luo Table 3 (x2)
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    # TODO Luo also has LaNi4.9Sn0.1, LaNi4.8Sn0.2, LaNi4.75Sn0.25
+}
+
+References
+{
+    Luo
+    {
+        ID:      10.1016/S0925-8388(97)00536-7
+        Authors: S. Luo, J. D. Clewley, T. B. Flanagan, R. C. Bowman, L. A. Wade
+        Title:   Further studies of the isotherms of LaNi5-xSnx-H for x=0-0.5
+        Journal: Journal of Alloys and Compounds
+        Year:    1998
+        Volume:  267
+        Pages:   171-181
+    }
+}

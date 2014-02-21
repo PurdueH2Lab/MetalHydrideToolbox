@@ -1,0 +1,50 @@
+Name: La0.8Ce0.2Co5
+Elements: [La:0.8,Ce:0.2,Co:5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 0.80  # Burnasheva
+
+    Dehydriding
+    {
+        DH:  -34000      # J/mol  Burnasheva
+        DS: -101.72      # J/mol.K  Burnasheva
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Burnasheva
+    {
+        ID:      SandiaDBRef1518
+        Authors: V.V. Burnasheva, V.K. Sarynin, K.N. Semenenko
+        Title:   Investigation of La1-xCexCo5-H2 system
+        Journal: VINITI Depositor, Bulletin of Moscow University
+        Year:    1978
+        Volume:  3574-78
+        Pages:   1-18
+    }
+}

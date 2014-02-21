@@ -1,0 +1,54 @@
+Elements: [Ti:0.9, Zr:0.1, Mn:1, Cr:0.9, V:0.1]
+Type: AB2
+
+Thermodynamics
+{
+    H/M:  3   # Liu fig 3
+
+    Dehydriding
+    {
+        DH:  -22500      # J/mol  Liu Text page 2
+        DS: -100.7      # J/mol.K  Liu Text page 2
+        
+        # TODO Liu has isotherms
+    }
+    Hydriding
+    {
+        ln(Pa/Pd): 0.29   # Liu Table 1
+        T: 303            # Liu Table 1
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO Liu has isotherms of other similar blends
+}
+
+References
+{
+    Liu
+    {
+        ID:      10.1016/0925-8388(96)02245-1
+        Authors: B.H. Liu, D. M. Kim, K.-Y. Lee, J.-Y. Lee
+        Title:   Hydrogen storage properties of TiMn2-based alloys
+        Journal: J. of Alloys and Compounds
+        Year:    1996
+        Volume:  240
+        Pages:   214-218
+    }
+}

@@ -1,0 +1,50 @@
+Name: CeCo3
+Elements: [Ce:1,Co:3]
+Type: AB3
+
+Thermodynamics
+{
+    Weight Percent: 1.60  # Burnasheva
+
+    Dehydriding
+    {
+        DH:  -38100      # J/mol  Burnasheva
+        DS: -104.52      # J/mol.K  Burnasheva
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Burnasheva
+    {
+        ID:      SandiaDBRef0544
+        Authors: V. V. Burnasheva, V. V. Klimeshin, and K. N. Semenenko
+        Title:   Equilibria in the Systems RCo3-H2, Where R is Ce, Pr, Tb, Dy, or Er
+        Journal: Izvestiya Akademii Nauk SSSR, Neorganicheskie Materialy
+        Year:    1977
+        Volume:  15
+        Pages:   251-255
+    }
+}

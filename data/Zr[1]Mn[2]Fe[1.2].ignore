@@ -1,0 +1,53 @@
+Elements: [Zr:1,Mn:2,Fe:1.2]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 0.70  # Sinha
+
+    Dehydriding
+    {
+        DH:   -6800      # J/mol  Sinha TODO check for PCI curves
+        DS:  -31.94      # J/mol.K  Sinha
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TGV: The results from Sinha are highly suspect.
+    Every one of the hydrides from a Sinha paper has a very low enthalpy which is
+    not reproduced by other authors. The abstracts from Sinha papers also always seem
+    to note how unusually low the enthalpy value is.
+}
+
+References
+{
+    Sinha
+    {
+        ID:      SandiaDBRef0509
+        Authors: V. K. Sinha, F. Pourariam, W. E. Wallace
+        Title:   Hydrogen Absorption by ZrMn2Fex
+        Journal: J. Phys. Chem.
+        Year:    1982
+        Volume:  86
+        Pages:   4952-4956
+    }
+}

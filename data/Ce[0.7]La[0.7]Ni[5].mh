@@ -1,0 +1,50 @@
+Name: Ce0.7La0.7Ni5
+Elements: [Ce:0.7,La:0.7,Ni:5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.40  # Mordkovich
+
+    Dehydriding
+    {
+        DH:  -25000      # J/mol  Mordkovich
+        DS: -105.22      # J/mol.K  Mordkovich
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Mordkovich
+    {
+        ID:      SandiaDBRef1525
+        Authors: V.Z. Mordkovich, N.V. Dudakova, I.B. Rodkina, Yu.K. Batchtok, V.P. Mordovin
+        Title:   Influence of cerium and aluminum on phase relations in CexLa1-xNi5-yAly-H2 system
+        Journal: Proc. Russian Academy of Sciences, Metals
+        Year:    1993
+        Volume:  No.3
+        Pages:   213-217
+    }
+}

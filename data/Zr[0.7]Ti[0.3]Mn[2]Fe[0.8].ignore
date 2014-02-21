@@ -1,0 +1,54 @@
+Name: Zr.7Ti.3Mn2Fe.8
+Elements: [Zr:0.7,Ti:0.3,Mn:2,Fe:0.8]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 0.80  # Sinha
+
+    Dehydriding
+    {
+        DH:  -14000      # J/mol  Sinha  TODO check for PCI curves
+        DS:  -54.90      # J/mol.K  Sinha
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TGV: The results from Sinha are highly suspect.
+    Every one of the hydrides from a Sinha paper has a very low enthalpy which is
+    not reproduced by other authors. The abstracts from Sinha papers also always seem
+    to note how unusually low the enthalpy value is.
+}
+
+References
+{
+    Sinha
+    {
+        ID:      SandiaDBRef0020
+        Authors: V. K. Sinha, W. E. Wallace
+        Title:   Zr0.7Ti0.3Mn2Fe0.8 As a Material for Hydrogen Storage
+        Journal: Journal of Less-Common Metals
+        Year:    1982
+        Volume:  87
+        Pages:   297-303
+    }
+}

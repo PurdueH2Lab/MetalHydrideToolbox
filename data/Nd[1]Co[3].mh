@@ -1,0 +1,51 @@
+Name: NdCo3
+Elements: [Nd:1, Co:3]
+Type: AB3
+
+Thermodynamics
+{
+    H/M: 4.3  # Kierstead Fig. 1
+
+    Dehydriding
+    {
+        DH: -54684       # J/mol  Kierstead Table 1, second plateau
+        DS: -121.13      # J/mol.K  Kierstead Table 1, second plateau
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    1. The reference below also has GdCo3 data
+}
+
+References
+{
+    Kierstead
+    {
+        ID:      10.1016/0022-5088(81)90110-7
+        Authors: H. A. Kierstead
+        Title:   The Hydrides of NdCo3 and GdCo3
+        Journal: Journal of Less-Common Metals
+        Year:    1981
+        Volume:  78
+        Pages:   29-34
+    }
+}

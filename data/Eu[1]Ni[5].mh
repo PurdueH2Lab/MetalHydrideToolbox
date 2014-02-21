@@ -1,0 +1,51 @@
+Name: EuNi5
+Elements: [Eu:1,Ni:5]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 4.5  # Gavra figure 1 reversible content
+
+    Dehydriding
+    {
+        DH:  -26400      # J/mol  Gavra abstract
+        DS:  -128.9      # J/mol.K  Gavra text (slightly differs from abstract)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Gavra has some isotherms (Fig 1), but it's not clear if they are measurements or just a conceptual diagram
+}
+
+References
+{
+    Gavra
+    {
+        ID:      10.1016/0022-5088(85)90416-3
+        Authors: Z. Gavra, J. J. Murray, L. D. Calvert, J. B. Taylor
+        Title:   The EuNi5-H System
+        Journal: Journal of Less-Common Metals
+        Year:    1985
+        Volume:  105
+        Pages:   291-301
+    }
+}

@@ -1,0 +1,100 @@
+Elements: [Ti:1, Fe:0.8, Ni:0.2]
+Type: AB
+ 
+Thermodynamics
+{
+    Weight Percent: 1.3 # Hovland Table 1
+    
+    Dehydriding 
+    { 
+        DH: -41840      # J/mol Mintz table 2 (Hovland Table 1)
+        DS: -118.4      # J/mol.K Mintz table 2 (Hovland Table 1)
+        
+        slope: 0.36     # Hovland Table 1
+    } 
+    Hydriding
+    {
+        #ln(Pa/Pd): 0.05  # Hovland Table 1
+        
+        DH: -39330      # J/mol Mintz table 2 
+        DS: -113.4      # J/mol.K Mintz table 2
+    }
+}
+ 
+Properties
+{
+    rho: 6500	# kg/m^3   TODO REF
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Mintz
+    {
+        ID:      10.1063/1.329808  
+        Authors: M. H. Mintz, S. Vaknin, S. Biderman, Z. Hadari
+        Title:   Hydrides of Ternary TiFexM1-x (M=Cr,Mn,Co,Ni) Intermetallics
+        Journal: J. Appl. Phys.
+        Year:    1981
+        Volume:  52
+        Pages:   463-467
+    }
+    
+    Hovland
+    {
+        ID:      NREL/CP-540-36735
+        Authors: V. Hovland
+        Title:   Integrated Cabin and Fuel Cell System Thermal Management with a Metal Hydride Heat Pump
+        Journal: Eighth International Symposium on Metal-Hydrogen Systems
+        Year:    2002
+        Volume:  September 2-6
+        Pages:   CP-540-36735
+    }
+    
+    Huston
+    {
+        ID:      10.1016/0022-5088(80)90182-4
+        Authors: E. Huston, G. Sandrock
+        Title:   Engineering properties of metal hydrides
+        Journal: Journal of Less Common Metals
+        Year:    1980
+        Volume:  74
+        Pages:   435-443
+    }
+    
+    Walker
+    {
+        ID:      1845692705
+        Authors: G. Walker
+        Title:   Solid State Hydrogen Storage: Materials and Chemistry
+        Year:    2008
+        Other:   Woodhead Publishing: Cambridge, England
+    }
+    
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }  
+}
+ 
+

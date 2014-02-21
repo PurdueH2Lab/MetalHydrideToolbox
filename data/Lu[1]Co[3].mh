@@ -1,0 +1,52 @@
+Name: LuCo3
+Elements: [Lu:1,Co:3]
+Type: AB3
+
+Thermodynamics
+{
+    H/M: 2   # Kierstead figure 1, 2nd plateau only
+    
+    Dehydriding
+    {
+        DH:  -31614      # J/mol  Kierstead, Table 1, 2nd plateau
+        DS: -122.04      # J/mol.K  Kierstead, Table 1, 2nd plateau
+        
+        # TODO Kierstead has isotherms, with 2 plateaus (fig 1)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Kierstead
+    {
+        ID:      10.1016/0022-5088(84)90187-5
+        Authors: H. A. Kierstead
+        Title:   Thermodynamic Properties of LuCo3 Hydrides
+        Journal: Journal of Less-Common Metals
+        Year:    1984
+        Volume:  96
+        Pages:   133-139
+    }
+}

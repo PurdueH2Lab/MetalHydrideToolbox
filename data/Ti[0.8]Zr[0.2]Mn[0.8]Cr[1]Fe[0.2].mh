@@ -1,0 +1,48 @@
+Name: Ti.8Zr.2Mn.8Cr1.0Fe.2
+Elements: [Ti:0.8,Zr:0.2,Mn:0.8,Cr:1,Fe:0.2]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.80  # Gamo
+
+    Dehydriding
+    {
+        DH:  -28000      # J/mol  Gamo
+        DS: -116.17      # J/mol.K  Gamo
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Gamo
+    {
+        ID:      SandiaDBRef0035
+        Authors: T. Gamo, Y. Moriwaki, T. Yamashita, M. Fukuda
+        Title:   Hydrogen Storage Material
+        Year:    1979
+        Other:   U.S. Patent 4160014
+    }
+}

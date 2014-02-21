@@ -1,0 +1,59 @@
+Elements: [Mg:1, Ni:0.02]
+Type: Mg
+
+Thermodynamics
+{
+    Weight Percent: 7.5  # Kapischke
+    
+    Dehydriding 
+    { 
+        DH: -72000  # J/mol   -  Kapischke Table 2
+        DS: -131    # J/mol.K -  Kapischke Table 2
+        slope:  0   # Kapischke isotherm
+        
+    } 
+    Hydriding
+    {
+        # DH and DS values listed by Kapischke are from absorption measurements,
+        # so we assume zero hysteresis and enter them as dehydriding values
+        
+        From Isotherms: true
+    }
+}
+
+Properties
+{
+    rho:  1700  #kg/m3 - Kapischke Table 1
+    Cp:   1050  #J/kg.K - Kapischke Table 1
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+	Kapischke
+	{
+        ID:      10.1016/S0894-1777(98)10007-9
+        Authors: J. Kapischke, J. Hapke
+        Title:   Measurement of the pressure-composition isotherms of high-temperature and low-temperature metal hydrides
+        Journal: Experimental Thermal and Fluid Science
+        Year:    1998
+        Volume:  18
+        Pages:   70-81 
+    }
+
+}
+

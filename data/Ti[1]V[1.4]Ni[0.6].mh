@@ -1,0 +1,50 @@
+Name: TiV1.4Ni.6
+Elements: [Ti:1,V:1.4,Ni:0.6]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 2.90  # Chen
+
+    Dehydriding
+    {
+        DH:  -28800      # J/mol  Chen
+        DS:  -78.83      # J/mol.K  Chen
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Chen
+    {
+        ID:      SandiaDBRef1163
+        Authors: J.-R. Chen, C.-C. Chuang, K. Hong
+        Title:   Hydrogen Storage in Ti-V-Ni Alloys
+        Journal: HYDROGEN ENERGY PROGRESS X, Proc. 10th World Hydrogen Energy Conf., D. L. Block and T. N. Veziroglu, Eds., IAHE
+        Year:    1994
+        Volume:  2
+        Pages:   1089-1098
+    }
+}

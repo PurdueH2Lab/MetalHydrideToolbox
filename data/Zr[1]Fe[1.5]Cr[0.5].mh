@@ -1,0 +1,68 @@
+Elements: [Zr:1, Fe:1.5, Cr:0.5]
+Type: AB2
+ 
+Thermodynamics
+{
+    Weight Percent: 1.5 # Sandrock Table 2
+    
+    Dehydriding 
+    { 
+        DH: -29200	    # J/mol Hagstrom Table 1
+        DS: -104.7      # J/mol.K  Hagstrom Table 1
+        slope: 1.26     # Sandrock Table 2
+    } 
+    Hydriding
+    {
+        # ln(Pa/Pd): 0.34  # Sandrock Table 2
+        
+        DH: -19500	    # J/mol Hagstrom Table 1
+        DS: -84.0       # J/mol.K  Hagstrom Table 1
+    }
+}
+ 
+Properties
+{ 
+    rho: 7600	# kg/m^3 - Sandrock Table 2
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Hagstrom
+    {
+        ID:      10.1016/0360-3199(95)00025-9
+        Authors: M. T. Hagstrom, P. D. Lund, J. P. Vanhanen
+        Title:   Metal hydride hydrogen storage for near-ambient temperature and atmospheric pressure applications, a pdsc study
+        Journal: International Journal of Hydrogen Energy
+        Year:    1995
+        Volume:  20
+        Pages:   897-909
+    }
+    
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }
+}
+ 
+

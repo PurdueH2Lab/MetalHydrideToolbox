@@ -1,0 +1,53 @@
+Elements: [Ti:0.98, Zr:0.02, V:0.43, Fe:0.09, Cr:0.05, Mn:1.5]
+Type: AB2
+ 
+Thermodynamics
+{
+    Weight Percent: 1.9  # Sandrock Table 2
+    
+    Dehydriding 
+    { 
+        DH: -27400      # J/mol - Sandrock Table 2
+        DS: -112        # J/mol.K  - Sandrock Table 2
+        slope: 1.1      # Sandrock Table 2
+    } 
+    Hydriding
+    {
+    }
+}
+ 
+Properties
+{
+    rho: 5800          # kg/m3 - Sandrock Table 2
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    } 
+}
+ 
+

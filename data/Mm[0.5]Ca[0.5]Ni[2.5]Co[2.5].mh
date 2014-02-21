@@ -1,0 +1,50 @@
+Elements: [Mm:0.5, Ca:0.5, Ni:2.5, Co:2.5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.10  # Osumi Table 1
+
+    Dehydriding
+    {
+        DH:  -34700      # J/mol  Osumi Table 1
+        DS: -125.65      # J/mol.K  Osumi Table 1, calculated from Peq
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    # TODO: Osumi table 1 has lots of hydrides
+}
+
+References
+{
+    Osumi
+    {
+        ID:      10.1016/0022-5088(80)90162-9
+        Authors: Y. Osumi, H. Suzuki, A. Kato, K. Oguro, M. Nakane
+        Title:   Development of Mischmetal-Nickel and Titanium-Cobalt Hydrides for Hydrogen Storage
+        Journal: Journal of Less-Common Metals
+        Year:    1980
+        Volume:  74
+        Pages:   271-277
+    }
+}

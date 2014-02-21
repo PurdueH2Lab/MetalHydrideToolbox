@@ -1,0 +1,64 @@
+Elements: [Zr:0.79, Ti:0.21, Mn:1, Fe:1.02]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.50  # Uchida
+
+    Dehydriding
+    {
+        DH: -33000      # J/mol  Hagstrom Table 1 and Uchida
+        DS: -111.4      # J/mol.K  Hagstrom Table 1 and Uchida
+        
+        # TODO Uchida has isotherms
+    }
+    Hydriding
+    {
+        DH: -26100      # J/mol  Hagstrom Table 1 and Uchida
+        DS: -100.3      # J/mol.K  Hagstrom Table 1 and Uchida
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Hagstrom
+    {
+        ID:      10.1016/0360-3199(95)00025-9
+        Authors: M. T. Hagstrom, P. D. Lund, J. P. Vanhanen
+        Title:   Metal hydride hydrogen storage for near-ambient temperature and atmospheric pressure applications, a pdsc study
+        Journal: International Journal of Hydrogen Energy
+        Year:    1995
+        Volume:  20
+        Pages:   897-909
+    }
+    
+    Uchida
+    {
+        ID:      10.1016/0022-5088(86)90196-7
+        Authors: M. Uchida, H. Bjurstrom, S. Suda, Y. Matsubara
+        Title:   On the Equilibrium Properties of some ZrMn2-Related Hydride-Forming Metals
+        Journal: Journal of Less-Common Metals
+        Year:    1986
+        Volume:  119
+        Pages:   63-74
+    }
+}

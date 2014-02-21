@@ -1,0 +1,49 @@
+Name: Tb2Co7
+Elements: [Tb:2,Co:7]
+Type: A2B7
+
+Thermodynamics
+{
+    Weight Percent: 1.10  # Goudy
+
+    Dehydriding
+    {
+        DH:  -40400      # J/mol  Goudy
+        DS: -130.78      # J/mol.K  Goudy
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Goudy
+    {
+        ID:      SandiaDBRef0186
+        Authors: A. J. Goudy
+        Title:   Hydrogen Solubility in Rare Earth Intermetallic Compounds
+        Journal: Thesis, University of Pittsburgh
+        Year:    1976
+        Pages:   1-115
+    }
+}

@@ -1,0 +1,49 @@
+Elements: [Ti:0.9,Fe:0.9,B:0.2]
+Type: AB
+
+Thermodynamics
+{
+    Weight Percent: 1.50  # Rajalakshmi
+
+    Dehydriding
+    {
+        DH:   -7600      # J/mol  Rajalakshmi TODO get PCI curves from Rajalakshmi
+        DS:  -47.26      # J/mol.K  Rajalakshmi
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Rajalakshmi
+    {
+        ID:      10.1016/S0360-3199(97)00175-4
+        Authors: N. Rajalakshmi, K. S. Dhathathreyan
+        Title:   The Hydrogen Solubility and Thermodynamics of Dissolved Hydrogen in Ti0.45Fe0.45B0.1 Alloy System
+        Journal: International Journal of Hydrogen Energy
+        Year:    1998
+        Volume:  23
+        Pages:   879-884
+    }
+}

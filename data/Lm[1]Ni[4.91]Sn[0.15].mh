@@ -1,0 +1,92 @@
+Name: LmNi4.91Sn
+Elements: [Lm: 1, Ni:4.91, Sn:0.15]
+Type: AB5
+ 
+Thermodynamics
+{
+    Weight Percent: 1.3 # TODO Ref?
+    
+    Dehydriding 
+    { 
+        DH: -31260		# J/mol, average of -32.4 and -30.12  TODO Ref?
+        DS: -111.7   	# J/mol.K, average of -112.8 and -110.6  TODO Ref?
+        slope: 0.31     # Satheesh B (.1*pi)
+    } 
+    Hydriding
+    {
+        DH: -27600 		# J/mol, average of -27.2 and -28  TODO Ref?
+        DS: -104.25   	# J/mol.K, average of -103.1 and -105.4  TODO Ref?
+    }
+}
+ 
+Properties
+{
+    keff: 1.6			# W/m.K   TODO Ref?
+    Cp: 419				# J/kg.K, 2 values: 419 and 500, Satheesh B gives 500
+    rho: 8400			# kg/m3   TODO Ref?
+}
+ 
+Kinetics
+{
+    Hydriding
+    {   # Rates from Satheesh A (conflicts with Satheesh B)
+        Ca: 195
+        Ea: 30500
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+    
+    Dehydriding
+    {   # Rates from Satheesh A (conflicts with Satheesh B)
+        Ca: 30
+        Ea: 28000
+        
+        pFcn: log
+        wFcn: 1st Order 
+    }
+}
+ 
+Notes
+{
+    Large differences in Ea 
+    Hydride "B" in SatheeshB paper 
+}
+        
+References
+{
+    SatheeshA
+    {
+        ID:      10.1016/j.ijhydene.2010.04.043
+        Authors: A. Satheesh, P. Muthukumar
+        Title:   Perfomance investigation of double-stage metal hydride based heat pump
+        Journal: International Journal of Hydrogen Energy
+        Year:    2010
+        Volume:  35
+        Pages:   6950-6958
+    }
+    
+    SatheeshB
+    {
+        ID:      10.1016/j.applthermaleng.2010.07.021
+        Authors: A. Satheesh, P. Muthukumar
+        Title:   Perfomance investigation of double-stage metal hydride based heat pump
+        Journal: Applied Thermal Engineering
+        Year:    2010
+        Volume:  30
+        Pages:   2698-2707
+    }
+    
+    Paya
+    {
+        ID:      10.1016/j.ijhydene.2010.08.112
+        Authors: J. Paya, M. Linder, R. Mertz, J. Corberan
+        Title:   Analysis and optimization of a metal hydride cooling system
+        Journal: International Journal of Hydrogen Energy
+        Year:    2011
+        Volume:  36
+        Pages:   920-930
+    }
+}
+ 
+

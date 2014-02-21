@@ -1,0 +1,53 @@
+Elements: [Zr:0.5, Ti:0.5, Cr:1, Fe:1]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.80  # Yu
+
+    Dehydriding
+    {
+        DH: -27000      # J/mol  Yu Table 2
+        DS: -100.7      # J/mol.K  Yu Table 2
+        
+        # TODO Yu has isotherms (fig 2), highly sloping
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    # TODO Yu has kinetics
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    WARNING: Suspect authors. Take with a grain of salt.
+}
+
+References
+{
+    Yu
+    {
+        ID:      10.1016/0022-5088(85)90368-6
+        Authors: G. Y. Yu, F. Pourarian, W. E. Wallace
+        Title:   The Crystallographic, Thermodynamic and Kinetic Properties of the Zr1-xTixCrFe-H2 System
+        Journal: Journal of Less-Common Metals
+        Year:    1985
+        Volume:  106
+        Pages:   79-87
+    }
+}

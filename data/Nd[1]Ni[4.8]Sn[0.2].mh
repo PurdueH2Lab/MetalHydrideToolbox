@@ -1,0 +1,63 @@
+Elements: [Nd:1, Ni:4.8, Sn:0.2]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 6  # Takaguchi isotherms
+    
+    Dehydriding
+    {
+        DH: -25700      # J/mol  Takaguchi Table 1 beta phase
+        DS: -102.6      # J/mol.K  Takaguchi Table 1 beta phase
+        
+        # TODO Takaguchi has isotherms
+    }
+    Hydriding
+    {
+        ln(Pa/Pd): 0.16  # Takaguchi Table 1 beta phase
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+        Ca: 6.39e3  # 1/s - From Takaguchi table 1 time constants
+        Ea: 34092   # J/mol - From Takaguchi table 1 time constants
+        
+        pFcn: Log        # assumed in fitting process
+        wFcn: 1st Order  # assumed in fitting process
+    }
+
+    Dehydriding
+    {
+        Ca: 0.76   # 1/s - From Takaguchi table 1 time constants
+        Ea: 14128  # J/mol - From Takaguchi table 1 time constants
+        
+        pFcn: Log        # assumed in fitting process
+        wFcn: 1st Order  # assumed in fitting process
+    }
+}
+
+Notes
+{
+    Two plateaus
+}
+
+References
+{
+    Takaguchi
+    {
+        ID:      10.1016/S0925-8388(99)00551-4
+        Authors: Y. Takaguchi, K. Tanaka
+        Title:   Hydriding-dehydriding characteristics of NdNi5 and effects of Sn-substitution
+        Journal: J. of Alloys and Compounds
+        Year:    2000
+        Volume:  297
+        Pages:   73-80
+    }
+}

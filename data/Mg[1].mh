@@ -1,0 +1,84 @@
+Name: Mg
+Elements: [Mg:1]
+Type: Mg
+ 
+Thermodynamics
+{
+    Weight Percent: 7.6 # From theory (practical maximums will be lower)
+    
+    Dehydriding 
+    { 
+        DH: -78300    # J/mol - Pivak Fig 2 - Comapres well with Chaise values
+        DS: -136.1    # J/mol.K - Pivak Fig 2 - Comapres well with Chaise values
+        slope: 0      # Chaise Fig 4 and Pivak Fig 2
+    } 
+    Hydriding
+    {
+        DH: -61600    # J/mol - Pivak Fig 2 - Differs from Chaise values
+        DS: -110.9    # J/mol.K - Pivak Fig 2 - Differs from Chaise values
+    }
+}
+ 
+Properties
+{
+    keff: 0.48			# W/m.K - Chaise
+    Cp: 1025			# J/kg.K - Metweb
+    rho: 1800			# kg/m^3 - Chaise
+}
+ 
+Kinetics
+{
+    Hydriding
+    {
+        Ca:  9.8e9    # 1/s Chaise, value from 1 MPa Table 1
+        Ea:  132000   # J/mol, Chaise, value from 1 MPa Table 1
+        
+        pFcn:  Normalized Linear
+        wFcn:  Chaise
+    }
+    
+    Dehydriding
+    { 
+        Ca:  10       # 1/s Chaise, value from Table 1
+        Ea:  41000    # J/mol, Chaise, value from Table 1
+        
+        pFcn:  Log
+        wFcn:  Chaise
+    }
+}
+ 
+Notes
+{
+    1. Chaise uses equal values of DS for hydriding and dehydriding, which makes calculation of Tc impossible
+    
+    2. Evard found desorption kinetics with Ca = 1.2e12 and Ea = 185 kJ/mol (DOI 10.1016/j.ijhydene.2010.05.092). At 350 K, this is 10 orders of magnitude slower than the Chaise value.
+    
+    3. Pivak (10.3390/cryst2020710) found dH and dS for absorption and desorption on thin films. Desorption values are similar to Chaise, absorption values are different though. Pivak has measurements over a wider range of temperatures than Chaise. Their Figure 2 shows decent agreement between their thin film measurements and bulk behavior though, so their values are used herein.
+}
+        
+References
+{
+    Chaise
+    {
+        ID:      10.1016/j.ijhydene.2010.03.057
+        Authors: A. Chaise, P. de Rango, P. Marty, D. Fruchart
+        Title:   Experimental and numerical study of a magnesium hydride tank
+        Journal: International Journal of Hydrogen Energy
+        Year:    2010
+        Volume:  35
+        Pages:   6311-6322
+    }
+    
+    Pivak
+    {
+        ID:      10.3390/cryst2020710
+        Authors: Y. Pivak, H. Schreuders, and B. Dam
+        Title:   Thermodynamic properties, hysteresis behavior and stress-strain analysis of MgH2 thin films, studied over a wide temperature range
+        Journal: Crystals
+        Year:    2012
+        Volume:  2
+        Pages:   710-729
+    }
+}
+ 
+

@@ -1,0 +1,51 @@
+Elements: [Ti:0.75, Al:0.25]
+Type: Misc
+
+Thermodynamics
+{
+    Weight Percent: 0  # Rudman - it is not reversible!
+
+    Dehydriding
+    {
+        DH: -47280      # J/mol  Rudman Fig 6 caption, for B+y plateau
+        DS: -127.2      # J/mol.K  Rudman Fig 6 caption, for B+y plateau
+        
+        # TODO Rudman has isotherms, multiple plateaus
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Rudman
+    {
+        ID:      10.1016/0022-5088(78)90204-7
+        Authors: P. S. Rudman, J. J. Reilly, R. H. Wiswall
+        Title:   The Formation of Metastable Hydrides Ti0.75Al0.25Hx with x<1.5
+        Journal: Journal of Less-Common Metals
+        Year:    1978
+        Volume:  58
+        Pages:   231-240
+    }
+}

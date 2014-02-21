@@ -1,0 +1,51 @@
+Elements: [V:0.8455, Ti:0.1045, Fe:0.05]
+Type: SS
+
+Thermodynamics
+{
+    H/M: 1.8 # Libowitz Fig 5
+
+    Dehydriding
+    {
+        DH: -42900      # J/mol  Libowitz (fig 3)
+        DS: -148      # J/mol.K  Libowitz (text above fig 3)
+        
+        # TODO Libowitz has isotherms (fig 5)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Libowitz
+    {
+        ID:      10.1016/0022-5088(87)90526-1
+        Authors: G. G. Libowitz, A. J. Maeland
+        Title:   Use of Vanadium-Based Solid Solution Alloys in Metal Hydride Heat Pumps
+        Journal: Journal of Less-Common Metals
+        Year:    1987
+        Volume:  131
+        Pages:   275-282
+    }
+}

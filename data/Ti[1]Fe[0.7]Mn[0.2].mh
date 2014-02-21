@@ -1,0 +1,50 @@
+Name: TiFe.7Mn.2
+Elements: [Ti:1,Fe:0.7,Mn:0.2]
+Type: AB
+
+Thermodynamics
+{
+    Weight Percent: 2.00  # Reilly
+
+    Dehydriding
+    {
+        DH:  -34700      # J/mol  Reilly
+        DS: -113.61      # J/mol.K  Reilly
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Reilly
+    {
+        ID:      SandiaDBRef0383
+        Authors: J. J. Reilly, J. R. Johnson
+        Title:   Titanium Alloy Hydrides; Their Properties and Applications
+        Journal: Proc. 1st World Hydrogen Energy Conference, T. N. Veziroglu, Ed., IAHE, Coral Gables
+        Year:    1976
+        Volume:  II
+        Pages:   8B-3-8B-26
+    }
+}

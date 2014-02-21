@@ -1,0 +1,78 @@
+Elements: [Ti:1, Fe:0.9, Mn:0.1]
+Type: AB
+ 
+Thermodynamics
+{
+    Weight Percent: 1.9 # Hovland Table 1
+    
+    Dehydriding 
+    { 
+        DH: -27615      # J/mol Mintz Table 2  (Hovland Table 1 has 29.5 kJ)
+        DS: -100.4      # J/mol.K Mintz Table 2 (Hovland Table 1 has 107 J)
+        slope: 0.92     # Hovland Table 1
+    } 
+    Hydriding
+    {   
+        # ln(Pa/Pd): 0.62  # Hovland Table 1
+        
+        DH: -23850      # J/mol Mintz Table 2 
+        DS: -94.6       # J/mol.K Mintz Table 2
+    }
+}
+ 
+Properties
+{
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Hovland
+    {
+        ID:      NREL/CP-540-36735
+        Authors: V. Hovland
+        Title:   Integrated Cabin and Fuel Cell System Thermal Management with a Metal Hydride Heat Pump
+        Journal: Eighth International Symposium on Metal-Hydrogen Systems
+        Year:    2002
+        Volume:  September 2-6
+        Pages:   CP-540-36735
+    }
+    
+    Huston
+    {
+        ID:      10.1016/0022-5088(80)90182-4
+        Authors: E. Huston, G. Sandrock
+        Title:   Engineering properties of metal hydrides
+        Journal: Journal of Less Common Metals
+        Year:    1980
+        Volume:  74
+        Pages:   435-443
+    }
+    
+    Mintz
+    {
+        ID:      10.1063/1.329808  
+        Authors: M. H. Mintz, S. Vaknin, S. Biderman, Z. Hadari
+        Title:   Hydrides of Ternary TiFexM1-x (M=Cr,Mn,Co,Ni) Intermetallics
+        Journal: J. Appl. Phys.
+        Year:    1981
+        Volume:  52
+        Pages:   463-467
+    }
+}
+ 
+

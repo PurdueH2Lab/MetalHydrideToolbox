@@ -1,0 +1,52 @@
+Elements: [Zr:1, Cr:1, Fe:1.2]
+Type: AB2
+
+Thermodynamics
+{
+    H/M: 3  # Ivanova fig 1
+
+    Dehydriding
+    {
+        DH:  -33600      # J/mol  Ivanova Table 1
+        DS: -102.7     # J/mol.K  Ivanova - Calculated from isotherm in fig 1
+        
+        # TODO Ivanova has isotherms (fig 1)
+    }
+    Hydriding
+    {
+        # Ivanova gives a dH value for abs that is greater than for des
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Ivanova
+    {
+        ID:      10.1016/S0925-8388(99)00394-1
+        Authors: T.V. Ivanova, V.N. Verbetsky
+        Title:   Calorimetric investigation of the hydrogen interaction with ZrCrFe1.2
+        Journal: J. of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   34-37
+    }
+}

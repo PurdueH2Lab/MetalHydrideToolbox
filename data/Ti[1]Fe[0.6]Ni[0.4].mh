@@ -1,0 +1,49 @@
+Elements: [Ti:1, Fe:0.6, Ni:0.4]
+Type: AB
+
+Thermodynamics
+{
+    Weight Percent: 1.50  # Bershadsky
+
+    Dehydriding
+    {
+        DH:  -48600      # J/mol  Bershadsky
+        DS: -122.52      # J/mol.K  Bershadsky
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Bershadsky
+    {
+        ID:      SandiaDBRef0395
+        Authors: E. Bershadsky, M. Ron
+        Title:   Investigation of Thermodynamic Properties of the TiFe1-xNix-H System
+        Journal: Z. Phys. Chem. NF
+        Year:    1993
+        Volume:  179
+        Pages:   125-131
+    }
+}

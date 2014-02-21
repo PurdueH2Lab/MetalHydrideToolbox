@@ -1,0 +1,53 @@
+Elements: [Zr:1, Mn:2, Ni:0.8]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.30  # Pourarian
+
+    Dehydriding
+    {
+        DH:  -18600      # J/mol  Pourarian TODO check for PCI curves
+        DS:  -71.94      # J/mol.K  Pourarian
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TGV: The results from Sinha are highly suspect.
+    Every one of the hydrides from a Sinha paper has a very low enthalpy which is
+    not reproduced by other authors. The abstracts from Sinha papers also always seem
+    to note how unusually low the enthalpy value is.
+}
+
+References
+{
+    Pourarian
+    {
+        ID:      SandiaDBRef0551
+        Authors: F. Pourarian, V. K. Sinha, W. E. Wallace
+        Title:   Hydrogen Sorption Properties of Non-Stoichiometric ZrMn2-based Systems
+        Journal: Journal of Less-Common Metals
+        Year:    1984
+        Volume:  96
+        Pages:   237-248
+    }
+}

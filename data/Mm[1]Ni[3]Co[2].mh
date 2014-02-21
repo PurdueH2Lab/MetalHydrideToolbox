@@ -1,0 +1,55 @@
+Name: MmNi3Co
+Elements: [Mm:1, Ni:3, Co:2]
+Type: AB5
+ 
+Thermodynamics
+{
+     
+    Weight Percent: 1.4  # Hovland Table 1
+    
+    Dehydriding 
+    { 
+        DH: -32700      # J/mol Hovland Table 1
+        DS: -120        # J/mol.K Hovland Table 1
+        slope: 0.25     #  Hovland Table 1
+    } 
+    Hydriding
+    {
+        # ln(Pa/Pd) listed as "n/a" in Hovland Table 1
+    }
+}
+ 
+Properties
+{
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Hovland
+    {
+        ID:      NREL/CP-540-36735
+        Authors: V. Hovland
+        Title:   Integrated Cabin and Fuel Cell System Thermal Management with a Metal Hydride Heat Pump
+        Journal: Eighth International Symposium on Metal-Hydrogen Systems
+        Year:    2002
+        Volume:  September 2-6
+        Pages:   CP-540-36735
+    }
+}
+ 
+

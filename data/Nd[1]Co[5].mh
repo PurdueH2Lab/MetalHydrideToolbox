@@ -1,0 +1,49 @@
+Name: NdCo5
+Elements: [Nd:1,Co:5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 0.62  # van Mal
+
+    Dehydriding
+    {
+        DH:  -42700      # J/mol  van Mal
+        DS: -141.71      # J/mol.K  van Mal
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    van Mal
+    {
+        ID:      SandiaDBRef0103
+        Authors: H. H. van Mal
+        Title:   Stability of Ternary Hydrides and Some Applications
+        Journal: Ph.D. Thesis, University of Delft
+        Year:    1976
+        Pages:   1-92
+    }
+}

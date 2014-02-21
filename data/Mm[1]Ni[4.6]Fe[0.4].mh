@@ -1,0 +1,97 @@
+Name: MmNi4.6Fe
+Elements: [Mm:1, Ni:4.6, Fe:0.4]
+Type: AB5
+ 
+Thermodynamics
+{
+	H/M: 7.2  # PCI curves from Muthukumar
+    
+    Dehydriding 
+    { # Values provided by Satheesh cannot be verified and do not make sense. 
+      # Values here are calculated using an assumed hysteresis of 0.2 at 298 K and the PCI curves from Muthukumar
+        DH: -30447      # J/mol  -  Calculated from assumed hysteresis and Tc
+        DS: -127.7      # J/mol.K  -  Calculated from assumed hysteresis and Tc
+        slope: 0.5      # Assumed to match absorption slope from Muthukumar PCI curve
+        
+        From isotherms: true  # really the isotherms are absorption isotherms
+    } 
+    Hydriding
+    {
+        # DH -29220      # J/mol      Fit to PCI curves from Muthukumar
+        # DS -125.2      # J/mol.K    Fit to PCI curves from Muthukumar
+        
+        ln(Pa/Pd): 0.2  # Assumed, along with a Tc of 500 K
+    }
+}
+ 
+Properties
+{
+    keff: 1.6    # W/m.K - SatheeshB Table 2
+    Cp: 419	     # J/kg.K - SatheeshB Table 2
+    rho: 8400    # kg/m3 - SatheeshB Table 2
+}
+ 
+Kinetics
+{
+    Hydriding
+    {   # Rates from Satheesh
+        Ca: 250
+        Ea: 31500
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+    
+    Dehydriding
+    {   # Rates from Satheesh
+        Ca: 120
+        Ea: 28500
+        
+        pFcn: log
+        wFcn: 1st Order 
+    }
+}
+ 
+Notes
+{ 
+    PCI curves are available in doi:10.1016/j.ijhydene.2004.12.007 which can provide better properties.
+    Reference tracing was unable to reveal the source of the desorption thermodynamics...
+}
+        
+References
+{
+    Muthukumar
+    {
+        ID:      10.1016/j.ijhydene.2004.12.007
+        Authors: P. Muthukumar, M. Prakash Maiya, S. Srinivasa Murthy
+        Title:   Experiments on a metal hydride-based hydrogen storage device
+        Journal: International Journal of Hydrogen Energy
+        Year:    2005
+        Volume:  30
+        Pages:   1569-1581
+    }
+    
+    Satheesh
+    {
+        ID:      10.1016/j.ijhydene.2010.04.043
+        Authors: A. Satheesh, P. Muthukumar
+        Title:   Perfomance investigation of double-stage metal hydride based heat pump
+        Journal: International Journal of Hydrogen Energy
+        Year:    2010
+        Volume:  35
+        Pages:   6950-6958
+    }
+    
+    SatheeshB
+    {
+        ID:      10.1016/j.ijhydene.2009.01.083
+        Authors: A. Satheesh, P. Muthukumar, A. Dewan
+        Title:   Computational study of metal hydride cooling system
+        Journal: International Journal of Hydrogen Energy
+        Year:    2009
+        Volume:  34
+        Pages:   3164-3172
+    }
+}
+ 
+

@@ -1,0 +1,67 @@
+Elements: [Ca: 1, Ni: 5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.87   #ref sandrock, different in Liang (1.5 wt%)
+    
+    Dehydriding 
+    { 
+        DH: -31900		# J/mol, ref sandrock
+        DS: -101   		# J/mol.K, ref sandrock, slightly different in Liang
+        slope: 0.19     # Sandrock table 1
+    } 
+    Hydriding
+    {
+        ln(Pa/Pd): 0.16  # Sandrock Table 1
+        
+        # TODO: Liang has PCI curves
+    }
+}
+ 
+Properties
+{
+    rho: 6600		# kg/m^3, ref sandrock
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }
+    
+    Liang
+    {
+        ID:      10.1016/S0925-8388(01)01010-6
+        Authors: G. Liang, J. Huot, R. Schultz
+        Title:   Mechanical alloying and hydrogen storage properties of CaNi5-based alloys
+        Journal: J. of Alloys and Compounds
+        Year:    2001
+        Volume:  321
+        Pages:   146-150
+    }
+}
+ 
+

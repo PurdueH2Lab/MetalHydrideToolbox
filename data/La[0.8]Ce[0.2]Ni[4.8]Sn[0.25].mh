@@ -1,0 +1,51 @@
+Name: La.8Ce.2Ni4.8Sn.25
+Elements: [La:0.8,Ce:0.2,Ni:4.8,Sn:0.25]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 5.5 # Zhang Table 1
+
+    Dehydriding
+    {
+        DH: -32400      # J/mol  Zhang Table 1
+        DS: -110.9      # J/mol.K  Zhang Table 1
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    # TODO Zhang has kinetics
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Zhang
+    {
+        ID:      10.1016/0925-8388(96)02282-7
+        Authors: W. Zhang, M. P. S. Kumar, A. Visintin, S. Srinivasan, H. J. Ploehn
+        Title:   A microcalorimetric investigation of the thermodynamics and kinetics of hydriding-dehydriding reactions
+        Journal: J. of Alloys and Compounds
+        Year:    1996
+        Volume:  242
+        Pages:   143-152
+    }
+}

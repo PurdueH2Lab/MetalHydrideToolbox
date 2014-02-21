@@ -1,0 +1,47 @@
+Elements: [Zr:1, Cr:1, Fe:1, Cu:0.8]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.20  # Wallace
+
+    Dehydriding
+    {
+        DH:  -28000      # J/mol  Wallace
+        DS: -103.68      # J/mol.K  Wallace
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Wallace
+    {
+        ID:      SandiaDBRef1168
+        Authors: W. E. Wallace, F. Pourarian
+        Title:   Hydrogen Storage Materials of Hyperstoichiometric Alloys
+        Year:    1985
+        Other:   U.S. Patent 4,512,965, Apr. 23, 1985
+    }
+}

@@ -1,0 +1,60 @@
+Elements: [Ti:0.56, V:0.30, Zr:0.1, Mn:0.94, Fe:0.06, Ni:0.04]
+Type: AB
+ 
+Thermodynamics
+{
+    Weight Percent: 2.2  # Kapischke
+    
+    Dehydriding 
+    { 
+        DH: -27874   # J/mol - Kapischke isotherm fit
+        DS: -104.1   # J/mol.K - Kapischke isotherm fit
+        slope: 1     # Kapischke isotherm fit (approximate)
+        
+        From isotherms: true
+    } 
+    Hydriding
+    {
+        DH: -26587   # J/mol - Kapischke isotherm fit
+        DS: -101.2   # J/mol.K - Kapischke isotherm fit
+        
+        From isotherms: true
+    }
+}
+ 
+Properties
+{
+    rho: 6200  # kg/m3 - Kapischke Table 1
+    Cp:  480   # J/kg.K - Kapischke Table 1
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Kapischke
+    {
+        ID:      10.1016/S0894-1777(98)10007-9
+        Authors: J. Kapischke, J. Hapke
+        Title:   Measurement of the pressure-composition isotherms of high-temperature and low-temperature metal hydrides
+        Journal: Experimental Thermal and Fluid Science
+        Year:    1998
+        Volume:  18
+        Pages:   70-81  
+    }
+}
+ 
+

@@ -1,0 +1,54 @@
+Name: TiCr1.4Mn0.4
+Elements: [Ti:1, Cr:1.4, Mn:0.4]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.4  # Agresti Figure 5b
+    
+    Dehydriding 
+    { 
+        DH: -28300      # J/mol    - Agresti Figure 5b
+        DS: -122        # J/mol.K  - Agresti Figure 5b (adjusted to fit isotherm)
+        slope: 2.5        # Fit to Agresti isotherm
+        
+        From isotherms: true
+    } 
+    Hydriding
+    {
+    }
+}
+ 
+Properties
+{
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Agresti
+    {
+        ID:      10.1016/j.msea.2008.09.154
+        Authors: F. Agresti, S. Lo Russo, A. Maddalena, G. Principi, G. Mazzolai, B. Coluzzi, A. Biscarini, F. M. Mazzolai, A. Tuissi
+        Title:   Reaction of hydrogen with the Laves phase (C14) TiCr1.78−x Mnx compounds
+        Journal: Materials Science and Engineering
+        Year:    2009
+        Volume:  521-522
+        Pages:   143-146
+    }   
+}
+ 

@@ -1,0 +1,52 @@
+Elements: [Pd:0.88, Pt:0.06, Rh:0.06]
+Type: SS
+
+Thermodynamics
+{
+    H/M: 0.60  # Sakamoto Fig 1
+
+    Dehydriding
+    {
+        DH:  -24800     # J/mol  Sakamoto Table 2 (x2)
+        DS:  -81.4      # J/mol.K  Sakamoto Table 2 (x2), value missing negative sign
+        
+        # TODO Sakamoto has isotherms (Fig 1)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    # TODO Sakamoto has other PdPtRh blends
+}
+
+References
+{
+    Sakamoto
+    {
+        ID:      10.1016/S0925-8388(96)02998-2
+        Authors: Y. Sakamoto, K. Ohira, M. Kokubu, T. B. Flanagan
+        Title:   Thermodynamic properties for solution of hydrogen in Pd-Pt-Rh ternary alloys
+        Journal: J. of Alloys and Compounds
+        Year:    1997
+        Volume:  253-254
+        Pages:   212-215
+    }
+}

@@ -1,0 +1,74 @@
+Elements: [Ti:1, Mn:1.5]
+Type: AB2
+ 
+Thermodynamics
+{
+    Weight Percent: 1.86  # Sandrock Table 1
+    
+    Dehydriding 
+    { 
+        DH: -28700		# J/mol  Sandrock Table 1
+        DS: -114   		# J/mol.K  Sandrock Table 1
+        slope: 0.57     # Sandrock Table 1
+    } 
+    Hydriding
+    {
+        ln(Pa/Pd): 0.93  # Sandrock Table 1
+    }
+}
+ 
+Properties
+{
+    rho: 6400	# kg/m^3 - Sandrock Table 1
+}
+ 
+Kinetics
+{ # TODO: NEEDS A REFERENCE
+
+    Hydriding
+    {
+        Ca: 100    # 1/s
+        Ea: 20700  # J/mol
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+    
+    Dehydriding
+    { 
+        Ca: 100    # 1/s
+        Ea: 20700  # J/mol
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Walker
+    {
+        ID:      1845692705
+        Authors: G. Walker
+        Title:   Solid State Hydrogen Storage: Materials and Chemistry
+        Year:    2008
+        Other:   Woodhead Publishing: Cambridge, England
+    }
+    
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }
+}
+ 
+

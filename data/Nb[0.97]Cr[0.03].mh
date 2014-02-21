@@ -1,0 +1,57 @@
+Elements: [Nb:0.97, Cr:0.03]
+Type: SS
+
+Thermodynamics
+{
+    Weight Percent: 1.0  # Esayed fit to fig 2 isotherms
+
+    Dehydriding
+    {
+        DH: -26822     # J/mol  Esayed fit to fig 2 isotherms
+        DS: -68.5      # J/mol.K  Esayed fit to fig 2 isotherms
+        slope: 0.3     # Esayed fit to fig 2 isotherms
+        
+        From isotherms: true
+    }
+    Hydriding
+    {
+        DH: -18470     # J/mol  Esayed fit to fig 2 isotherms
+        DS: -54.9      # J/mol.K  Esayed fit to fig 2 isotherms
+        
+        From isotherms: true
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    The values in the table in Esayed do not produce reasonable peq values and do not match the reported isotherms.
+}
+
+References
+{
+    Esayed
+    {
+        ID:      10.1016/S0360-3199(99)00025-7
+        Authors: A.Y. Esayed
+        Title:   Hysteresis and thermodynamic characterization of  Nb1-xCrx (X=0.03, 0.05, 0.10)
+        Journal: International Journal of Hydrogen Energy
+        Year:    2000
+        Volume:  25
+        Pages:   363-368
+    }
+}

@@ -1,0 +1,50 @@
+Name: HoCo3
+Elements: [Ho:1,Co:3]
+Type: AB3
+
+Thermodynamics
+{
+    Weight Percent: 1.20  # Wallace
+
+    Dehydriding
+    {
+        DH:  -36000      # J/mol  Wallace
+        DS: -111.37      # J/mol.K  Wallace
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Wallace
+    {
+        ID:      SandiaDBRef0439
+        Authors: W. E. Wallace, R. S. Craig, V. U. S. Rao
+        Title:   Hydrogen Absorption by Intermetallic Compounds
+        Journal: Solid State Chemistry: A Contemporary Overview, Adv. in Chemistry Series, S. L. Holt, J. B. Milstein, and M. Robbins, Eds., ACS
+        Year:    1980
+        Volume:  186
+        Pages:   207-240
+    }
+}

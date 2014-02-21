@@ -1,0 +1,52 @@
+Name: Ce.5La.5Ni2.5Cu2.5
+Elements: [Ce:0.5, La:0.5, Ni:2.5, Cu:2.5]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 5.05             # Pourarian Table 1
+
+    Dehydriding
+    {
+        DH:  -22900      # J/mol  Pourarian Table 3
+        DS:  -87.0       # J/mol.K  Pourarian Table 3
+        
+        # TODO: Pourarian has isotherms
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Pourarian
+    {
+        ID:      10.1016/0360-3199(86)90175-8
+        Authors: F. Pourarian, W.E. Wallace
+        Title:   Stability of Some Ternary and Quatenary CeNi5-Based and PrNi5-Based Hydride Systems
+        Journal: International Journal of Hydrogen Energy
+        Year:    1986
+        Volume:  11
+        Pages:   789-795
+    }
+}

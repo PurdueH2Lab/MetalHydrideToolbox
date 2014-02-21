@@ -1,0 +1,51 @@
+Elements: [Ti:0.8, Zr:0.2, V:0.6, Mn:0.2, Pd:0.1, Ni:0.8, Fe:0.2]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.30  # Yang TODO Could not be confirmed
+
+    Dehydriding
+    {
+        DH:  -46500      # J/mol  Yang TODO Could not be confirmed, 
+        # dH value matches Table 1 for Zr0.5Ti0.5V0.6Mn0.2Pd0.1Ni0.8Fe0.2
+        
+        DS: -117.67      # J/mol.K  Yang TODO Could not be confirmed
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Yang
+    {
+        ID:      10.1149/1.1391753 
+        Authors: X. G. Yang, W. K. Zhang, Y. Q. Lei, Q. D. Wang
+        Title:   Electrochemical Properties of Zr-V-Ni System Hydrogen Storage Alloys
+        Journal: J. Electrochemical Society
+        Year:    1999
+        Volume:  146
+        Pages:   1245-1250
+    }
+}

@@ -1,0 +1,88 @@
+Elements: [La:1, Ni:4.8, Sn:0.2] 
+Type: AB5
+ 
+Thermodynamics
+{
+    Weight Percent: 1.4  #ref walker pp 324 - zhang has H/M: 6.26
+    
+    Dehydriding 
+    { 
+        DH: -34560      # J/mol, Calculated using lexcellent isotherms, Sandrock hystersis, and assumed Tc
+        DS: -108        # J/mol.K, Calculated using lexcellent isotherms, Sandrock hystersis, and assumed Tc
+        slope: 0.22     # Sandrock 
+        
+        From isotherms: true  # confirmed from Lexcellent isotherm fig 5
+    } 
+    Hydriding
+    { 
+	    ln(Pa/Pd): 0.19   # Sandrock
+	    Tc:        500    # K, assumed for closure on Lexcellent isotherms
+    }
+}
+ 
+Properties
+{
+    rho: 8400			# kg/m^3, ref walker pp 324
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Zhang
+    {
+        ID:      10.1016/0925-8388(96)02282-7
+        Authors: W. Zhang, M. P. S. Kumar, A. Visintin, S. Srinivasan, H. J. Ploehn
+        Title:   A microcalorimetric investigation of the thermodynamics and kinetics of hydriding-dehydriding reactions
+        Journal: J. of Alloys and Compounds
+        Year:    1996
+        Volume:  242
+        Pages:   143-152
+    }
+    
+    Walker
+    {
+        ID:      1845692705
+        Authors: G. Walker
+        Title:   Solid State Hydrogen Storage: Materials and Chemistry
+        Year:    2008
+        Other:   Woodhead Publishing: Cambridge, England
+    }
+    
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }
+    
+    Lexcellent
+    {
+        ID:      10.1016/j.intermet.2006.11.002
+        Authors: Ch. Lexcellent, G. Gondor
+        Title:   Analysis of hydride formation for hydrogen storage: Pressure-composition isotherm curves modeling
+        Journal: Intermetallics
+        Year:    2007
+        Volume:  15
+        Pages:   934-944
+    }
+}
+ 
+

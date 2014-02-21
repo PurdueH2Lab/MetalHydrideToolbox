@@ -1,0 +1,64 @@
+Name: LaNi4.25Al
+Elements: [La:1, Ni:4.25, Al:0.75]
+Type: AB5
+ 
+Thermodynamics
+{
+    Weight Percent: 1.13  #ref sandrock or walker pp 324
+    
+    Dehydriding 
+    { 
+        DH: -44100		# J/mol, ref sandrock or walker pp 324
+        DS: -117   		# J/mol.K, ref sandrock or walker pp 324
+        slope: 2.7      # Sandrock table 1
+    } 
+    Hydriding
+    {
+        ln(Pa/Pd): 0.23   # Sandrock table 1
+    }
+}
+ 
+Properties
+{
+    rho: 7600			# kg/m^3, ref sandrock or walker pp 324
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Walker
+    {
+        ID:      1845692705
+        Authors: G. Walker
+        Title:   Solid State Hydrogen Storage: Materials and Chemistry
+        Year:    2008
+        Other:   Woodhead Publishing: Cambridge, England
+    }
+    
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }
+}
+ 
+

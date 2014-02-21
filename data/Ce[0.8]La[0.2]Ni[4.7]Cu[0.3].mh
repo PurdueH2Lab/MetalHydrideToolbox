@@ -1,0 +1,56 @@
+Elements: [Ce:0.8, La:0.2, Ni:4.7, Cu:0.3]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 7  # Klyamkin Fig 6
+
+    Dehydriding
+    {
+        DH:  -30053      # J/mol  Klyamkin isotherm fit Fig 6
+        DS:  -127.4      # J/mol.K  Klyamkin isotherm fit Fig 6
+        slope: 0.2       # Klyamkin isotherm fit Fig 6
+        
+        From Isotherms: true
+    }
+    Hydriding
+    {
+        DH:  -22880      # J/mol  Klyamkin isotherm fit Fig 6
+        DS:  -111.0      # J/mol.K  Klyamkin isotherm fit Fig 6
+        
+        From Isotherms: true
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Klyamkin
+    {
+        ID:      10.1016/0925-8388(95)01869-7
+        Authors: S. N. Klyamkin, V. N. Verbetsky, A. A. Karih
+        Title:   Thermodynamic particularities of some CeNi5-based metal hydride systems with high dissociation pressure
+        Journal: J. of Alloys and Compounds
+        Year:    1995
+        Volume:  231
+        Pages:   479-482
+    }
+}

@@ -1,0 +1,56 @@
+Elements: [Ti: 1.0, Mn:1.4] 
+Type: AB2  # TODO: True? or is it an AB?
+ 
+Thermodynamics
+{
+    H/M: 2.2 # Taizhong 
+    
+    Dehydriding 
+    { 
+        DH:  -28413    #J/mol Taizhong PCI curve fit
+        DS:  -105.8    #J/mol.K Taizhong PCI curve fit
+        slope: 3.5     # Taizhong PCI curve fit
+        
+        From isotherms: true
+    } 
+    Hydriding
+    {
+        DH:  -22195    #J/mol Taizhong PCI curve fit
+        DS:  -88.7     #J/mol.K Taizhong PCI curve fit
+        
+        From isotherms: true
+    }
+}
+ 
+Properties
+{
+}
+ 
+Kinetics
+{
+    Hydriding
+    {
+    }
+    
+    Dehydriding
+    {
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Taizhong
+    {
+        ID:      10.1016/j.intermet.2003.08.005
+        Authors: H. Taizhong, W. Zhu, Y. Xuebin, C. Jinzhou, X. Baojia, H. Tiesheng, X. Naixin
+        Title:   Hydrogen absorption–desorption behavior of zirconium-substituting Ti–Mn based hydrogen storage alloys
+        Journal: Intermetallics
+        Year:    2004
+        Volume:  12
+        Pages:   91-96
+    }
+}

@@ -1,0 +1,90 @@
+Name: Ti0.99ZrVFeCrMn
+Elements: [Ti:0.99, Zr:0.01, V:0.43, Fe:0.09, Cr:0.05, Mn:1.5]
+Type: AB2
+ 
+Thermodynamics
+{
+    Weight Percent: 1.75 # TODO: Ref?
+    
+    Dehydriding 
+    {
+        DH:  -25980		# J/mol - Satheesh B Table 1
+        DS:  -112.6   	# J/mol.K - Satheesh B Table 1
+        slope: 0.3      # Satheesh B
+    } 
+    Hydriding
+    {
+        DH: -20120 		# J/mol  - Satheesh B Table 1
+        DS: -97.4   	# J/mol.K  - Satheesh B Table 1
+    }
+}
+ 
+Properties
+{
+    keff: 1.6    # W/m.K    TODO: Ref?
+    Cp: 419      # J/kg.K   TODO: Ref?
+    rho: 8400    # kg/m^3   TODO: Ref?
+}
+ 
+Kinetics
+{
+    Hydriding
+    {   # Rates from Satheesh A
+        Ca: 305
+        Ea: 31400
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+    
+    Dehydriding
+    {   # Rates from Satheesh A
+        Ca: 65
+        Ea: 29000
+        
+        pFcn: log
+        wFcn: 1st Order 
+    }
+}
+ 
+Notes
+{ 
+}
+        
+References
+{
+    SatheeshA
+    {
+        ID:      10.1016/j.ijhydene.2010.04.043
+        Authors: A. Satheesh, P. Muthukumar
+        Title:   Perfomance investigation of double-stage metal hydride based heat pump
+        Journal: International Journal of Hydrogen Energy
+        Year:    2010
+        Volume:  35
+        Pages:   6950-6958
+    }
+    
+    SatheeshB
+    {
+        ID:      10.1016/j.applthermaleng.2010.07.021
+        Authors: A. Satheesh, P. Muthukumar
+        Title:   Perfomance investigation of double-stage metal hydride based heat pump
+        Journal: Applied Thermal Engineering
+        Year:    2010
+        Volume:  30
+        Pages:   2698-2707
+    }
+    
+    Paya
+    {
+        ID:      10.1016/j.ijhydene.2010.08.112
+        Authors: J. Paya, M. Linder, R. Mertz, J. Corberan
+        Title:   Analysis and optimization of a metal hydride cooling system
+        Journal: International Journal of Hydrogen Energy
+        Year:    2011
+        Volume:  36
+        Pages:   920-930
+    }
+}
+ 
+

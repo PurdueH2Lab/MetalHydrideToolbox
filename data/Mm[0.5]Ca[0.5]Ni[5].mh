@@ -1,0 +1,49 @@
+Name: Mm.5Ca.5Ni5
+Elements: [Mm:0.5,Ca:0.5,Ni:5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.30  # Osumi
+
+    Dehydriding
+    {
+        DH:  -27600      # J/mol  Osumi
+        DS: -108.54      # J/mol.K  Osumi
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Osumi
+    {
+        ID:      SandiaDBRef0117
+        Authors: Y. Osumi, H. Suzuki, A. Kato, M. Nakane, Y. Miyake
+        Title:   Absorption-Desorption Characteristics of Hydrogen for Mischmetal Based Alloys
+        Journal: J. of Chem. Soc. Japan, Chem. and Industrial Chem.
+        Year:    1978
+        Pages:   1472-1477
+    }
+}

@@ -1,0 +1,86 @@
+Name: MmNi4.15Fe
+Elements: [Mm:1, Ni:4.15, Fe:0.85]
+Type: AB5
+ 
+Thermodynamics
+{
+    Weight Percent: 1.14 # Sandrock Table 1
+    
+    Dehydriding 
+    { 
+        DH: -25300		# J/mol - Sandrock Table 1
+        DS: -105   		# J/mol.K - Sandrock Table 1
+        slope: 0.17     # Sandrock Table 1
+    } 
+    Hydriding
+    {
+        ln(Pa/Pd): 0.36  # Sandrock Table 1
+    }
+}
+ 
+Properties
+{
+    rho: 8100			# kg/m3 - Sandrock Table 1
+}
+ 
+Kinetics
+{
+    Hydriding
+    {   # Rates from Satheesh
+        Ca: 300
+        Ea: 26000
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+    
+    Dehydriding
+    {   # Rates from Satheesh
+        Ca: 40
+        Ea: 25000
+        
+        pFcn: log
+        wFcn: 1st Order 
+    }
+}
+ 
+Notes
+{
+    Values in Satheesh Table 1 appear to be switched for Abs/des
+}
+        
+References
+{
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }
+    
+    Walker
+    {
+        ID:      1845692705
+        Authors: G. Walker
+        Title:   Solid State Hydrogen Storage: Materials and Chemistry
+        Year:    2008
+        Other:   Woodhead Publishing: Cambridge, England
+    }
+    
+    Satheesh
+    {
+        ID:      10.1016/j.ijhydene.2010.04.043
+        Authors: A. Satheesh, P. Muthukumar
+        Title:   Perfomance investigation of double-stage metal hydride based heat pump
+        Journal: International Journal of Hydrogen Energy
+        Year:    2010
+        Volume:  35
+        Pages:   6950-6958
+    }
+}
+ 
+

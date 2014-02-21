@@ -1,0 +1,50 @@
+Name: MmNi4.5Cr.5
+Elements: [Mm:1,Ni:4.5,Cr:0.5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.20  # Suzuki
+
+    Dehydriding
+    {
+        DH:  -25500      # J/mol  Suzuki
+        DS: -100.03      # J/mol.K  Suzuki
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Suzuki
+    {
+        ID:      SandiaDBRef0125
+        Authors: H. Suzuki, Y. Osumi, A. Kato, M. Nakane
+        Title:   Hydrogen Absorption-Desorption Characterisitcs of Mischmetal-Nickel-Chromium Alloys
+        Journal: J. of the Chem. Soc. of Japan, Chem. and Indust. Chem.
+        Year:    1981
+        Volume:  7
+        Pages:   1065-1069
+    }
+}

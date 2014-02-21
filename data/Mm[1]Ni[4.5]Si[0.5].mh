@@ -1,0 +1,52 @@
+Elements: [Mm:1, Ni:4.5, Si:0.5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 0.9  # Osumi Summary page 1
+
+    Dehydriding
+    {
+        DH: -27600  # J/mol  Osumi Table 2
+        DS: -109.6  # J/mol.K  Osumi Table 2
+        
+        # TODO Osumi has isotherms (Fig 6)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Osumi also has MmNi4.2Si0.8
+}
+
+References
+{
+    Osumi
+    {
+        ID:      10.1016/0022-5088(82)90133-3
+        Authors: Y. Osumi, H. Suzuki, A. Kato, M. Nakane
+        Title:   Hydrogen Absorption-Desorption Characteristics of Mischmetal-Nickel-Silicon Alloys
+        Journal: Journal of Less-Common Metals
+        Year:    1982
+        Volume:  84
+        Pages:   99-106
+    }
+}

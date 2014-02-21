@@ -1,0 +1,50 @@
+Name: HoNi4Al
+Elements: [Ho:1,Ni:4,Al:1]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 0.90  # Sorgic
+
+    Dehydriding
+    {
+        DH:  -35900      # J/mol  Sorgic
+        DS: -119.28      # J/mol.K  Sorgic
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Sorgic
+    {
+        ID:      SandiaDBRef0635
+        Authors: B. Sorgic, A. Drasner, Z. Blazina
+        Title:   A Search for Hydrogen Storage Materials other than LaNi5-xAlx in the RENi5-xAlx (RE=Rare Earth) Intermetallic Series
+        Journal: HYDROGEN ENERGY PROGRESS XI, T.N. Veziroglu, C.-J. Winter, J.P. Baselt and G. Kreysa, Eds., Int. Assoc. of Hydrogen Energy
+        Year:    1996
+        Volume:  3
+        Pages:   2645-2650
+    }
+}

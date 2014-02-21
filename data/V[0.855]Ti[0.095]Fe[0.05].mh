@@ -1,0 +1,52 @@
+Elements: [V:0.855, Ti:0.095, Fe:0.05]
+Type: SS
+
+Thermodynamics
+{
+    Weight Percent: 3.7     # Sandrock Table 5
+    
+    Dehydriding 
+    { 
+        DH: -43200		# J/mol - Sandrock Table 5
+        DS: -140   		# J/mol.K - Sandrock Table 5
+        slope: 0.45     # Sandrock Table 5
+    } 							
+    Hydriding
+    {
+        ln(Pa/Pd): 0.80  # Sandrock Table 5
+    }
+}
+ 
+Properties
+{
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }  
+}
+ 

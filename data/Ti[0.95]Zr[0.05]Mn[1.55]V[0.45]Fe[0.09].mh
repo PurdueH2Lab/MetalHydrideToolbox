@@ -1,0 +1,83 @@
+Elements: [Ti: 0.95, Zr:0.05, Mn:1.55, V:0.45, Fe:0.09] # Composition from Herbrig
+Type: AB2
+
+Thermodynamics
+{
+    H/M: 3.09  # From herbrig
+    
+    Dehydriding 
+    { 
+        DH: -28400      # J/mol from Herbrig (does not match PCI data though, need to fix), Vanhanan gives 29.9 kJ/mol
+        DS: -112        # J/mol.K from Herbrig (does not match PCI data though, need to fix), Vanhanan gives 115 J/mol.K
+        slope: 0.99     # vanhanen, value is an average of 0.4 and 0.7
+        
+        From isotherms: true
+    } 
+    Hydriding
+    {
+        DH: -22300      # J/mol from Herbrig (does not match PCI data though, need to fix), Vanhanan gives 24.6 kJ/mol
+        DS: -95.3       # J/mol.K from Herbrig (does not match PCI data though, need to fix), Vanhanan gives 101.9 J/mol.K
+        
+        From isotherms: true
+    }
+}
+ 
+Properties
+{ # Properties from Herbrig
+    keff: 1      # W/m.K (loose powder)
+    Cp: 500      # J/kg.K
+    rho: 6100    # kg/m3
+}
+ 
+Kinetics
+{ # TODO All kinetics from Herbrig, I do not trust them, 6e6 is insanely fast
+
+    Hydriding
+    {    
+        Ea 40045     # J/mol
+        Ca 6e6       # 1/s
+        
+        pFcn linear
+        wFcn 1st Order
+    }
+    
+    Dehydriding
+    { 
+        Ea 40045     # J/mol
+        Ca 6e6       # 1/s
+        
+        pFcn linear
+        wFcn 1st Order
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Vanhanen
+    {
+        ID:      10.1016/S0360-3199(98)00095-0
+        Authors: J. P. Vanhanen, M. T. Hagstrom, P. D. Lund
+        Title:   Combined hydrogen compressing and heat transforming through metal hydrides
+        Journal: International Journal of Hydrogen Energy
+        Year:    1999
+        Volume:  24
+        Pages:   441-448  
+    }
+    
+    Herbrig
+    {
+        ID:      10.1016/j.ijhydene.2013.03.104
+        Authors: K. Herbrig, L. Rontzsch, C. Pohlmann, T. Weibgarber, B. Kieback
+        Title:   Hydrogen storage systems based on hydride-graphite composites: computer simulation and experimental validation
+        Journal: International Journal of Hydrogen Energy
+        Year:    2013
+        Volume:  38
+        Pages:   7026-7036
+    }
+}
+ 
+

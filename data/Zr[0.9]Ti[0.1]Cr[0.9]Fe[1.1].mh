@@ -1,0 +1,67 @@
+Name: ZrTiCrFe1.1
+Elements: [Zr:0.9, Ti:0.1, Cr:0.9, Fe:1.1]
+Type: AB2
+
+Thermodynamics
+{
+    H/M: 3  #assumption
+    
+    Dehydriding 
+    { 
+        DH: -34710		# J/mol
+        DS: -104.97   	# J/mol.K
+    } 
+    Hydriding
+    {
+        DH: -29650 		# J/mol
+        DS: -92   		# J/mol.K
+    }
+}
+ 
+Properties
+{
+    keff: 1.6		# W/m.K
+    Cp: 419			# J/kg.K
+    rho: 8400		# kg/m^3
+}
+ 
+Kinetics
+{
+    Hydriding
+    {   # Rates from Satheesh
+        Ca: 145
+        Ea: 30000
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+    
+    Dehydriding
+    {   # Rates from Satheesh
+        Ca: 20
+        Ea: 25500
+        
+        pFcn: log
+        wFcn: 1st Order 
+    }
+}
+ 
+Notes
+{  
+}
+        
+References
+{
+    Satheesh
+    {
+        ID:      10.1016/j.ijhydene.2010.04.043
+        Authors: A. Satheesh, P. Muthukumar
+        Title:   Perfomance investigation of double-stage metal hydride based heat pump
+        Journal: International Journal of Hydrogen Energy
+        Year:    2010
+        Volume:  35
+        Pages:   6950-6958
+    }
+}
+ 
+

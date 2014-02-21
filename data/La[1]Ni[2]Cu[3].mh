@@ -1,0 +1,50 @@
+Name: LaNi2Cu3
+Elements: [La:1,Ni:2,Cu:3]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 0.90  # Ganich
+
+    Dehydriding
+    {
+        DH:  -32000      # J/mol  Ganich
+        DS: -104.64      # J/mol.K  Ganich
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Ganich
+    {
+        ID:      SandiaDBRef1523
+        Authors: E.A. Ganich, N.A. Yakolova, K.N. Semenenko
+        Title:   Study of hydrogen interaction with intermetallic compounds LaNi5-xCux, where x=2,3
+        Journal: J. of General Chemistry (Russian)
+        Year:    1999
+        Volume:  69
+        Pages:   1288-1295
+    }
+}

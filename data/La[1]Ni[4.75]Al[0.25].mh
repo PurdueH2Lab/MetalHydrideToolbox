@@ -1,0 +1,50 @@
+Name: LaNi4.75Al0.25
+Elements: [La:1,Ni:4.75,Al:0.25]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.20  # Filatova
+
+    Dehydriding
+    {
+        DH:  -33700      # J/mol  Filatova
+        DS: -110.88      # J/mol.K  Filatova
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Filatova
+    {
+        ID:      SandiaDBRef1522
+        Authors: E.A. Filatova, N.A. Yakolova, K.N. Semenenko
+        Title:   Calorimetric study of interaction in LaNi4.75Al0.25-H2 and LaNi4.8Sn0.2-H2 systems
+        Journal: Proc. Academy of Sciences USSR, Chemistry
+        Year:    1999
+        Volume:  10
+        Pages:   1841-1844
+    }
+}

@@ -1,0 +1,50 @@
+Name: LaNi4Fe0.5Cu0.5
+Elements: [La:1,Ni:4,Fe:0.5,Cu:0.5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.30  # Burnasheva
+
+    Dehydriding
+    {
+        DH:  -36100      # J/mol  Burnasheva
+        DS: -116.21      # J/mol.K  Burnasheva
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Burnasheva
+    {
+        ID:      SandiaDBRef1528
+        Authors: V.V. Burnasheva, L.A. Petrova, K.N. Semenenko
+        Title:   Hydrogen interaction with LaNi5-x(T1T2)x, where T1T2=Al,Ce,Fe,Cu
+        Journal: J. of Inorganic Chemistry (Russian)
+        Year:    1984
+        Volume:  29
+        Pages:   869-874
+    }
+}

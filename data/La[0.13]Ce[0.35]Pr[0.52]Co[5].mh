@@ -1,0 +1,50 @@
+Name: La0.13Ce0.35Pr0.52Co5
+Elements: [La:0.13,Ce:0.35,Pr:0.52,Co:5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 0.80  # Sarynin
+
+    Dehydriding
+    {
+        DH:  -40000      # J/mol  Sarynin
+        DS: -134.43      # J/mol.K  Sarynin
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Sarynin
+    {
+        ID:      SandiaDBRef1526
+        Authors: V.K. Sarynin, V.V. Burnasheva, K.N. Semenenko
+        Title:   Systems R1-x-yRxRyCo5-H2, where R=rare earth metal
+        Journal: Bulletin of Moscow University, Chemistry Series
+        Year:    1981
+        Volume:  22
+        Pages:   494-498
+    }
+}

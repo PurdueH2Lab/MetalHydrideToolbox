@@ -1,0 +1,50 @@
+Name: Ti.46Fe.45V.05Mn.05
+Elements: [Ti:0.46,Fe:0.45,V:0.05,Mn:0.05]
+Type: AB
+
+Thermodynamics
+{
+    Weight Percent: 1.70  # Mitrokhin
+
+    Dehydriding
+    {
+        DH:  -28600      # J/mol  Mitrokhin
+        DS: -102.66      # J/mol.K  Mitrokhin
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Mitrokhin
+    {
+        ID:      SandiaDBRef0396
+        Authors: S. V. Mitrokhin, V. N. Verbetsky, C. Hong, Y. Zhang
+        Title:   Hydriding Characteristics of FeTi-Based Ti-Fe-V-Mn Alloy
+        Journal: Z. Phys. Chem. NF
+        Year:    1993
+        Volume:  181
+        Pages:   283-287
+    }
+}

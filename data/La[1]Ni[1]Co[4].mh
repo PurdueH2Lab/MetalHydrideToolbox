@@ -1,0 +1,51 @@
+Name: LaNiCo4
+Elements: [La:1,Ni:1,Co:4]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 3.5  # Colinet - text on page 115
+
+    Dehydriding
+    {
+        DH: -44900      # J/mol  Colinet Table 4
+        DS: -128.5      # J/mol.K  Colinet Table 4
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Colinet Table 4 has lots of hydride DH and DS values
+}
+
+References
+{
+    Colinet
+    {
+        ID:      10.1016/0022-5088(87)90447-4
+        Authors: C. Colinet, A. Pasturel, A. Percheron-Guegan, J. C. Achard
+        Title:   Enthalpies of Formation and Hydrogenation of La(ni(1-x)Cox)5 Compounds
+        Journal: Journal of Less-Common Metals
+        Year:    1987
+        Volume:  134
+        Pages:   109-122
+    }
+}

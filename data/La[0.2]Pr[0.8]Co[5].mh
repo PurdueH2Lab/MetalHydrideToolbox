@@ -1,0 +1,50 @@
+Name: La0.2Pr0.8Co5
+Elements: [La:0.2,Pr:0.8,Co:5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 0.70  # Burnasheva
+
+    Dehydriding
+    {
+        DH:  -38000      # J/mol  Burnasheva
+        DS: -117.41      # J/mol.K  Burnasheva
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Burnasheva
+    {
+        ID:      SandiaDBRef1517
+        Authors: V.V. Burnasheva, V.K. Sarynin, K.N. Semenenko
+        Title:   La1-xPrxCo5-H2 and Ce1-xPrxCo5-H2 systems
+        Journal: VINITI Depositor, Bulletin of Moscow University
+        Year:    1978
+        Volume:  3575-78
+        Pages:   1-19
+    }
+}

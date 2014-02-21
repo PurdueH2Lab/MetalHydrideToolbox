@@ -1,0 +1,51 @@
+Elements: [Mm:1,Ni:4.4,Al:0.6]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.20  # Iwakura
+
+    Dehydriding
+    {
+        DH:  -30000      # J/mol  Iwakura TODO Read from isotherms
+        DS: -104.72      # J/mol.K  Iwakura TODO Read from isotherms
+        
+        # TODO Iwakura has isotherm (fig 1)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Iwakura
+    {
+        ID:      10.1016/0013-4686(95)00283-K
+        Authors: C. Iwakura, T. Oura, H. Inoue, M. Matsuoka
+        Title:   Effects of Substitutions with Foreign Metals on the Crystallographic, Thermodynamic and Electrochemical Properties of AB5-Type Hydrogen Storage Alloys
+        Journal: Electrochemica Acta
+        Year:    1995
+        Volume:  41
+        Pages:   117-121
+    }
+}

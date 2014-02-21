@@ -1,0 +1,51 @@
+Elements: [Ti:1, Fe:0.8, Cr:0.2]
+Type: AB
+
+Thermodynamics
+{
+    H/M: 2  # Assumed
+
+    Dehydriding
+    {
+        DH: -35564      # J/mol  Mintz Table 2 (8.5 kcal)
+        DS: -107.5      # J/mol.K  Mintz Table 2 (25.7 cal)
+    }
+    Hydriding
+    {
+        DH: -33054      # J/mol  Mintz Table 2 (7.9 kcal)
+        DS: -102.5      # J/mol.K  Mintz Table 2 (24.5 cal)
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Mintz
+    {
+        ID:      10.1063/1.329808  
+        Authors: M. H. Mintz, S. Vaknin, S. Biderman, Z. Hadari
+        Title:   Hydrides of Ternary TiFexM1-x (M=Cr,Mn,Co,Ni) Intermetallics
+        Journal: J. Appl. Phys.
+        Year:    1981
+        Volume:  52
+        Pages:   463-467
+    }
+}

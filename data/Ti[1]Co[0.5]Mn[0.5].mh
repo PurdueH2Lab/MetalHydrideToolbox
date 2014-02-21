@@ -1,0 +1,49 @@
+Elements: [Ti:1, Co:0.5, Mn:0.5]
+Type: AB
+
+Thermodynamics
+{
+    Weight Percent: 1.60  # Osumi Table 1
+
+    Dehydriding
+    {
+        DH:  -46860      # J/mol  Osumi Table 1 (11.2 kcal)
+        DS: -132.2       # J/mol.K  Osumi Table 1 (31.6 cal)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Osumi
+    {
+        ID:      10.1016/0022-5088(80)90254-4
+        Authors: Y. Osumi, H. Suzuki, A. Kato, M. Nakane, Y. Miyake
+        Title:   Hydrogen Absorption-Desorption Characteristics of Titanium-Cobalt-Manganese Alloys
+        Journal: Journal of Less-Common Metals
+        Year:    1980
+        Volume:  72
+        Pages:   79-86
+    }
+}

@@ -1,0 +1,50 @@
+Name: ZrCr1.2Ni.8
+Elements: [Zr:1,Cr:1.2,Ni:0.8]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 2.00  # Boulghallat
+
+    Dehydriding
+    {
+        DH:  -56400      # J/mol  Boulghallat
+        DS: -152.83      # J/mol.K  Boulghallat
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Boulghallat
+    {
+        ID:      SandiaDBRef0375
+        Authors: M. Boulghallat, N. Gerard, O. Canet, A. Percheron-Guegan
+        Title:   Correlation Between structure and Hydriding Behaviors in Laves Phases: Zr(MxCr1-x)2, M=Fe,Ni
+        Journal: Z. Phys. Chem. NF
+        Year:    1993
+        Volume:  79
+        Pages:   199-209
+    }
+}

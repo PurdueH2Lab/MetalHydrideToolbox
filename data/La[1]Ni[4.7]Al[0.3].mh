@@ -1,0 +1,104 @@
+Elements: [La:1, Ni:4.7, Al:0.3]
+Type: AB5
+ 
+Thermodynamics
+{
+    Weight Percent: 1.35  #1.44 # Hovland Table 1
+    
+    Dehydriding 
+    { 
+        DH: -28511      # J/mol, ref veeraju  (listed as 34000 in Hovland), from isotherms in Lexcellent
+        DS: -90.1       # J/mol.K, ref veeraju (listed as 106.8 in Hovland), from isotherms in Lexcellent
+        slope: 0.48     # Hovland Table 1, from isotherms in Lexcellent
+        
+        From Isotherms: true
+    } 
+    Hydriding
+    {
+        DH: -27499      # J/mol, Lexcellent isotherm fit
+        DS: -88.4       # J/mol.K, Lexcellent isotherm fit
+        
+        From Isotherms: true
+    }
+}
+ 
+Properties
+{
+    keff: 5     # W/m.K, ref veeraju
+    Cp: 419     # J/kg.K, ref veeraju
+    rho: 8000   # kg/m^3, ref veeraju
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+	    Ca: 1000  # 1/s, Veeraju
+	    Ea: 30000 # J/mol, ref veeraju
+	
+        pFcn: linear
+        wFcn: 1st Order
+    }
+    
+    Dehydriding
+    { 
+        Ca: 1000  # 1/s, Veeraju
+	    Ea: 30000 # J/mol, ref veeraju
+	
+        pFcn: linear
+        wFcn: 1st Order
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Veeraju
+    {
+        ID:      10.1016/j.ijhydene.2009.03.022
+        Authors: C. Veerraju, M. R. Gopal
+        Title:   Heat and mass transfer studies on elliptical metal hydride tubes and tube banks
+        Journal: International Journal of Hydrogen Energy
+        Year:    2009
+        Volume:  34
+        Pages:   4340-4350
+    }
+    
+    Huston
+    {
+        ID:      10.1016/0022-5088(80)90182-4
+        Authors: E. Huston, G. Sandrock
+        Title:   Engineering properties of metal hydrides
+        Journal: Journal of Less Common Metals
+        Year:    1980
+        Volume:  74
+        Pages:   435-443
+    }
+    
+    Hovland
+    {
+        ID:      NREL/CP-540-36735
+        Authors: V. Hovland
+        Title:   Integrated Cabin and Fuel Cell System Thermal Management with a Metal Hydride Heat Pump
+        Journal: Eighth International Symposium on Metal-Hydrogen Systems
+        Year:    2002
+        Volume:  September 2-6
+        Pages:   CP-540-36735
+    }
+    
+    Lexcellent
+    {
+        ID:      10.1016/j.intermet.2006.11.002
+        Authors: Ch. Lexcellent, G. Gondor
+        Title:   Analysis of hydride formation for hydrogen storage: Pressure-composition isotherm curves modeling
+        Journal: Intermetallics
+        Year:    2007
+        Volume:  15
+        Pages:   934-944
+    }
+}
+ 
+

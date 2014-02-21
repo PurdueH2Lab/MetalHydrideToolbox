@@ -1,0 +1,50 @@
+Name: LaNi4.6Cu0.3Mn0.1
+Elements: [La:1,Ni:4.6,Cu:0.3,Mn:0.1]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.40  # Ganich
+
+    Dehydriding
+    {
+        DH:  -32000      # J/mol  Ganich
+        DS: -103.85      # J/mol.K  Ganich
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Ganich
+    {
+        ID:      SandiaDBRef1521
+        Authors: E.A. Ganich, E.A. Lyandina, E.P. Khoroshutina, N.A. Yakovleva, K.N. Semenenko
+        Title:   Calorimetric study of hydrogen interaction with LaNi4.9Mn0.1 and LaNi4.6Cu0.3Mn0.1
+        Journal: J. of General Chemistry (Russian)
+        Year:    1999
+        Volume:  69
+        Pages:   353-357
+    }
+}

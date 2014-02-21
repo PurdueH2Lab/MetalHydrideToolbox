@@ -1,0 +1,55 @@
+Name: PrNi4.5Fe.5
+Elements: [Pr:1, Ni:4.5, Fe:0.5]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 5.5             # Pourarian Table 1
+    
+    Dehydriding
+    {
+        DH:  -20500      # J/mol  Pourarian Table 3
+        DS:  -84.4       # J/mol.K  Pourarian Table 3
+        
+        # TODO: Pourarian has isotherms
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    Appears to have multiple plateaus from Pourarian isotherms, values are from the larger plateau
+    
+    TODO: Table 3 also includes values for CeNi2.5Cu2.5 and CeNi4.25Mn0.25 thermodynamics
+}
+
+References
+{
+    Pourarian
+    {
+        ID:      10.1016/0360-3199(86)90175-8
+        Authors: F. Pourarian, W.E. Wallace
+        Title:   Stability of Some Ternary and Quatenary CeNi5-Based and PrNi5-Based Hydride Systems
+        Journal: International Journal of Hydrogen Energy
+        Year:    1986
+        Volume:  11
+        Pages:   789-795
+    }
+}

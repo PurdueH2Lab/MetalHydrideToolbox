@@ -1,0 +1,73 @@
+Name: Ti1.01CrMn
+Elements: [Ti:1.01, Cr:1.06, Mn:1]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.8  # Voskuilen
+    
+    Dehydriding 
+    { 
+        DH: -21800       # J/mol - Voskuilen
+        DS: -111.9       # J/mol.K - Voskuilen
+        slope: 0         # Voskuilen
+        
+        From isotherms: true
+    } 
+    Hydriding
+    {
+        DH: -13300 			# J/mol - Voskuilen
+        DS: -89.5   		# J/mol.K - Voskuilen
+        
+        From isotherms: true
+    }
+}
+ 
+Properties
+{
+    keff: 0.7		# W/m.K - Flueckiger
+    Cp: 500			# J/kg.K - Flueckiger
+    rho: 6400		# kg/m^3 - Flueckiger
+}
+ 
+Kinetics
+{ #TODO - get kinetics from Voskuilen
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Voskuilen
+    {
+        ID:      10.1016/j.ijhydene.2010.07.169
+        Authors: T. Voskuilen, Y. Zheng, T. Pourpoint
+        Title:   Development of a Sievert apparatus for characterization of high pressure hydrogen sorption materials
+        Journal: International Journal of Hydrogen Energy
+        Year:    2010
+        Volume:  35
+        Pages:   10387-10395
+    }
+    
+    Flueckiger
+    {
+        ID:      10.1016/j.ijhydene.2010.07.169
+        Authors: S. Flueckiger, T. Voskuilen, T. Pourpoint, T. Fisher, T. Zheng
+        Title:   In situ characterization of metal hydride thermal transport properties
+        Journal: International Journal of Hydrogen Energy
+        Year:    2010
+        Volume:  35
+        Pages:   614-621
+    }
+}
+ 
+

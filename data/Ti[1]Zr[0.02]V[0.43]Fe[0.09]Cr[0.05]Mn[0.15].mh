@@ -1,0 +1,51 @@
+Name: TiZrVFeCrMn
+Elements: [Ti:1, Zr:0.02, V:0.43, Fe:0.09, Cr:0.05, Mn:0.15]
+Type: AB
+
+Thermodynamics
+{
+    Weight Percent: 1.9
+    
+    Dehydriding 
+    { 
+        DH: -27400		# J/mol
+        DS: -122   		# J/mol.K
+    } 
+    Hydriding
+    {
+    }
+}
+ 
+Properties
+{
+    rho: 5800	# kg/m^3
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Walker
+    {
+        ID:      1845692705
+        Authors: G. Walker
+        Title:   Solid State Hydrogen Storage: Materials and Chemistry
+        Year:    2008
+        Other:   Woodhead Publishing: Cambridge, England
+    }
+}
+ 
+

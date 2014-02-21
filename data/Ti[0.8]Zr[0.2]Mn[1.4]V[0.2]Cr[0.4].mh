@@ -1,0 +1,49 @@
+Name: Ti.8Zr.2Mn1.4V.2Cr.4
+Elements: [Ti:0.8,Zr:0.2,Mn:1.4,V:0.2,Cr:0.4]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.90  # Gamo
+
+    Dehydriding
+    {
+        DH:  -29000      # J/mol  Gamo
+        DS: -117.19      # J/mol.K  Gamo
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Gamo
+    {
+        ID:      SandiaDBRef0031
+        Authors: T. Gamo, Y. Moriwaki, N. Yanagihara, T. Yamashita, T. Iwaki
+        Title:   Formation and Properties of Titanium-Manganese Alloy Hydrides
+        Journal: Hydrogen Energy Progress III; Proc. 3rd World Hydrogen Energy Conf., Tokyo, Japan
+        Year:    1980
+        Pages:   2127-2144
+    }
+}

@@ -1,0 +1,64 @@
+Elements: [Zr:0.8, Ti:0.2, Fe:1, Mn:1]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.40  # Park
+
+    Dehydriding
+    {
+        DH: -29600      # J/mol  Hagstrom Table 1
+        DS: -101.3      # J/mol.K  Hagstrom Table 1
+        
+        # TODO Park has isotherm (fig 1)
+    }
+    Hydriding
+    {
+        DH: -21600      # J/mol  Hagstrom Table 1
+        DS: -87.9       # J/mol.K  Hagstrom Table 1
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Hagstrom
+    {
+        ID:      10.1016/0360-3199(95)00025-9
+        Authors: M. T. Hagstrom, P. D. Lund, J. P. Vanhanen
+        Title:   Metal hydride hydrogen storage for near-ambient temperature and atmospheric pressure applications, a pdsc study
+        Journal: International Journal of Hydrogen Energy
+        Year:    1995
+        Volume:  20
+        Pages:   897-909
+    }
+    
+    Park
+    {
+        ID:      10.1016/0022-5088(91)90279-D
+        Authors: J.-M. Park, J.-Y. Lee
+        Title:   Thermodynamic Properties of the Zr0.8Ti0.2(MnxCr1-x)Fe-H2 System
+        Journal: Journal of Less-Common Metals
+        Year:    1991
+        Volume:  167
+        Pages:   245-253
+    }
+}

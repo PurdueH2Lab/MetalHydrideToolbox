@@ -1,0 +1,50 @@
+Elements: [Ho:6,Fe:23]
+Type: Misc
+
+Thermodynamics
+{
+    Weight Percent: 0.80  # Smith
+
+    Dehydriding
+    {
+        DH:  -24300      # J/mol  Smith Table 1 for y->B transition
+        DS:  -77         # J/mol.K  Smith Table 1 for y->B transition
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Smith has isotherm, highly sloping
+}
+
+References
+{
+    Smith
+    {
+        ID:      10.1016/0022-5088(83)90144-3
+        Authors: H. K. Smith, W. E. Wallace, R. S. Craig
+        Title:   An Investigation of R6Fe23Hx Thermodynamics
+        Journal: Journal of Less-Common Metals
+        Year:    1983
+        Volume:  94
+        Pages:   89-93
+    }
+}

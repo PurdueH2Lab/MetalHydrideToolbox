@@ -1,0 +1,56 @@
+Elements: [Ca:0.85, Mm:0.15, Ni:5]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 0.9  # Liang Isotherm reversible capacity only
+
+    Dehydriding
+    {
+        DH:  -29300      # J/mol  Liang Table 1
+        DS:  -98.0       # J/mol.K  Liang Table 1 (adjusted within error bars to match isotherm)
+        slope: 0.3       # Liang isotherm
+        
+        From Isotherms: true
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    # TODO: Liang has kinetics
+    
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    Liang had only a single isotherm, so dH and dS could not be independently
+    verified.
+}
+
+References
+{
+    Liang
+    {
+        ID:      10.1016/S0925-8388(01)01010-6
+        Authors: G. Liang, J. Huot, R. Schultz
+        Title:   Mechanical alloying and hydrogen storage properties of CaNi5-based alloys
+        Journal: J. of Alloys and Compounds
+        Year:    2001
+        Volume:  321
+        Pages:   146-150
+    }
+}

@@ -1,0 +1,75 @@
+Name: Mg2Ni
+Elements: [Mg:2, Ni:1]  # actually Mg2.4Ni
+Type: Mg
+ 
+Thermodynamics
+{
+    Weight Percent: 3.6     # Sandrock Table 1
+    
+    Dehydriding 
+    { 
+        DH: -64500		# J/mol - Sandrock Table 1
+        DS: -122   		# J/mol.K - Sandrock Table 1
+        slope: 0.02     # Huston Table 2
+        Ts: 571         # Huston table 2 footnote f (TODO Check! 298 C is suspicious)
+    } 							
+    Hydriding
+    {
+    }
+}
+ 
+Properties
+{
+    Cp: 753				# J/kg.K Huston Table 2
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Huston
+    {
+        ID:      10.1016/0022-5088(80)90182-4
+        Authors: E. Huston, G. Sandrock
+        Title:   Engineering properties of metal hydrides
+        Journal: Journal of Less Common Metals
+        Year:    1980
+        Volume:  74
+        Pages:   435-443
+    }
+    
+    Walker
+    {
+        ID:      1845692705
+        Authors: G. Walker
+        Title:   Solid State Hydrogen Storage: Materials and Chemistry
+        Year:    2008
+        Other:   Woodhead Publishing: Cambridge, England
+    }
+    
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }  
+}
+ 
+

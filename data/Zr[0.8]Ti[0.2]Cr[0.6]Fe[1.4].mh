@@ -1,0 +1,48 @@
+Name: Zr.8Ti.2Cr.6Fe1.4
+Elements: [Zr:0.8,Ti:0.2,Cr:0.6,Fe:1.4]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.60  # Wallace
+
+    Dehydriding
+    {
+        DH:  -27000      # J/mol  Wallace
+        DS: -100.30      # J/mol.K  Wallace
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Wallace
+    {
+        ID:      SandiaDBRef1169
+        Authors: W. E. Wallace, F. Pourarian
+        Title:   Hydrogen Storage Materials of Zirconium-Chromium-Iron and Titanium Alloys Characterized by ZrCr2 Stoichiometry
+        Year:    1985
+        Other:   U.S. Patent 4,556,551, Dec. 3, 1985
+    }
+}

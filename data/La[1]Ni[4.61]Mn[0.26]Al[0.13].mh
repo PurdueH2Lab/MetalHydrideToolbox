@@ -1,0 +1,85 @@
+Elements: [La:1, Ni:4.61, Mn:0.26, Al:0.13]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 6  # Ni PCI curves
+    
+    Dehydriding 
+    { 
+        DH: -39869      # J/mol  Ni PCI curve fit
+        DS: -95.5       # J/mol.K  Ni PCI curve fit
+        slope: 0.5      # Ni PCI curve fit
+        
+        From Isotherms: true
+    } 
+    Hydriding
+    {
+        DH: -37492      # J/mol  Ni PCI curve fit
+        DS: -92.1       # J/mol.K  Ni PCI curve fit
+        
+        From Isotherms: true
+    }
+}
+ 
+Properties
+{
+    keff: 1.6			# W/m.K    TODO Ref?
+    Cp: 419				# J/kg.K   TODO Ref?
+    rho: 8400			# kg/m^3   TODO Ref?
+}
+ 
+Kinetics
+{
+    Hydriding
+    {   # Rates from Satheesh
+        Ca: 230
+        Ea: 35000
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+    
+    Dehydriding
+    {   # Rates from Satheesh
+        Ca: 25
+        Ea: 32500
+        
+        pFcn: log
+        wFcn: 1st Order 
+    }
+}
+ 
+Notes
+{
+    Values from Satheesh (taken from Ni) are for very close to parallel lines taken
+    over a narrow temperature range. As a result, Tc extrapolation is incorrect (Tc = -450 K).
+    The original data from Reference 9 was re-fit with this physical constraint (Tc > Tdata)
+}
+        
+References
+{
+    Ni
+    {
+        ID:      10.1016/j.ijhydene.2006.09.038
+        Authors: J. Ni, H. Liu
+        Title:   Experimental research on refrigeration characteristics of a metal hydride heat pump in auto air-conditioning
+        Journal: International Journal of Hydrogen Energy
+        Year:    2007
+        Volume:  32
+        Pages:   2567-2572
+    }
+    
+    Satheesh
+    {
+        ID:      10.1016/j.ijhydene.2010.04.043
+        Authors: A. Satheesh, P. Muthukumar
+        Title:   Perfomance investigation of double-stage metal hydride based heat pump
+        Journal: International Journal of Hydrogen Energy
+        Year:    2010
+        Volume:  35
+        Pages:   6950-6958
+    }
+}
+ 
+

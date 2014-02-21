@@ -1,0 +1,52 @@
+Name: GdRh2
+Elements: [Gd:1,Rh:2]
+Type: AB2
+
+Thermodynamics
+{
+    H/M: 3  # Jacob Fig 3
+
+    Dehydriding
+    {
+        DH:  -49370      # J/mol  Jacob Table 2 (11.8 kcal)
+        DS: -133.89      # J/mol.K  Jacob Table 2 (32 cal(?) table lists as kcal...)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Reference Tables 1 and 2 also has GdMn2, GdFe2, GdCo2, GdNi2, LaRu2, GdRu2, and LaRh2 dH and dS values
+    TODO: Jacob has isotherms (fig 3)
+}
+
+References
+{
+    Jacob
+    {
+        ID:      10.1016/0022-5088(79)90158-9
+        Authors: I. Jacob, D. Shaltiel
+        Title:   Hydrogen Sorption Properties of some AB2 Laves Phase Compounds
+        Journal: Journal of Less-Common Metals
+        Year:    1979
+        Volume:  65
+        Pages:   117-128
+    }
+}

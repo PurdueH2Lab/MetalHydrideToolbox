@@ -1,0 +1,52 @@
+Name: MgYNi4
+Elements: [Mg:1,Y:1,Ni:4]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.05  # Aono, fig 5
+
+    Dehydriding
+    {
+        DH: -35800    # J/mol  Aono text page 3
+        DS: -106      # J/mol.K  Aono text page 3
+        
+        # TODO Aono has isotherms (fig 5)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Aono
+    {
+        ID:      10.1016/S0925-8388(00)01065-3
+        Authors: K. Aono, S. Orimo, H. Fujii
+        Title:   Structural and hydriding properties of MgYNi4: A new intermetallic compound with the C15b-type Laves phase structure
+        Journal: J. of Alloys and Compounds
+        Year:    2000
+        Volume:  309
+        Pages:   L1-L4
+    }
+}

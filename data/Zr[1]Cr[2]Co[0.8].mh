@@ -1,0 +1,51 @@
+Elements: [Zr:1,Cr:2,Co:0.8]
+Type: AB2
+
+Thermodynamics
+{
+    H/M: 2.5  # Drasner fig 2 isotherm
+
+    Dehydriding
+    {
+        DH: -45300      # J/mol  Drasner Table 2
+        DS: -118.9      # J/mol.K  Drasner Table 2
+        
+        # TODO Drasner has isotherms
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Drasner
+    {
+        ID:      10.1016/0022-5088(91)90310-Z
+        Authors: A. Drasner, Z. Blazina
+        Title:   Thermodynamic Properties of the ZrCr2T0.8-H2 Systems (T=Fe,Co,Ni)
+        Journal: Journal of Less-Common Metals
+        Year:    1991
+        Volume:  168
+        Pages:   289-294
+    }
+}

@@ -1,0 +1,50 @@
+Name: Pd.975Rh.025
+Elements: [Pd:0.975,Rh:0.025]
+Type: SS
+
+Thermodynamics
+{
+    Weight Percent: 0.70  # Sakamoto
+
+    Dehydriding
+    {
+        DH:  -36000      # J/mol  Sakamoto
+        DS:  -94.79      # J/mol.K  Sakamoto
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Sakamoto
+    {
+        ID:      SandiaDBRef0868
+        Authors: Y. Sakamoto, Y. Haraguchi, M. Ura, F. L. Chen
+        Title:   Hydrogen Absorption and Thermodynamic Properties of Hydrogen in Low Rh Content Pd-Rh Alloys
+        Journal: Ber. Bunsenges. Phys. Chem.
+        Year:    1994
+        Volume:  98
+        Pages:   964-969
+    }
+}

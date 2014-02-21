@@ -1,0 +1,51 @@
+Elements: [Pd:0.972, Ir:0.028]
+Type: SS
+
+Thermodynamics
+{
+    Weight Percent: 0.50  # LaPrade
+
+    Dehydriding
+    {
+        DH:  -30700      # J/mol  LaPrade Table 4 (x2)
+        DS:  -81.96      # J/mol.K  LaPrade Table 4 (x2)
+        
+        # TODO LaPrade has isotherms
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    LaPrade
+    {
+        ID:      10.1039/F19747001615
+        Authors: M. LaPrade, K. D. Allard, J. F. Lynch, T. B. Flanagan
+        Title:   Absorption of Hydrogen by Iridium/Palladium Substitutional Alloys
+        Journal: J. Chemical Soc., Faradat Trans I
+        Year:    1974
+        Volume:  70
+        Pages:   1615-1630
+    }
+}

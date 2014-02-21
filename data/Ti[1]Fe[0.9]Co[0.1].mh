@@ -1,0 +1,63 @@
+Name: TiFe.9Co.1
+Elements: [Ti:1,Fe:0.9,Co:0.1]
+Type: AB
+
+Thermodynamics
+{
+    Weight Percent: 1.50  # Lee
+
+    Dehydriding
+    {
+        DH:  -30600      # J/mol  Mintz table 2
+        DS: -106.4      # J/mol.K  Mintz table 2
+        
+        # TODO Lee has isotherms
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Lee
+    {
+        ID:      10.1016/S0925-8388(99)00262-5
+        Authors: S.-M. Lee, T.-P. Perng
+        Title:   Correlation of substitutional solid solution with hydrogenation properties of TiFe1-xMx (M=Ni, Co, Al) alloys
+        Journal: J. of Alloys and Compounds
+        Year:    1999
+        Volume:  291
+        Pages:   254-261
+    }
+    
+    Mintz
+    {
+        ID:      10.1063/1.329808  
+        Authors: M. H. Mintz, S. Vaknin, S. Biderman, Z. Hadari
+        Title:   Hydrides of Ternary TiFexM1-x (M=Cr,Mn,Co,Ni) Intermetallics
+        Journal: J. Appl. Phys.
+        Year:    1981
+        Volume:  52
+        Pages:   463-467
+    }
+}

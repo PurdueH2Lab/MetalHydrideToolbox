@@ -1,0 +1,68 @@
+Elements: [Y:1, Co:3]
+Type: AB3
+
+Thermodynamics
+{
+    Weight percent: 1.6  # Yamaguchi reversible B-y portion from fig 2
+
+    Dehydriding
+    {
+        DH: [-55455, -44570, -52540]   # J/mol  Fit to Yamaguchi isotherm
+        DS: [-118.97, -121.2, -176]    # J/mol.K  Fit to Yamaguchi isotherm
+        slope: [0, 0, 1]               # Fit to Yamaguchi isotherm
+        
+        centers: [0.13, 0.6, 0.95]   # Fit to Yamaguchi isotherm
+        widths: [0.26, 0.4, 0.1]     # Fit to Yamaguchi isotherm
+        minSpans: [0.08, 0.08]       # Fit to Yamaguchi isotherm
+        
+        From Isotherms:  True
+    }
+    Hydriding
+    {
+        Tc: [423, 550, 300]  # Approximated from isotherm fitting
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Yamaguchi
+    {
+        ID:      10.1016/0022-5088(85)90377-7
+        Authors: M. Yamaguchi, H. Ikeda, T. Ohta, T. Katayama, T. Goto
+        Title:   Influence of Hydrogen on the Magnetic Properties of Y-Co Compounds
+        Journal: Journal of Less-Common Metals
+        Year:    1985
+        Volume:  106
+        Pages:   165-173
+    }
+    
+    VanEssen
+    {
+        ID:      10.1016/0022-5088(80)90227-1
+        Authors: R. H. Van Essen, K. H. J. Buschow
+        Title:   Hydrogen sorption characteristics of Ce-3d and Y-3d intermetallic compounds
+        Journal: Journal of Less-Common Metals
+        Year:    1980
+        Volume:  70
+        Pages:   189-198
+    }
+}

@@ -1,0 +1,51 @@
+Name: DyNi4.25Ga.75
+Elements: [Dy:1,Ni:4.25,Ga:0.75]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 4  # Miletic Figure 3
+
+    Dehydriding
+    {
+        DH: -30100       # J/mol  Miletic Table 3
+        DS: -124.71      # J/mol.K  Miletic Table 3
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Miletic has isotherms (Fig 3)
+}
+
+References
+{
+    Miletic
+    {
+        ID:      10.1016/S0925-8388(99)00502-2
+        Authors: G.I. Miletic, A. Drasner, Z. Blazina
+        Title:   Crystal structure and hydride formation of the DyNi5-xGax alloys
+        Journal: J. of Alloys and Compounds
+        Year:    2000
+        Volume:  296
+        Pages:   170-174
+    }
+}

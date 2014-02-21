@@ -1,0 +1,50 @@
+Name: La0.75Pr0.25Ni4.5Cu0.3Al0.2
+Elements: [La:0.75,Pr:0.25,Ni:4.5,Cu:0.3,Al:0.2]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.40  # Petrova
+
+    Dehydriding
+    {
+        DH:  -34200      # J/mol  Petrova
+        DS: -114.02      # J/mol.K  Petrova
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Petrova
+    {
+        ID:      SandiaDBRef1520
+        Authors: L.A. Petrova, V.V. Burnasheva, K.N. Semenenko
+        Title:   Hydrogen interaction with intermetallic compounds La1-yRyNi5-x(T1,T2)x, where R=Ce,Pr,Mm; Ti=Cu; T2=Al,Ti,SnV,Fe
+        Journal: J. of General Chemistry (Russian)
+        Year:    1989
+        Volume:  50
+        Pages:   1697-1703
+    }
+}

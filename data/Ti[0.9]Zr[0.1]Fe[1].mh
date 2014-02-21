@@ -1,0 +1,53 @@
+Elements: [Ti:0.9, Zr:0.1, Fe:1]
+Type: AB
+
+Thermodynamics
+{
+    Weight Percent: 1.00  # Jang
+
+    Dehydriding
+    {
+        DH:  -28911      # J/mol  Jang Table 1
+        DS: -105.02      # J/mol.K  Jang Table 1
+        
+        # TODO Jang has isotherms
+    }
+    Hydriding
+    {
+        DH:  -26150      # J/mol  Jang Table 1
+        DS: -101.67      # J/mol.K  Jang Table 1
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Jang
+    {
+        ID:      10.1016/0022-5088(86)90684-3
+        Authors: T.H. Jang, J. I. Han, J.-Y. Lee
+        Title:   Effect of Substitution of Titanium by Zirconium in TiFe on Hydrogenation Properties
+        Journal: Journal of Less-Common Metals
+        Year:    1986
+        Volume:  119
+        Pages:   237-246
+    }
+}

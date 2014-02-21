@@ -1,0 +1,52 @@
+Elements: [Mm:1, Ni:4.6, Sn:0.4]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 3  # Balasubramaniam Fig 6
+
+    Dehydriding
+    {
+        DH: -29390      # J/mol  Balasubramaniam Table 1
+        DS: -115.74     # J/mol.K  Balasubramaniam Table 1
+        
+        # TODO Balasubramaniam has isotherms
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Has several MmNiX alloys with isotherms (4.6, 4.2 with X = Al, Mn)
+}
+
+References
+{
+    Balasubramaniam
+    {
+        ID:      10.1016/0925-8388(93)90571-4
+        Authors: R. Balasubramaniam, M. N. Mungole, K. N. Rai
+        Title:   Hydriding properties of MmNi5 system with aluminum, manganese and tin substitutions
+        Journal: J. of Alloys and Compounds
+        Year:    1993
+        Volume:  196
+        Pages:   63-70
+    }
+}

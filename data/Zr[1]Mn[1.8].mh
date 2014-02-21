@@ -1,0 +1,51 @@
+Elements: [Zr:1, Mn:1.8]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.60  # Luo
+
+    Dehydriding
+    {
+        DH:  -38800      # J/mol  Luo Table 2 (x2)
+        DS: -100.92      # J/mol.K  Luo 
+        
+        # TODO Luo has isotherm (Fig 4)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Luo
+    {
+        ID:      10.1016/0925-8388(92)90480-W
+        Authors: W. Luo, J. D. Clewley, T. B. Flanagan, W. A. Oates
+        Title:   Thermodynamic characterization of the Zr-Mn-H system  Part 1. Reaction of H2 with single-phase ZrMn2+x C-14 Laves phase alloys
+        Journal: J. of Alloys and Compounds
+        Year:    1992
+        Volume:  185
+        Pages:   321-338
+    }
+}

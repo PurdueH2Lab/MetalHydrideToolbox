@@ -1,0 +1,51 @@
+Name: ErNi4Al
+Elements: [Er:1,Ni:4,Al:1]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 0.90  # Sorgic
+
+    Dehydriding
+    {
+        DH:  -32380      # J/mol  Sorgic Table 1
+        DS: -122.22      # J/mol.K  Sorgic Table 1
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Sorgic has isotherms (Fig 3). Capacity decreases considerably at higher temperatures.
+}
+
+References
+{
+    Sorgic
+    {
+        ID:      10.1016/0925-8388(95)01895-6
+        Authors: B. Sorgic, A. Drasner, Z. Blazina
+        Title:   The effect of aluminum on the structural and hydrogen sorption properties of ErNi5
+        Journal: J. of Alloys and Compounds
+        Year:    1996
+        Volume:  232
+        Pages:   79-83
+    }
+}

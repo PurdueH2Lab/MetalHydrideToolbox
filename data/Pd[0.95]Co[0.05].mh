@@ -1,0 +1,54 @@
+Name: Pd.95Co.05
+Elements: [Pd:0.95,Co:0.05]
+Type: SS
+
+Thermodynamics
+{
+    H/M: 0.6  # Feenstra fig 1
+
+    Dehydriding
+    {
+        DH: -38200      # J/mol  Feenstra Table 1 (x2)
+        DS: -102.8      # J/mol.K  Feenstra Table 1 (x2)
+        
+        # TODO Feenstra has isotherms (Fig 1)
+    }
+    Hydriding
+    {
+        DH: -31200      # J/mol  Feenstra Table 1 (x2)
+        DS: -88.0       # J/mol.K  Feenstra Table 1 (x2)
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Feenstra
+    {
+        ID:      10.1016/0022-5088(87)90132-9
+        Authors: R. Feenstra, D. G. de Groot, R. Griessen, J. P. Burger, A. Menovski
+        Title:   Absorption of Hydrogen in Pd-Co and Pd-U Alloys
+        Journal: Journal of Less-Common Metals
+        Year:    1975
+        Volume:  130
+        Pages:   375-386
+    }
+}

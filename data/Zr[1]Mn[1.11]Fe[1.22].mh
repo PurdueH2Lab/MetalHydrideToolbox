@@ -1,0 +1,53 @@
+Elements: [Zr:1, Mn:1.11, Fe:1.22]
+Type: AB2
+
+Thermodynamics
+{
+    H/M: 2.7   # Uchida fig 4
+
+    Dehydriding
+    {
+        DH: -29400      # J/mol  Uchida Table 4
+        DS: -104.9      # J/mol.K  Uchida Table 5
+        
+        # TODO Uchida has isotherms
+    }
+    Hydriding
+    {
+        DH: -22100      # J/mol  Uchida Table 4
+        DS: -92.5       # J/mol.K  Uchida Table 5
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Uchida
+    {
+        ID:      10.1016/0022-5088(86)90196-7
+        Authors: M. Uchida, H. Bjurstrom, S. Suda, Y. Matsubara
+        Title:   On the Equilibrium Properties of some ZrMn2-Related Hydride-Forming Metals
+        Journal: Journal of Less-Common Metals
+        Year:    1986
+        Volume:  119
+        Pages:   63-74
+    }
+}

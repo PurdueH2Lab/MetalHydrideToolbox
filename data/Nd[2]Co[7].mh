@@ -1,0 +1,49 @@
+Name: Nd2Co7
+Elements: [Nd:2,Co:7]
+Type: A2B7
+
+Thermodynamics
+{
+    Weight Percent: 1.20  # Goudy
+
+    Dehydriding
+    {
+        DH:  -56700      # J/mol  Goudy
+        DS: -141.53      # J/mol.K  Goudy
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Goudy
+    {
+        ID:      SandiaDBRef0186
+        Authors: A. J. Goudy
+        Title:   Hydrogen Solubility in Rare Earth Intermetallic Compounds
+        Journal: Thesis, University of Pittsburgh
+        Year:    1976
+        Pages:   1-115
+    }
+}

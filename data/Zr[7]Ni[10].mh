@@ -1,0 +1,48 @@
+Elements: [Zr:7,Ni:10]
+Type: Misc
+
+Thermodynamics
+{
+    Weight Percent: 1.40  # Spit
+
+    Dehydriding
+    {
+        DH:  -47000      # J/mol  Spit
+        DS: -129.55      # J/mol.K  Spit
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Spit
+    {
+        ID:      SandiaDBRef0446
+        Authors: F. H. M. Spit
+        Title:   The Thermodynamics and Kinetics of Hydrogen Solution in Some Metallic Glasses
+        Journal: Doctor's Thesis, Rijksuniversiteit Utrecht
+        Year:    1982
+        Pages:   1-137
+    }
+}

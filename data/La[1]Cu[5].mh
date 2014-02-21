@@ -1,0 +1,51 @@
+Name: LaCu5
+Elements: [La:1,Cu:5]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 3.7  # Spada abstract
+
+    Dehydriding
+    {
+        DH: -42680      # J/mol  Spada text after fig 1 (10.2 kcal)
+        DS: -127.2      # J/mol.K  Spada text after fig 1 (30.4 cal)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Spada has isotherms (Fig 1)
+}
+
+References
+{
+    Spada
+    {
+        ID:      10.1016/0022-5088(87)90060-9
+        Authors: F. E. Spada, R. C. Bowman, J. S. Cantrell
+        Title:   Hydrogen Absorption by LaCu5 and Nuclear Magnetic Resonance (NMR) Studies of Hydrogen Diffusion in beta-LaCu5 Hydride
+        Journal: Journal of Less-Common Metals
+        Year:    1987
+        Volume:  129
+        Pages:   261-270
+    }
+}

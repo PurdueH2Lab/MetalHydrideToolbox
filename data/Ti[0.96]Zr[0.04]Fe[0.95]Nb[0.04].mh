@@ -1,0 +1,51 @@
+Elements: [Ti:0.96, Zr:0.04, Fe:0.95, Nb:0.04]
+Type: AB
+
+Thermodynamics
+{
+    H/M: 1.2  # Sasai fig 3, 1st plateau only
+
+    Dehydriding
+    {
+        DH: -31800      # J/mol  Sasai text page 4 (7.6 kcal)
+        DS: -108.3      # J/mol.K  Sasai calculated form Peq = 1.5 atm at 30 C (page 4 text)
+        
+        # TODO Sasi has isotherms (fig 3) which show 2 plateaus
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Sasai
+    {
+        ID:      10.1016/0022-5088(83)90281-3
+        Authors: T. Sasai, K. Oku, H. Konno, K. Onouwe, S. Kashu
+        Title:   Hydrogen Storage Characteristics of Fe-Ti-Zr-Nb Alloys
+        Journal: Journal of Less-Common Metals
+        Year:    1983
+        Volume:  89
+        Pages:   281-285
+    }
+}

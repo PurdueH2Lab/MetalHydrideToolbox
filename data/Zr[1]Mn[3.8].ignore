@@ -1,0 +1,53 @@
+Elements: [Zr:1, Mn:3.8]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.20  # Pourarian
+
+    Dehydriding
+    {
+        DH:  -17000      # J/mol  Pourarian  TODO check for PCI curves
+        DS:  -53.11      # J/mol.K  Pourarian
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TGV: The results from Sinha are highly suspect.
+    Every one of the hydrides from a Sinha paper has a very low enthalpy which is
+    not reproduced by other authors. The abstracts from Sinha papers also always seem
+    to note how unusually low the enthalpy value is.
+}
+
+References
+{
+    Pourarian
+    {
+        ID:      SandiaDBRef0019
+        Authors: F. Pourarian, H. Fujii, W. E. Wallace, V. K. Sinha, H. Kevin Smith
+        Title:   Stabillity and Magnetism of Hydrides of Nonstoichiometric ZrMn2
+        Journal: J. Phys. Chem.
+        Year:    1981
+        Volume:  85
+        Pages:   3105-3111
+    }
+}

@@ -1,0 +1,51 @@
+Name: ErNi3
+Elements: [Er:1,Ni:3]
+Type: AB3
+
+Thermodynamics
+{
+    H/M: 4  # Verbetsky abstract
+
+    Dehydriding
+    {
+        DH: -23800      # J/mol  Verbetsky abstract
+        DS: -103.0      # J/mol.K  Verbetsky abstract
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Verbetsky has isotherms. Isotherms have narrow plateau and lower than theoretical capacity.
+}
+
+References
+{
+    Verbetsky
+    {
+        ID:      10.1016/S0360-3199(96)00053-5
+        Authors: V. N. Verbetsky, S. N. Klyamkin, A. Yu. Kovriga, A. P. Besphalov
+        Title:   Hydrogen Interaction with RNi3 Type Intermetallic Compounds at High Gaseous Pressure
+        Journal: International Journal of Hydrogen Energy
+        Year:    1996
+        Volume:  21
+        Pages:   997-1000
+    }
+}

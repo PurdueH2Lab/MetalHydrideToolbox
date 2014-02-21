@@ -1,0 +1,77 @@
+Name: TiCrMn0.4FeV
+Elements: [Ti:1, Cr:1, Mn:0.4, Fe:0.4, V:0.2]
+Type: AB2
+ 
+Thermodynamics
+{
+    Weight Percent: 1.9
+    
+    Dehydriding 
+    { 
+        DH: -22000    # J/mol - Hagstrom Table 2
+        DS: -109   	  # J/mol.K - Hagstrom Table 2
+        slope: 0.75   # vanhanen, value is an average of 0.6 and 0.9
+    } 
+    Hydriding
+    {
+        DH: -20200 		# J/mol - Hagstrom Table 2
+        DS: -103   		# J/mol.K - Hagstrom Table 2
+    }
+}
+ 
+Properties
+{
+}
+ 
+Kinetics
+{ # TODO: NEED REFERENCES FOR KINETICS
+
+    Hydriding
+    {
+        Ca: 150    # 1/s
+        Ea: 20700  # J/mol
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+    
+    Dehydriding
+    { 
+        Ca: 150    # 1/s
+        Ea: 20700  # J/mol
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Vanhanen
+    {
+        ID:      10.1016/S0360-3199(98)00095-0
+        Authors: J. P. Vanhanen, M. T. Hagstrom, P. D. Lund
+        Title:   Combined hydrogen compressing and heat transforming through metal hydrides
+        Journal: International Journal of Hydrogen Energy
+        Year:    1999
+        Volume:  24
+        Pages:   441-448  
+    }  
+    
+    Hagstrom
+    {
+        ID:      10.1016/S0925-8388(98)00213-8
+        Authors: M. T. Hagstrom, J. P. Vanhanen, P. D. Lund
+        Title:   AB2 metal hydrides for high-pressure and narrow temperature interval applications
+        Journal: Journal of Alloys and Compounds
+        Year:    1998
+        Volume:  269
+        Pages:   288-293  
+    }
+}
+ 
+

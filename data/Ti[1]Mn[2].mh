@@ -1,0 +1,53 @@
+Elements: [Ti:1, Mn:2]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.70  # Klyamkin
+
+    Dehydriding
+    {
+        DH: -24700      # J/mol  Klyamkin Table 1 (based on f)
+        DS: -114.3      # J/mol.K  Klyamkin Table 1 (based on f)
+        
+        # TODO Klyamkin has isotherms (fig 2)
+    }
+    Hydriding
+    {
+        DH: -13100      # J/mol  Klyamkin Table 1 (based on f)
+        DS: -95.7      # J/mol.K  Klyamkin Table 1 (based on f)
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Klyamkin
+    {
+        ID:      10.1016/0925-8388(94)90753-6
+        Authors: S. N. Klyamkin, V. N. Verbetsky, V. A. Demidov
+        Title:   Thermodynamics of hydride formation and decomposition for TiMn2-H2 system at pressure up to 2000 atm
+        Journal: J. of Alloys and Compounds
+        Year:    1994
+        Volume:  205
+        Pages:   L1-L2
+    }
+}

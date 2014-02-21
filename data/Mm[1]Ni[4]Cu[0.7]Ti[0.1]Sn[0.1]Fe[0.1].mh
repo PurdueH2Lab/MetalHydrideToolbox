@@ -1,0 +1,50 @@
+Name: MmNi4Cu0.7Ti0.1Sn0.1Fe0.1
+Elements: [Mm:1,Ni:4,Cu:0.7,Ti:0.1,Sn:0.1,Fe:0.1]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.40  # Petrova
+
+    Dehydriding
+    {
+        DH:  -37300      # J/mol  Petrova
+        DS: -143.02      # J/mol.K  Petrova
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Petrova
+    {
+        ID:      SandiaDBRef1520
+        Authors: L.A. Petrova, V.V. Burnasheva, K.N. Semenenko
+        Title:   Hydrogen interaction with intermetallic compounds La1-yRyNi5-x(T1,T2)x, where R=Ce,Pr,Mm; Ti=Cu; T2=Al,Ti,SnV,Fe
+        Journal: J. of General Chemistry (Russian)
+        Year:    1989
+        Volume:  50
+        Pages:   1697-1703
+    }
+}

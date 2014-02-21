@@ -1,0 +1,51 @@
+Name: CaNi3
+Elements: [Ca:1,Ni:3]
+Type: AB3
+
+Thermodynamics
+{
+    H/M: 4.4  # Chen Section 3.3.2 text (1.1 * 4)
+
+    Dehydriding
+    {
+        DH:  -35000      # J/mol  Chen - Table 5
+        DS: -112.1       # J/mol.K  Chen - Table 5
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Chen has CaNi3 isotherm
+}
+
+References
+{
+    Chen
+    {
+        ID:      10.1016/S0925-8388(00)00694-0
+        Authors: J. Chen, H.T. Takeshita, H. Tanaka, N. Kuriyama, T. Sakai, I. Uehara, M. Haruta
+        Title:   Hydriding properties of LaNi3 and CaNi3 and their substitutes with PuNi3-type structure
+        Journal: J. of Alloys and Compounds
+        Year:    2000
+        Volume:  302
+        Pages:   304-313
+    }
+}

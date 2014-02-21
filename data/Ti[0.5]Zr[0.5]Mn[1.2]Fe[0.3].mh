@@ -1,0 +1,67 @@
+Elements: [Ti:0.5, Zr:0.5, Mn:1.2, Fe:0.3]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.90  # Ivey and Komazaki
+
+    Dehydriding
+    {
+        DH:  -48858      # J/mol  Komazaki PCI curve fit
+        DS: -127.0       # J/mol.K  Komazaki PCI curve fit
+        slope: 2         # Komazaki PCI curve fit
+        
+        From isotherms: true
+    }
+    Hydriding
+    {
+        DH:  -46833      # J/mol  Komazaki PCI curve fit
+        DS: -123.0       # J/mol.K  Komazaki PCI curve fit
+        
+        From isotherms: true
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Komazaki
+    {
+        ID:      10.1016/0022-5088(83)90279-5
+        Authors: Y. Komazaki, M. Uchida, S. Suda, A. Suzuki, S. Ono, N. Nishimiya
+        Title:   Equilibrium Properties of Ti-Zr-Fe-Mn Hydrides
+        Journal: Journal of the Less-Common Metals
+        Year:    1983
+        Volume:  89
+        Pages:   269-274  
+    }
+    
+    Ivey
+    {
+        ID:      SandiaDBRef0029
+        Authors: D. G. Ivey, D. O. Northwood
+        Title:   Hydrogen Absorption-Desorption Characteristics of Zr(FexCr1-x)2
+        Journal: Hydrogen Energy Progress V, T. N. Veziroglu and J. B. Taylor, Eds., Pergamon, New York
+        Year:    1984
+        Volume:  3
+        Pages:   1395-1406
+    }
+}

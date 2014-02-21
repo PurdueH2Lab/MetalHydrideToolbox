@@ -1,0 +1,54 @@
+Name: LaNi4.7Si.3
+Elements: [La:1, Ni:4.7, Si:0.3]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 5  # Meli Figs 1 and 2
+
+    Dehydriding
+    {
+        DH: -33800      # J/mol  Meli Table 2
+        DS: -113.1      # J/mol.K  Meli Table 2
+        
+        # TODO Meli has isotherms (Figs 1 and 2)
+    }
+    Hydriding
+    {
+        DH: -30700      # J/mol  Meli Table 2
+        DS: -105.6      # J/mol.K  Meli Table 2
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Meli
+    {
+        ID:      10.1016/0925-8388(92)90167-8
+        Authors: F. Meli, A. Zuettel, L. Schlapbach
+        Title:   Surface and Bulk Properties of LaNi5-xSix alloys from the viewpoint of battery applications
+        Journal: J. of Alloys and Compounds
+        Year:    1992
+        Volume:  190
+        Pages:   17-24
+    }
+}

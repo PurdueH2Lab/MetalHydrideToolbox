@@ -1,0 +1,49 @@
+Name: Ti.8Zr.2Mn1.2Cr.8
+Elements: [Ti:0.8,Zr:0.2,Mn:1.2,Cr:0.8]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 2.00  # Machida
+
+    Dehydriding
+    {
+        DH:  -28900      # J/mol  Machida
+        DS: -111.97      # J/mol.K  Machida
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Machida
+    {
+        ID:      SandiaDBRef0371
+        Authors: Y. Machida, T. Yamadaya, M. Asanuma
+        Title:   Hydride Formation of C14-Type Ti Alloy
+        Journal: Hydrides for Energy Storage, A. F. Andresen and A. J. Maeland, Eds., Pergamon Press, Oxford
+        Year:    1978
+        Pages:   329-336
+    }
+}

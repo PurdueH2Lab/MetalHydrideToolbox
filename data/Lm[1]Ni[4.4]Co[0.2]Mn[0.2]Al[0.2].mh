@@ -1,0 +1,50 @@
+Name: LmNi4.4Co.2Mn.2Al.2
+Elements: [Lm:1,Ni:4.4,Co:0.2,Mn:0.2,Al:0.2]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 1.30  # Groll
+
+    Dehydriding
+    {
+        DH:  -34100      # J/mol  Groll
+        DS: -112.45      # J/mol.K  Groll
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Groll
+    {
+        ID:      SandiaDBRef0266
+        Authors: M. Groll, W. Supper, R. Werner
+        Title:   Dynamic Pressure-Concentration-Isotherms and their Impact on Metal Hydride Machine Design
+        Journal: Zeit. Phys. Chem. NF
+        Year:    1989
+        Volume:  164
+        Pages:   1485-1496
+    }
+}

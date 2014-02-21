@@ -1,0 +1,51 @@
+Name: LaNi4.6Sn
+Elements: [La:1, Ni:4.6, Sn:0.4]
+Type: AB5
+ 
+Thermodynamics
+{
+    H/M: 4.20  # ref walker pp 323
+    
+    Dehydriding 
+    { 
+        DH: -38460		# J/mol, ref walker pp 323
+        DS: -109.52   	# J/mol.K, ref walker pp 323
+    } 
+    Hydriding
+    { 
+    }
+}
+ 
+Properties
+{
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+    Walker pages 323 and 324 tables  
+}
+        
+References
+{
+    Walker
+    {
+        ID:      1845692705
+        Authors: G. Walker
+        Title:   Solid State Hydrogen Storage: Materials and Chemistry
+        Year:    2008
+        Other:   Woodhead Publishing: Cambridge, England
+    }
+}
+ 
+

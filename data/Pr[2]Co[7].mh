@@ -1,0 +1,50 @@
+Elements: [Pr:2,Co:7]
+Type: A2B7
+
+Thermodynamics
+{
+    H/M: 5  # Clinton Table 1
+
+    Dehydriding
+    {
+        DH: -33470      # J/mol  Clinton Table 1 (-8 kcal)
+        DS: -108.9      # J/mol.K  Clinton - Calculated from Peq of 10 atm at 373 K from Table 1
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Clinton has PrCo2 and PrCo3 too
+}
+
+References
+{
+    Clinton
+    {
+        ID:      10.1016/0022-5088(75)90107-1
+        Authors: J. Clinton, H. Bittner, H. Oesterreicher
+        Title:   Hydrides of Praseodymium-Cobalt Compounds
+        Journal: Journal of Less-Common Metals
+        Year:    1975
+        Volume:  41
+        Pages:   187-189
+    }
+}

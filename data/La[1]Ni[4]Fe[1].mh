@@ -1,0 +1,50 @@
+Name: LaNi4Fe
+Elements: [La:1,Ni:4,Fe:1]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 0.80  # Misawa
+
+    Dehydriding
+    {
+        DH:  -34500      # J/mol  Misawa
+        DS:  -91.82      # J/mol.K  Misawa
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Misawa
+    {
+        ID:      SandiaDBRef0118
+        Authors: T. Misawa, A. P. Nomachi, S. Yajima, H. Sugawara
+        Title:   Effect of Fe and Cr Substitution on the Hydride Formation in LaNi5
+        Journal: J. Japan Inst. Metals
+        Year:    1979
+        Volume:  43
+        Pages:   104-107
+    }
+}

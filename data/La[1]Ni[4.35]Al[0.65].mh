@@ -1,0 +1,54 @@
+Name: LaNi4.35Al
+Elements: [La:1, Ni:4.35, Al:0.65]
+Type: AB5
+ 
+Thermodynamics
+{
+    Weight Percent: 1.13  #ref sakhar
+    
+    Dehydriding 
+    { 
+        DH: -36900		# J/mol, ref sakhar
+        DS: -109.4   	# J/mol.K, ref sakhar
+    } 
+    Hydriding
+    {
+        DH: -34900 		# J/mol, ref sakhar
+        DS: -104   		# J/mol.K, ref sakhar
+    }
+}
+ 
+Properties
+{
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Sekhar
+    {
+        ID:      10.1016/j.ijhydene.2013.03.135
+        Authors: B. S. Sekhar, S. Pailwan, P. Muthukumar
+        Title:   Studies on metal hydride based single-stage heat transformer
+        Journal: International Journal of Hydrogen Energy
+        Year:    2013
+        Volume:  38
+        Pages:   7178-7187
+    }
+}
+ 
+

@@ -1,0 +1,66 @@
+Name: TiZrCrMn0.8
+Elements: [Ti:0.85, Zr:0.15, Cr:1.2, Mn:0.8]
+Type: AB2
+ 
+Thermodynamics
+{
+    Weight Percent: 2.01
+    
+    Dehydriding 
+    { 
+        DH: -26200		# J/mol - Hagstrom Table 2
+        DS: -114   		# J/mol.K - Hagstrom Table 2
+        slope: 1.35     # vanhanen, value is an average of 1.2 and 1.5
+    } 
+    Hydriding
+    {
+        DH: -21500 		# J/mol - Hagstrom Table 2
+        DS: -101   		# J/mol.K - Hagstrom Table 2
+    }
+}
+ 
+Properties
+{
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Vanhanen
+    {
+        ID:      10.1016/S0360-3199(98)00095-0
+        Authors: J. P. Vanhanen, M. T. Hagstrom, P. D. Lund
+        Title:   Combined hydrogen compressing and heat transforming through metal hydrides
+        Journal: International Journal of Hydrogen Energy
+        Year:    1999
+        Volume:  24
+        Pages:   441-448  
+    }
+    
+    Hagstrom
+    {
+        ID:      10.1016/S0925-8388(98)00213-8
+        Authors: M. T. Hagstrom, J. P. Vanhanen, P. D. Lund
+        Title:   AB2 metal hydrides for high-pressure and narrow temperature interval applications
+        Journal: Journal of Alloys and Compounds
+        Year:    1998
+        Volume:  269
+        Pages:   288-293  
+    }
+}
+ 
+

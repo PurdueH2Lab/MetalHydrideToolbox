@@ -1,0 +1,56 @@
+Elements: [Ho:0.6, Zr:0.4, Co:2]
+Type: AB2
+
+Thermodynamics
+{
+    H/M: 2.5  # Ramesh figure 2
+
+    Dehydriding
+    {
+        DH:  -15800     # J/mol  Ramesh Table 2 value at y = 0.75 - see note
+        DS:  -41.6      # J/mol.K  Ramesh Table 2 value at y = 0.75 - see note
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    # TODO: Ramesh has kinetics
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Ramesh has a lot of very nice isotherms with a phase diagram
+    
+    Note on Ramesh reported values:
+        The values in all tables are listed as per mol-H, not per mol-H2.
+        However, spot checking them against the isotherm values, the appear to
+        actually be per mol-H2.
+}
+
+References
+{
+    Ramesh
+    {
+        ID:      10.1016/0925-8388(93)90278-U
+        Authors: R. Ramesh, K. V. S. Rama Rao
+        Title:   Hydrogen absorption characteristics of the Zr1-xHoxCo2 system in the pressure range 0-40 bar
+        Journal: J. of Alloys and Compounds
+        Year:    1993
+        Volume:  191
+        Pages:   101-105
+    }
+}

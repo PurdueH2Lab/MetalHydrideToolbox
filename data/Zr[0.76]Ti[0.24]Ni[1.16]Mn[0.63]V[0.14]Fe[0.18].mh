@@ -1,0 +1,56 @@
+Elements: [Zr:0.76, Ti:0.24, Ni:1.16, Mn:0.63, V:0.14, Fe:0.18]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.70  # Morii fig 5
+
+    Dehydriding
+    {
+        DH:  -29700      # J/mol  Morii Table 2 (specimen 16)
+        DS: -110.5       # J/mol.K  Morii - Calculated from Peq = 4.5 bar at 303 K on fig 5
+        slope: 0.07      # Morii Table 2 (specimen 16)
+        Ts: 303          # Morii Table 2
+        
+        # TODO Morii has isotherms (fig 5)
+    }
+    Hydriding
+    {
+        ln(Pa/Pd): 0.04   # Morii Table 2 (specimen 16)
+        T: 303            # Morii Table 2
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO Morii has data and isotherms for several alloys in this family
+}
+
+References
+{
+    Morii
+    {
+        ID:      10.1016/0925-8388(95)01860-3
+        Authors: K. Morii, T. Shimizu
+        Title:   Hydriding characteristics in (Ti,Zr)(Ni,Mn,X)2 alloys
+        Journal: J. of Alloys and Compounds
+        Year:    1995
+        Volume:  231
+        Pages:   524-527
+    }
+}

@@ -1,0 +1,60 @@
+Elements: [Ti:1, Fe:0.9, Cr:0.1]
+Type: AB
+
+Thermodynamics
+{
+    Weight Percent: 1.10  # Someno
+
+    Dehydriding
+    {
+        DH:  -30125      # J/mol  Mintz Table 2 (7.2 kcal)
+        DS:  -100.8      # J/mol.K  Mintz Table 2 (24.1 cal)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Mintz
+    {
+        ID:      10.1063/1.329808  
+        Authors: M. H. Mintz, S. Vaknin, S. Biderman, Z. Hadari
+        Title:   Hydrides of Ternary TiFexM1-x (M=Cr,Mn,Co,Ni) Intermetallics
+        Journal: J. Appl. Phys.
+        Year:    1981
+        Volume:  52
+        Pages:   463-467
+    }
+    
+    Someno
+    {
+        ID:      SandiaDBRef0381
+        Authors: M. Someno, M. Arita, R. Kinaka, Y. Ichinose
+        Title:   Hydrogen Absorption and Hydriding of Ti-Based Intermetallic Compounds
+        Journal: Hydrogen in Metals, Trans. Japan Inst. of Metals (Supplement)
+        Year:    1980
+        Volume:  21
+        Pages:   325-328
+    }
+}

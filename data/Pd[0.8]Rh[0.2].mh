@@ -1,0 +1,51 @@
+Elements: [Pd:0.8, Rh:0.2]
+Type: SS
+
+Thermodynamics
+{
+    H/M: 0.80  # Noh Fig 12
+
+    Dehydriding
+    {
+        DH: -28400      # J/mol  Noh Table 1 (x2)
+        DS: -106.4      # J/mol.K  Noh Table 1 (x2)
+    }
+    Hydriding
+    {
+        DH: -22800      # J/mol  Noh Table 1 (x2)
+        DS: -94.8       # J/mol.K  Noh Table 1 (x2)
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Noh
+    {
+        ID:      10.1016/0925-8388(93)90562-2
+        Authors: H. Noh, W. Luo, T. B. Flanagan
+        Title:   The effect of annealing pretreatment of Pd-Rh alloys on their hydrogen solubilities and thermodynamoc parameters for H2 solution
+        Journal: Journal of Alloys and Compounds
+        Year:    1993
+        Volume:  196
+        Pages:   7-16
+    }
+}

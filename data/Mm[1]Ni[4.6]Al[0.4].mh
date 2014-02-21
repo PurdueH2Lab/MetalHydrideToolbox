@@ -1,0 +1,103 @@
+Elements: [Mm:1, Ni:4.6, Al:0.4]
+Type: AB5
+ 
+Thermodynamics
+{
+    H/M: 6 # Muthukumar figure 4
+    
+    Dehydriding 
+    { 
+        # The values from the PCI curves are nonsense, so we just use the Satheesh desorption values
+        # and type defaults for absorption. Maybe he switched Abs and Des in the table?
+        DH:  -27800    # J/mol  - SatheeshB Table 1
+        DS:  -107.2    # J/mol.K  - SatheeshB Table 1
+        
+        #DH: -78991    # J/mol  -  Calculated from Muthukumar PCI data, see notes
+        #DS: -276.5    # J/mol.K  -  Calculated from Muthukumar PCI data, see notes
+        #slope: 1.5    # Calculated from Muthukumar PCI data, see notes
+    } 
+    Hydriding
+    {
+        # TODO - Need to find better values, these are clearly wrong
+        #DH: -71784     # J/mol  -  Calculated from Muthukumar PCI data, see notes
+        #DS: -254.0     # J/mol.K  -  Calculated from Muthukumar PCI data, see notes
+    }
+}
+ 
+Properties
+{
+    keff: 1.6    # W/m.K - SatheeshB Table 2
+    Cp: 419	     # J/kg.K - SatheeshB Table 2
+    rho: 8400    # kg/m3 - SatheeshB Table 2
+}
+ 
+Kinetics
+{
+    Hydriding
+    {   # Rates from Satheesh
+        Ca: 150
+        Ea: 30000
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+    
+    Dehydriding
+    {   # Rates from Satheesh
+        Ca: 75
+        Ea: 29000
+        
+        pFcn: log
+        wFcn: 1st Order 
+    }
+}
+ 
+Notes
+{
+    The dH and dS values in the paper by Satheesh are nonsense, they result in Peq_des > Peq_abs.
+    
+    Chasing down their listed reference leads to another paper by the same authors where the
+    values are asserted without experiments or references.
+    
+    The PCI curves (for absorption) by Muthukumar are used with the default ln(Pa/Pd) value of 0.2
+    for AB5 hydrides to calculate appropriate values. However, the values fit to these isotherms 
+    (enthalpy of 74 kJ/mol) are WAY too large to be correct for an AB5 hydride.
+}
+        
+References
+{
+    Satheesh
+    {
+        ID:      10.1016/j.ijhydene.2010.04.043
+        Authors: A. Satheesh, P. Muthukumar
+        Title:   Perfomance investigation of double-stage metal hydride based heat pump
+        Journal: International Journal of Hydrogen Energy
+        Year:    2010
+        Volume:  35
+        Pages:   6950-6958
+    }
+    
+    SatheeshB
+    {
+        ID:      10.1016/j.ijhydene.2009.01.083
+        Authors: A. Satheesh, P. Muthukumar, A. Dewan
+        Title:   Computational study of metal hydride cooling system
+        Journal: International Journal of Hydrogen Energy
+        Year:    2009
+        Volume:  34
+        Pages:   3164-3172
+    }
+    
+    Muthukumar
+    {
+        ID:      10.1016/j.ijhydene.2004.12.007
+        Authors: P. Muthukumar, M. Prakash Maiya, S. Srinivasa Murthy
+        Title:   Experiments on a metal hydride-based hydrogen storage device
+        Journal: International Journal of Hydrogen Energy
+        Year:    2005
+        Volume:  30
+        Pages:   1569-1581
+    }
+}
+ 
+

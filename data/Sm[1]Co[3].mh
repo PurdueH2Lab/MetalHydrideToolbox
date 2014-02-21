@@ -1,0 +1,49 @@
+Name: SmCo3
+Elements: [Sm:1,Co:3]
+Type: AB3
+
+Thermodynamics
+{
+    Weight Percent: 0.60  # Tauber
+
+    Dehydriding
+    {
+        DH:  -59400      # J/mol  Tauber
+        DS: -160.23      # J/mol.K  Tauber
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Tauber
+    {
+        ID:      SandiaDBRef0529
+        Authors: A. Tauber, R. D. Finnegan, A. Schwartz, F. Rothwarf, W. E. Wallace
+        Title:   Some Light Rare Earth Intermetallic Hydrides
+        Journal: Proc. 12th Rare Earth Research Conf., C. E. Lundin, Ed.
+        Year:    1976
+        Pages:   1073-1082
+    }
+}

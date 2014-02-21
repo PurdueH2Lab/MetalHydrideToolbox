@@ -1,0 +1,51 @@
+Elements: [La:1,Ca:1,Mg:1,Ni:6,Mn:3]
+Type: Misc
+
+Thermodynamics
+{
+    H/M: 13  # Chen Figure 8
+
+    Dehydriding
+    {
+        DH:  -32300      # J/mol  Chen Table 5
+        DS: -110.9       # J/mol.K  Chen Table 5
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Chen has PCI curves
+    Chen also published in DOI 10.1149/1.1391115
+}
+
+References
+{
+    Chen
+    {
+        ID:      10.1016/S0925-8388(00)00694-0
+        Authors: J. Chen, H.T. Takeshita, H. Tanaka, N. Kuriyama, T. Sakai, I. Uehara, M. Haruta
+        Title:   Hydriding properties of LaNi3 and CaNi3 and their substitutes with PuNi3-type structure
+        Journal: J. of Alloys and Compounds
+        Year:    2000
+        Volume:  302
+        Pages:   304-313
+    }
+}

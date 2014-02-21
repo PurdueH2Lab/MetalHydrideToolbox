@@ -1,0 +1,52 @@
+Elements: [Zr:1, Fe:1.6, Al:0.4]
+Type: AB2
+
+Thermodynamics
+{
+    H/M: 2  # Fujii fig 1
+
+    Dehydriding
+    {
+        DH: -36000      # J/mol  Fujii Table 1
+        DS: -125        # J/mol.K  Fujii Table 1
+        
+        # TODO Fujii has isotherms, highly sloping
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    WARNING: Suspect authors.
+}
+
+References
+{
+    Fujii
+    {
+        ID:      10.1016/0304-8853(82)90275-X
+        Authors: F. Fujii, F. Pourarian, W. E. Wallace
+        Title:   Effect of Hydrogen Absorption on the Magnetic Properties of Zr(Fe1-xAlx)2 Compounds
+        Journal: J. of Magnetism and Magnetic Materials
+        Year:    1982
+        Volume:  27
+        Pages:   215-220
+    }
+}

@@ -1,0 +1,50 @@
+Name: LaNi5.2Mn0.05Al0.05
+Elements: [La:1,Ni:5.2,Mn:0.05,Al:0.05]
+Type: AB5
+
+Thermodynamics
+{
+    Weight Percent: 0.80  # Verbetsky
+
+    Dehydriding
+    {
+        DH:  -26800      # J/mol  Verbetsky
+        DS:  -93.60      # J/mol.K  Verbetsky
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Verbetsky
+    {
+        ID:      SandiaDBRef1529
+        Authors: V.A. Verbetsky, A.L. Shilov, N.T. Kuznetsov
+        Title:   Hydrogen interaction with LaNi5+-xMnyAlz
+        Journal: J. of Inorganic chemistry (Russian)
+        Year:    1989
+        Volume:  34
+        Pages:   2403-2406
+    }
+}

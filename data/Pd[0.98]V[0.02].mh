@@ -1,0 +1,49 @@
+Elements: [Pd:0.98, V:0.02]
+Type: SS
+
+Thermodynamics
+{
+    H/M: 0.5  # Artman Fig 3
+
+    Dehydriding
+    {
+        DH:  -30800      # J/mol  Artman Table 3
+        DS:  -84.64      # J/mol.K  Artman - Calculated from peq = 80 mmHg at 298 K in Fig 3
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Artman
+    {
+        ID:      10.1016/0022-5088(76)90268-X
+        Authors: D. Artman, J. F. Lynch, T. B. Flanagan
+        Title:   Absorption of Hydrogen by Vanadium-Palladium Alloys
+        Journal: Journal of Less-Common Metals
+        Year:    1976
+        Volume:  45
+        Pages:   215-228
+    }
+}

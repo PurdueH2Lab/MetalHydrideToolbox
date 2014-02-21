@@ -1,0 +1,61 @@
+Elements: [Mm:1, Al:0.4, Mn:0.3, Co:0.7, Ni:3.6]
+Type: AB5
+ 
+Thermodynamics
+{
+    Weight Percent: 1.4  # Kapischke isotherms
+    
+    Dehydriding 
+    { 
+        DH: -32452   # J/mol   -  Kapischke Table 2, adjusted from fit to isotherms
+        DS: -104.0   # J/mol.K -  Kapischke Table 2, adjusted from fit to isotherms
+        slope: 3     # Fit from Kapischke isotherms
+        
+        From Isotherms: true
+    } 
+    Hydriding
+    {    
+        DH: -31380   # J/mol - Kapischke fit to isotherms
+        DS: -102.6   # J/mol.K - Kapischke fit to isotherms
+        
+        From Isotherms: true
+    }
+}
+ 
+Properties
+{
+    rho:  6700  #kg/m3 - Kapischke Table 1
+    Cp:   460   #J/kg.K - Kapischke Table 1
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+	Kapischke
+	{
+	    ID:      10.1016/S0894-1777(98)10007-9
+	    Authors: J. Kapischke, J. Hapke
+	    Title:   Measurement of the pressure-composition isotherms of high-temperature and low-temperature metal hydrides
+	    Journal: Experimental Thermal and Fluid Science
+	    Year:    1998
+	    Volume:  18
+	    Pages:   70-81
+	}
+
+}
+ 
+

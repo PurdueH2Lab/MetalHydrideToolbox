@@ -1,0 +1,49 @@
+Elements: [Zr:1, Mn:1.2, Fe:0.8]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.50  # Shaltiel
+
+    Dehydriding
+    {
+        DH:  -33050     # J/mol  Shaltiel Table 3 (-7.9 kcal)
+        DS:  -96.2      # J/mol.K  Shaltiel Table 3 (-23 cal)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Shaltiel
+    {
+        ID:      10.1016/0022-5088(77)90162-X
+        Authors: D. Shaltiel, I. Jacob, D. Davidov
+        Title:   Hydrogen Absorption and Desorption Properties of AB2 Laves-Phase Pseudobinary Compounds
+        Journal: Journal of Less-Common Metals
+        Year:    1977
+        Volume:  53
+        Pages:   117-131
+    }
+}

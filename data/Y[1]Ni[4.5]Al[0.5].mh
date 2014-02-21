@@ -1,0 +1,51 @@
+Elements: [Y:1, Ni:4.5, Al:0.5]
+Type: AB5
+
+Thermodynamics
+{
+    H/M:  4.5  # Sorgic fig 1
+
+    Dehydriding
+    {
+        DH:  -22420      # J/mol  Sorgic Table 1
+        DS: -100.60      # J/mol.K  Sorgic Table 1
+        
+        # TODO Sorgic has isotherms (fig 1)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Sorgic
+    {
+        ID:      10.1016/S0925-8388(97)00296-X
+        Authors: B. Sorgic, Z. Blazina, A. Drasner
+        Title:   A study of structural ans thermodynamic properties of the YNi5-xAlx-hydrogen system
+        Journal: Journal of Alloys and Compounds
+        Year:    1998
+        Volume:  265
+        Pages:   185-189
+    }
+}

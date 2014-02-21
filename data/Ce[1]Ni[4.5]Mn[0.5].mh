@@ -1,0 +1,58 @@
+Elements: [Ce:1,Ni:4.5,Mn:0.5]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 5.4  # Pourarian Figures 1 and 2
+
+    Dehydriding
+    {
+        DH:  -25400      # J/mol  Pourarian Table 5
+        DS: -100.6      # J/mol.K  Pourarian Table 5
+        slope: 0.39     # Pourarian Table 5
+        
+        From Isotherms: true  # confirmed by Pourarian isotherms
+    }
+    Hydriding
+    {
+        DH:  -19400      # J/mol  Pourarian Table 5
+        DS: -91.6      # J/mol.K  Pourarian Table 5
+        
+        From Isotherms: true  # confirmed by Pourarian isotherms
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    # TODO Pourarian has kinetics at one T
+    
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Pourarian
+    {
+        ID:      10.1016/0360-3199(85)90135-1
+        Authors: F. Pourarian, W. E. Wallace
+        Title:   The Effect of Substitution of Mn of Al on the Hydrogen Sorption Characteristics of CeNi5
+        Journal: Int. J. of Hydrogen Energy
+        Year:    1985
+        Volume:  10
+        Pages:   49-58
+    }
+}

@@ -1,0 +1,52 @@
+Elements: [Mm:1, Ni:4.8, Al:0.2]  # Used Cerium-free Mischmetal
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 6  # Mendelsohn Fig 6
+
+    Dehydriding
+    {
+        DH:  -31380      # J/mol  Mendelsohn Table 7
+        DS: -110.9      # J/mol.K  Mendelsohn Table 7
+        
+        # TODO Mendelsohn has isotherms (Fig 6)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    # TODO: Has isotherms and dH/dS values for LaNiAl alloys
+}
+
+References
+{
+    Mendelsohn
+    {
+        ID:      10.1016/0022-5088(79)90243-1
+        Authors: M. H. Mendelsohn, D. M. Gruen, A. E. Dwight
+        Title:   The Effect of Aluminum Additions on the Structural and Hydrogen Absorption Properties of AB5 Alloys with Particular Reference to the LaNi5-xAlx Ternary Alloy System
+        Journal: Journal of Less-Common Metals
+        Year:    1979
+        Volume:  63
+        Pages:   193-207
+    }
+}

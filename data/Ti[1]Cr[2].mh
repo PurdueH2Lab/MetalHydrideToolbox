@@ -1,0 +1,49 @@
+Name: TiCr2
+Elements: [Ti:1,Cr:2]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 0.80  # Machida
+
+    Dehydriding
+    {
+        DH:  -23000      # J/mol  Machida
+        DS: -109.13      # J/mol.K  Machida
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Machida
+    {
+        ID:      SandiaDBRef0371
+        Authors: Y. Machida, T. Yamadaya, M. Asanuma
+        Title:   Hydride Formation of C14-Type Ti Alloy
+        Journal: Hydrides for Energy Storage, A. F. Andresen and A. J. Maeland, Eds., Pergamon Press, Oxford
+        Year:    1978
+        Pages:   329-336
+    }
+}

@@ -1,0 +1,54 @@
+Name: NaAl
+Elements: [Na:1, Al:1]
+Type: Complex
+ 
+Thermodynamics
+{
+    Weight Percent: 3.7
+    
+    Dehydriding 
+    { 
+        DH: -37000		# J/mol
+        DS: -122   	# J/mol.K
+    } 
+    Hydriding
+    {
+    }
+}
+ 
+Properties
+{
+    # TODO: Find properties from Dedrick et al.
+    rho: 1240			# kg/m^3
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Ahluwalia
+    {
+        ID:      10.1016/j.ijhydene.2006.07.027
+        Authors: R. Ahluwalia
+        Title:   Sodium alanate hydrogen storage system for automotive fuel cells
+        Journal: International Journal of Hydrogen Energy
+        Year:    2007
+        Volume:  32
+        Pages:   1251-1261
+    }
+}
+ 
+

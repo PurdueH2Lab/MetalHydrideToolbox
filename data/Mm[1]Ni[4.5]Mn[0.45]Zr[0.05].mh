@@ -1,0 +1,52 @@
+Elements: [Mm:1, Ni:4.5, Mn:0.45, Zr:0.05]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 6 # assumed
+
+    Dehydriding
+    {
+        DH:  -29900      # J/mol  Hagstrom Table 1
+        DS:  -112        # J/mol.K  Hagstrom Table 1
+    }
+    Hydriding
+    {
+        DH:  -23900      # J/mol  Hagstrom Table 1
+        DS:  -100        # J/mol.K  Hagstrom Table 1
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Hagstrom
+    {
+        ID:      10.1016/0360-3199(95)00025-9
+        Authors: M. T. Hagstrom, P. D. Lund, J. P. Vanhanen
+        Title:   Metal hydride hydrogen storage for near-ambient temperature and atmospheric pressure applications, a pdsc study
+        Journal: International Journal of Hydrogen Energy
+        Year:    1995
+        Volume:  20
+        Pages:   897-909
+    }
+
+}

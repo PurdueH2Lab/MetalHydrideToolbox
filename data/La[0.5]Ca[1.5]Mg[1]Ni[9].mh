@@ -1,0 +1,51 @@
+Elements: [La:0.5,Ca:1.5,Mg:1,Ni:9]
+Type: Misc
+
+Thermodynamics
+{
+    H/M: 13  # Chen section 3.3.4 text
+
+    Dehydriding
+    {
+        DH:  -35350      # J/mol  Chen Table 5, first plateau
+        DS: -107.1       # J/mol.K  Chen Table 5, first plateau
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO: Chen has PCI curves
+    Has multiple plateaus
+}
+
+References
+{
+    Chen
+    {
+        ID:      10.1016/S0925-8388(00)00694-0
+        Authors: J. Chen, H.T. Takeshita, H. Tanaka, N. Kuriyama, T. Sakai, I. Uehara, M. Haruta
+        Title:   Hydriding properties of LaNi3 and CaNi3 and their substitutes with PuNi3-type structure
+        Journal: J. of Alloys and Compounds
+        Year:    2000
+        Volume:  302
+        Pages:   304-313
+    }
+}

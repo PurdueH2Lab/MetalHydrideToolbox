@@ -1,0 +1,49 @@
+Elements: [Ti:1, Co:0.5, Fe:0.5]
+Type: AB
+
+Thermodynamics
+{
+    Weight Percent: 1.10  # Suzuki Table 2
+
+    Dehydriding
+    {
+        DH:  -42260      # J/mol  Suzuki Table 1 (10.1 kcal)
+        DS: -123.0      # J/mol.K  Suzuki Table 1 (29.4 cal)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Suzuki
+    {
+        ID:      10.1016/0022-5088(81)90091-6
+        Authors: H. Suzuki, Y. Osumi, A. Kato, K. Oguro, M. Nakane
+        Title:   Hydrogen Absorption-Desorption Characteristics of Ti-Co-Fe Alloys
+        Journal: Journal of Less-Common Metals
+        Year:    1981
+        Volume:  80
+        Pages:   179-185
+    }
+}

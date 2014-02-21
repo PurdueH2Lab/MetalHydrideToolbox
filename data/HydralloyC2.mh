@@ -1,0 +1,58 @@
+Elements: [Ti: 1, Mn: 1.67, Vf: 0.33]  # From GfE brochure, very approximate
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.6  # Vanhanan Table 1
+    
+    Dehydriding 
+    {
+        DH: -30000	 	# J/mol Vanhanan Table 1
+        DS: -121   		# J/mol.K Vanhanan Table 1
+        slope: 1.28     # vanhanen, value is an average of 0.5 and 1.1
+        
+        From Isotherms: true
+    } 
+    Hydriding
+    {
+        DH: -26000 		# J/mol Vanhanan Table 1
+        DS: -112   		# J/mol.K Vanhanan Table 1
+        
+        From Isotherms: true
+    }
+}
+ 
+Properties
+{
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Vanhanen
+    {
+        ID:      10.1016/S0360-3199(98)00095-0
+        Authors: J. P. Vanhanen, M. T. Hagstrom, P. D. Lund
+        Title:   Combined hydrogen compressing and heat transforming through metal hydrides
+        Journal: International Journal of Hydrogen Energy
+        Year:    1999
+        Volume:  24
+        Pages:   441-448  
+    }
+}
+ 
+

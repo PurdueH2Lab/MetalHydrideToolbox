@@ -1,0 +1,51 @@
+Elements: [Ti:0.9, Zr:0.2, Mn:1.6, Ni:0.2, Vf:0.2]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 2.00  # Xu
+
+    Dehydriding
+    {
+        DH:  -23190      # J/mol  Xu Table 2
+        DS:  -90.06      # J/mol.K  Xu Table 2
+        slope: 1.26      # Xu Table 2 (average of abs and des)
+    }
+    Hydriding
+    {
+        ln(Pa/Pd): 0.99  # Xu Table 2
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Xu
+    {
+        ID:      10.1016/S0360-3199(00)00124-5
+        Authors: Y.-H. Xu, C.-P. Chen, W.-X. Geng, Q.-D. Wang
+        Title:   The hydrogen storage properties of Ti-Mn-based C14 Laves phase intermetallics as hydrogen resource for PEMFC
+        Journal: International Journal of Hydrogen Energy
+        Year:    2001
+        Volume:  26
+        Pages:   593-596
+    }
+}

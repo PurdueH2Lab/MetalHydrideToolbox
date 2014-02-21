@@ -1,0 +1,84 @@
+Elements: [Ti:1, Fe:0.8, Mn:0.2]
+Type: AB
+ 
+Thermodynamics
+{
+    Weight Percent: 1.3   # Sandrock Table 3
+    
+    Dehydriding 
+    { 
+        #DH: -41200		# J/mol - Sandrock Table 3
+        #DS: -119     	# J/mol.K - Sandrock Table 3
+        
+        DH: -31800      # J/mol - Mintz table 2
+        DS: -105       # J/mol.K - Mintz table 2
+        
+        slope: 0.36     # Sandrock Table 3
+    } 
+    Hydriding
+    {
+        #ln(Pa/Pd): 0.05   # Sandrock Table 3
+        
+        DH: -27600      # J/mol - Mintz table 2
+        DS: -94.98      # J/mol.K - Mintz table 2
+    }
+}
+ 
+Properties
+{
+    Cp: 502		# J/kg.K
+	rho: 6500   # kg/m^3   Sandrock Table 3
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Huston
+    {
+        ID:      10.1016/0022-5088(80)90182-4
+        Authors: E. Huston, G. Sandrock
+        Title:   Engineering properties of metal hydrides
+        Journal: Journal of Less Common Metals
+        Year:    1980
+        Volume:  74
+        Pages:   435-443
+    }  
+    
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }
+    
+    Mintz
+    {
+        ID:      10.1063/1.329808  
+        Authors: M. H. Mintz, S. Vaknin, S. Biderman, Z. Hadari
+        Title:   Hydrides of Ternary TiFexM1-x (M=Cr,Mn,Co,Ni) Intermetallics
+        Journal: J. Appl. Phys.
+        Year:    1981
+        Volume:  52
+        Pages:   463-467
+    }
+}
+ 
+

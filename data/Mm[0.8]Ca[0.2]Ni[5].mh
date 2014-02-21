@@ -1,0 +1,57 @@
+Name: Mm0.8CaNi
+Elements: [Mm:0.8, Ca:0.2, Ni:5]
+Type: AB5
+ 
+Thermodynamics
+{ 
+    Weight Percent: 1.08
+    
+    Dehydriding 
+    { 
+        DH: -24300		# J/mol Huston Table 1
+        DS: -108.7   	# J/mol.K Huston Table 1
+        slope: 0.98     # Huston Table 2
+        
+        # TODO Huston has isotherms
+    } 
+    Hydriding
+    {   
+        ln(Pa/Pd): 0.39  # Huston Table 1
+    }
+}
+ 
+Properties
+{
+    Cp: 439	    # J/kg.K Table 2
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Huston
+    {
+        ID:      10.1016/0022-5088(80)90182-4
+        Authors: E. Huston, G. Sandrock
+        Title:   Engineering properties of metal hydrides
+        Journal: Journal of Less Common Metals
+        Year:    1980
+        Volume:  74
+        Pages:   435-443
+    }
+}
+ 
+

@@ -1,0 +1,65 @@
+Elements: [Mm:0.3, Ca:0.7, Ni:5]
+Type: AB5
+ 
+Thermodynamics
+{
+    Weight Percent: 1.9  # Sandrock
+    
+    Dehydriding 
+    { 
+        DH: -26640	   # J/mol Huston Table 1
+        DS: -100.4     # J/mol.K Huston Table 1
+        slope: 3.27    # Huston Table 2
+    } 
+    Hydriding
+    {  
+        ln(Pa/Pd): 0.10  # Huston Table 1
+    }
+}
+ 
+Properties
+{
+	Cp: 502				# J/kg.K Huston Table 2
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Sandrock
+    {
+        ID:      SandiaDBRef0113
+        Authors: G. D. Sandrock
+        Title:   Development of Low Cost Nickel-Rare Earth Hydrides for Hydrogen Storage
+        Journal: HYDROGEN ENERGY SYSTEM, T. N. Vezeroglu and W. Seifritz, Eds., Pergamon Press
+        Year:    1978
+        Volume:  3
+        Pages:   1625-1656
+    }
+    
+    Huston
+    {
+        ID:      10.1016/0022-5088(80)90182-4
+        Authors: E. Huston, G. Sandrock
+        Title:   Engineering properties of metal hydrides
+        Journal: Journal of Less Common Metals
+        Year:    1980
+        Volume:  74
+        Pages:   435-443
+    }
+}
+ 
+

@@ -1,0 +1,50 @@
+Name: Ti.8Zr.2Mn1.5Fe.5
+Elements: [Ti:0.8,Zr:0.2,Mn:1.5,Fe:0.5]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.70  # Hong
+
+    Dehydriding
+    {
+        DH:  -25400      # J/mol  Hong
+        DS: -103.72      # J/mol.K  Hong
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Hong
+    {
+        ID:      SandiaDBRef0373
+        Authors: C. Hong, Y. Zhang, D. Han
+        Title:   Hydrogen Absorption Properties of Pseudo-Binary Alloys Ti0.8Zr0.2Mn1.5M0.5
+        Journal: Z. Phys. Chem. NF
+        Year:    1994
+        Volume:  183
+        Pages:   169-174
+    }
+}

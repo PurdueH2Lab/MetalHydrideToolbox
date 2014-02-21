@@ -1,0 +1,55 @@
+Name: Mg2Cu
+Elements: [Mg:2, Cu:1]
+Type: Mg
+ 
+Thermodynamics
+{
+    Weight Percent: 2.04 # Huston Table 2 (alloy 302)
+    
+    Dehydriding 
+    { 
+        DH: -72900		# J/mol Huston Table 1 from 'A' value
+        DS: -142.3   	# J/mol.K Huston Table 1 from 'B' value
+        slope: 0.17     # Huston Table 2
+        Ts: 597         # Huston Table 2 footnote g slope temperature (TODO Check!, see Mg2Ni for reasons)
+    } 
+    Hydriding
+    {
+    }
+}
+ 
+Properties
+{
+    Cp: 753				# J/kg.K, Huston Table 2
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Huston
+    {
+        ID:      10.1016/0022-5088(80)90182-4
+        Authors: E. Huston, G. Sandrock
+        Title:   Engineering properties of metal hydrides
+        Journal: Journal of Less Common Metals
+        Year:    1980
+        Volume:  74
+        Pages:   435-443
+    }
+}
+ 
+

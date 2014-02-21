@@ -1,0 +1,55 @@
+Name: MmNi3.5CoAl
+Elements: [Mm:1, Ni:3.5, Co:0.7, Al:0.8]
+Type: AB5
+ 
+Thermodynamics
+{
+    Weight Percent: 1.24  # Sandrock Table 1
+    
+    Dehydriding 
+    { 
+        DH: -39800			# J/mol - Sandrock Table 1
+        DS: -115   			# J/mol.K - Sandrock Table 1
+        slope: 1.2          # Sandrock table 1
+    } 
+    Hydriding
+    {
+        ln(Pa/Pd): 0.2   # Sandrock table 1 (noted in table as "est")
+    }
+}
+ 
+Properties
+{
+    rho: 7600			# kg/m3 - Sandrock table 1
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }
+}
+ 
+

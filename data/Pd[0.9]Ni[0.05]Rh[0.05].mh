@@ -1,0 +1,49 @@
+Elements: [Pd:0.9, Ni:0.05, Rh:0.05]
+Type: SS
+
+Thermodynamics
+{
+    H/M: 0.7  # Sakamoto isotherms
+
+    Dehydriding
+    {
+        DH:  -28400      # J/mol  Sakamoto Table 2 (x2)
+        DS:  -91.4       # J/mol.K  Sakamoto Table 2 (x2)
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Sakamoto
+    {
+        ID:      10.1016/0925-8388(94)01353-5
+        Authors: Y. Sakamoto, K. Ohira, N. Isimaru, F. L. Chen, M. Kokubu, T. B. Flanagan
+        Title:   Absorption of hydrogen by palladium-nickel-rhodium ternary alloys
+        Journal: J. of Alloys and Compounds
+        Year:    1995
+        Volume:  217
+        Pages:   226-234
+    }
+}

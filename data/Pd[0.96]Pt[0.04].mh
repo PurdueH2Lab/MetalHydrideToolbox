@@ -1,0 +1,54 @@
+Elements: [Pd:0.96, Pt:0.04]
+Type: SS
+
+Thermodynamics
+{
+   H/M: 0.6  # Yasumatsu fig 2
+
+    Dehydriding
+    {
+        DH:  -37400      # J/mol  Yasumatsu Table 3
+        DS:  -97.9       # J/mol.K  Yasumatsu Table 3
+        
+        # TODO Yasumatsu has isotherms (fig 2)
+    }
+    Hydriding
+    {
+        DH:  -30900      # J/mol  Yasumatsu Table 3
+        DS:  -82.6       # J/mol.K  Yasumatsu Table 3
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TODO Yasumatsu has other blends of Pt-Pd hydride
+}
+
+References
+{
+    Yasumatsu
+    {
+        ID:      10.1016/S0925-8388(99)00438-7
+        Authors: T. Yasumatsu, J.L. Wan, M. Matsuyama, K. Watanabe
+        Title:   Absorption og hydrogen isotopes by Pd-Pt alloys
+        Journal: J. of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   900-907
+    }
+}

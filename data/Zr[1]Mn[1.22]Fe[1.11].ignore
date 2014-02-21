@@ -1,0 +1,53 @@
+Elements: [Zr:1, Mn:1.22, Fe:1.11]
+Type: AB2
+
+Thermodynamics
+{
+    Weight Percent: 1.50  # Sinha
+
+    Dehydriding
+    {
+        DH:  -13100      # J/mol  Sinha - TODO: Sinha has PCI curves
+        DS:  -43.20      # J/mol.K  Sinha
+    }
+    Hydriding
+    {
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{ #Sinha mentions that "kinetics are extremely fast" and has kinetics
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+    TGV: The results from Sinha are highly suspect.
+    Every one of the hydrides from a Sinha paper has a very low enthalpy which is
+    not reproduced by other authors. The abstracts from Sinha papers also always seem
+    to note how unusually low the enthalpy value is.
+}
+
+References
+{    
+    Sinha
+    {
+        ID:      10.1016/0022-5088(83)90317-X
+        Authors: V. K. Sinha, W. E. Wallace
+        Title:   The Hyperstoichiometric ZrMn1+xFe1+y-H2 System, I: Hydrogen Storage Characteristics
+        Journal: Journal of Less-Common Metals
+        Year:    1983
+        Volume:  91
+        Pages:   229-237
+    }
+}

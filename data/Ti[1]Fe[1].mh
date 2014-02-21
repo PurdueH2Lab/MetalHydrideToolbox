@@ -1,0 +1,56 @@
+Name: TiFe
+Elements: [Ti:1, Fe:1]
+Type: AB
+ 
+Thermodynamics
+{
+    Weight Percent: 1.86  # Sandrock Table 3
+    
+    Dehydriding 
+    { 
+        DH: -28100		# J/mol Sandrock Table 3
+        DS: -106   		# J/mol.K Sandrock Table 3
+        slope: 0        # Sandrock Table 3
+    } 
+    Hydriding
+    {
+        ln(Pa/Pd): 0.64  # Sandrock Table 3
+    }
+}
+ 
+Properties
+{
+    rho: 6500	# kg/m^3 - Sandrock Table 3
+}
+ 
+Kinetics
+{ # TODO: Look up Ron 1999 for kinetics
+
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }   
+}
+ 
+

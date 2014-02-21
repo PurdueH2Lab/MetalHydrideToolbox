@@ -1,0 +1,61 @@
+Name: TiZrMnFe
+Elements: [Ti:0.5, Zr:0.5, Mn:1.36, Fe:0.34]
+Type: AB2
+ 
+Thermodynamics
+{
+    Weight Percent: 1.6  # Komazaki
+    
+    Dehydriding 
+    { 
+        DH:  -37802    #J/mol Komazaki PCI curve fit
+        DS:  -111.0     #J/mol.K Komazaki PCI curve fit
+        slope: 1.9     # Komazaki PCI curve fit
+        
+        From isotherms: true
+    } 
+    Hydriding
+    {
+        DH:  -35382    #J/mol Komazaki PCI curve fit
+        DS:  -106.8     #J/mol.K Komazaki PCI curve fit
+        
+        From isotherms: true
+    }
+}
+ 
+Properties
+{
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Komazaki
+    {
+        ID:      10.1016/0022-5088(83)90279-5
+        Authors: Y. Komazaki, M. Uchida, S. Suda, A. Suzuki, S. Ono, N. Nishimiya
+        Title:   Equilibrium Properties of Ti-Zr-Fe-Mn Hydrides
+        Journal: Journal of the Less-Common Metals
+        Year:    1983
+        Volume:  89
+        Pages:   269-274  
+    }
+}
+ 
+
+ 
+

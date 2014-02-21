@@ -1,0 +1,54 @@
+Name: TiMn1.4V
+Elements: [Ti:1, Mn:1.4, V:0.62]
+Type: AB2
+ 
+Thermodynamics
+{
+    Weight Percent: 2.15 # Sandrock Table 2
+    
+    Dehydriding 
+    { 
+        DH: -28600		# J/mol Sandrock Table 2
+        DS: -107   		# J/mol.K Sandrock Table 2
+        slope: 1.4      # Sandrock Table 2
+    } 
+    Hydriding
+    {
+    }
+}
+ 
+Properties
+{
+    rho: 5800	# kg/m^3 - Sandrock Table 2
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Sandrock
+    {
+        ID:      10.1016/S0925-8388(99)00384-9
+        Authors: G. Sandrock
+        Title:   A panoramic overview of hydrogen storage alloys from a gas reaction point of view
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  293-295
+        Pages:   877-888
+    }
+}
+ 
+
