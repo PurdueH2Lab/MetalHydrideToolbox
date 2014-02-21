@@ -156,10 +156,11 @@ classdef Element
     methods(Static)
         %------------------------------------------------------------------
         function sf = CompareAlloys(A,B)
-            % Compare the composition of alloys A and B and calculate a
-            % similarity factor
+            % Compare the composition of alloys A and B and calculate their
+            % average difference in elemental composition
             %
-            % A and B are arrays of elements
+            % A and B are either MetalHydride objects or arrays of Element
+            % objects
             
             if isa(A,'MetalHydride')
                 A = A.Elements;
