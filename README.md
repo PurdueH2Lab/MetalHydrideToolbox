@@ -1,7 +1,7 @@
 Purdue Metal Hydride Toolbox
 ===============================
 
-The Purdue Metal Hydride Toolbox (PMHT) object-oriented MATLAB Toolbox for modeling 
+The Purdue Metal Hydride Toolbox (PMHT) is an object-oriented MATLAB Toolbox for modeling 
 metal hydride thermal systems and hydrogen storage systems. It is tested in
 MATLAB R2012a and newer.
 
