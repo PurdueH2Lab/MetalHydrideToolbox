@@ -615,7 +615,7 @@ AB5full = hydrides( hydrides.IsType('AB5') & [hydrides.ThermoLevel] == 2);
 % *Comparing Hydrides*
 %
 % To compare the alloy composition of two hydrides, you can use the
-% |CompareAlloys| static function in the |Element| class. This function
+% |SimilarTo| operator in the |MetalHydride| class. This function
 % returns the average difference in elemental composition between two
 % alloys (alloys are arrays of |Element| objects).
 % A low difference value means the alloys have similar elemental
@@ -626,10 +626,10 @@ HydB = MetalHydride('Ti[1.01]Cr[1.06]Mn[1]');
 HydC = MetalHydride('La[1]Ni[4.9]Al[0.1]');
 HydD = MetalHydride('Ti[1]Cr[1]Mn[0.8]');
 
-fprintf('A and B -> %f\n',Element.CompareAlloys(HydA, HydB));
-fprintf('A and C -> %f\n',Element.CompareAlloys(HydA, HydC));
-fprintf('B and D -> %f\n',Element.CompareAlloys(HydB, HydD));
-fprintf('A and D -> %f\n',Element.CompareAlloys(HydA, HydD));
+fprintf('A and B -> %f\n',HydA.SimilarTo(HydB));
+fprintf('A and C -> %f\n',HydA.SimilarTo(HydC));
+fprintf('B and D -> %f\n',HydB.SimilarTo(HydD));
+fprintf('A and D -> %f\n',HydA.SimilarTo(HydD));
 
 %%
 % *Plotting Hydrides*

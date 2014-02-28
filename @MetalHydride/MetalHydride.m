@@ -57,6 +57,8 @@ classdef MetalHydride
         kEffAssumed % Whether the thermal conductivity was assumed (boolean/logical)
         rhoAssumed % Whether the density was assumed (boolean/logical)
         CpAssumed % Whether the specific heat was assumed (boolean/logical)
+        AbsFromIsotherms % Whether the absorption thermo is from isotherms (boolean/logical)
+        DesFromIsotherms % Whether the desorption thermo is from isotherms (boolean/logical)
     end
     
     %----------------------------------------------------------------------
@@ -69,14 +71,14 @@ classdef MetalHydride
         Pc   % Critical pressure (Pa)
         Name % Compact hydride name (e.g. 'LaNi5')
         FormattedName % Formatted hydride name (e.g. 'LaNi_{5}')
-        FormattedType % Formatted hydride type (e.g. 'AB_5')
+        FormattedType % Formatted hydride type (e.g. 'AB_{5}')
         W    % Hydride molar mass (g/mol or kg/kmol)
     end
     
     %----------------------------------------------------------------------
     % Base private properties - for debugging it can be helpful to set this
     % to 'SetAccess = protected' so you can see the stored values
-    properties (SetAccess = protected) %(Access = private)
+    properties %(Access = private)
         % Elements - Array of Element objects
         Elements = Element(); 
         
@@ -89,16 +91,18 @@ classdef MetalHydride
         % The thermo structure contains the following information:
         %   Thermo.WtPct - Maximum weight percent hydrogen (H/(H+M))
         %   Thermo.Tc - Hydride critical temperature (K)
-        %   Thermo.Omega - Solution interaction energy calculated from Tc (J/mol_H)
+        %   Thermo.Omega - Solution interaction energy calculated from Tc (J/mol_H2)
         %   Thermo.TcAssumed - Boolean indicating if Tc was assumed
         %   Thermo.SlopeAssumed - Boolean indicating if plateau slope was assumed
         %   Thermo.HysteresisAssumed - Boolean indicating if hysteresis was assumed
-        %   Thermo.Dehydriding.dH - Dehydriding enthalpy (J/mol_H)
-        %   Thermo.Dehydriding.dS - Dehydriding entropy (J/mol_H/K)
-        %   Thermo.Dehydriding.A - Dehydriding plateau slope (J/mol_H)
-        %   Thermo.Hydriding.dH - Hydriding enthalpy (J/mol_H)
-        %   Thermo.Hydriding.dS - Hydriding entropy (J/mol_H/K)
-        %   Thermo.Hydriding.A - Hydriding plateau slope (J/mol_H)
+        %   Thermo.Dehydriding.dH - Dehydriding enthalpy (J/mol_H2)
+        %   Thermo.Dehydriding.dS - Dehydriding entropy (J/mol_H2/K)
+        %   Thermo.Dehydriding.A - Dehydriding plateau slope (J/mol_H2)
+        %   Thermo.Dehydriding.FromIsotherms - Boolean indicating source
+        %   Thermo.Hydriding.dH - Hydriding enthalpy (J/mol_H2)
+        %   Thermo.Hydriding.dS - Hydriding entropy (J/mol_H2/K)
+        %   Thermo.Hydriding.A - Hydriding plateau slope (J/mol_H2)
+        %   Thermo.Hydriding.FromIsotherms - Boolean indicating source
         %
         % For information on how these properties are used, see
         % MetalHydride.Peq and MetalHydride.dH.
@@ -639,7 +643,8 @@ classdef MetalHydride
             %         determine whether it is absorbing or desorbing.
             %  w  -   Specific weight fraction to evaluate dH at. If
             %         omitted, this takes the average from all plateaus 
-            %         weighted by the plateau width.
+            %         weighted by the plateau width. This is only relevant
+            %         for multi-plateau hydrides.
             %
             % Output:
             %  dH - Absolute value of the reaction enthalpy
@@ -839,6 +844,10 @@ classdef MetalHydride
             % if A == B
             %   do stuff
             % end
+            %
+            % if A == 'LaNi5'
+            %   do stuff
+            % end
             
             if isa(mh1,'MetalHydride')
                 mh1CellStr = {mh1.Name};
@@ -872,6 +881,11 @@ classdef MetalHydride
             % if A ~= B
             %   do stuff
             % end
+            %
+            % if A ~= 'LaNi5'
+            %   do stuff
+            % end
+            
             noteq = ~(mh1 == mh2);
         end
         
@@ -995,6 +1009,24 @@ classdef MetalHydride
         end
         
         %------------------------------------------------------------------
+        function fromIsotherms = get.AbsFromIsotherms(self)
+            if isnan(self)
+                fromIsotherms = [];
+            else
+                fromIsotherms = self.Thermo.Hydriding.FromIsotherms;
+            end
+        end
+        
+        %------------------------------------------------------------------
+        function fromIsotherms = get.DesFromIsotherms(self)
+            if isnan(self)
+                fromIsotherms = [];
+            else
+                fromIsotherms = self.Thermo.Dehydriding.FromIsotherms;
+            end
+        end
+        
+        %------------------------------------------------------------------
         function simFactor = SimilarTo(self,other)
             % Determines if a hydride is of similar composition to another
             %
@@ -1067,8 +1099,9 @@ classdef MetalHydride
                     for j = i+1:length(self)
                         if self(i).SimilarTo(self(j)) == 0
                             error('MetalHydride:Evaluate',...
-                                  ['Database has to elementally identical hydrides',...
-                                  ' in different entries (%s and %s)'],...
+                                  ['Database has two elementally ',...
+                                  'identical hydrides in different ',...
+                                  'entries (%s and %s)'],...
                                   self(i).Name, self(j).Name);
                         end
                     end
@@ -1115,9 +1148,12 @@ classdef MetalHydride
             title(self.FormattedName)
             h = zeros(size(T));
             for t = 1:length(T)
-                h(t) = plot(w.*100,self.Peq(T(t),w,'abs')./1e5,'Line','-',...
-                     'Color',colors(t,:),'LineWidth',2,...
-                     'DisplayName',sprintf('%3.0f K',T(t)));
+                h(t) = plot(w.*100,self.Peq(T(t),w,'abs')./1e5,...
+                            'Line','-',...
+                            'Color',colors(t,:),...
+                            'LineWidth',2,...
+                            'DisplayName',sprintf('%3.0f K',T(t)));
+                        
                 plot(w.*100,self.Peq(T(t),w,'des')./1e5,'Line','--',...
                      'Color',colors(t,:),'LineWidth',2);
             end
