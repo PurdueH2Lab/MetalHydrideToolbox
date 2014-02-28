@@ -10,7 +10,8 @@ function WriteLaTeXSummary(showPlots)
     % installed.
     %
     % Inputs:
-    %  showPlots (optional) - Boolean input of whether to show plots
+    %  showPlots (optional) - Boolean input of whether to show plots.
+    %                         Defaults to false if omitted.
     %
     % Output:
     %  None (produces several files in the 'doc' folder)
@@ -59,9 +60,6 @@ function WriteLaTeXSummary(showPlots)
     % Locate all PCI data CSV files
     csvFiles = dir(fullfile(PCIpath,'*_PCI.csv'));
     
-    % Make a color map for temperature
-    colors = jet(100);
-
     % Write the document preamble
     docStr = sprintf([...
           '\\documentclass[notitlepage]{article}\n\n',...
@@ -103,114 +101,15 @@ function WriteLaTeXSummary(showPlots)
                     hydrideName);
             continue
         end
-
-        % Read the PCI data from the excel sheet
-        PCIData = MetalHydride.ReadPCIData(hydrideName);
-
+        
         % Load the corresponding MetalHydride object from the database
         MH = MetalHydride([hydrideName, '.mh']);
-        wvec = linspace(0.01,0.97,100).*MH.wMax();
 
         % Create a figure to plot the data and model
-        figure;
-        set(gcf,...
-            'Name',hydrideName,...
-            'Units','inches',...
-            'Position',[2 2 6.5 2.75],...
-            'PaperPositionMode','auto',...
-            'PaperSize',[6.5 2.75],...
-            'Visible','off');
-
-        if showPlots
-            set(gcf,'Visible','on');
-        end
+        [hFig,DOI] = MH.ComparePCI(showPlots);
         
-        % Make two axes
-        ax(1) = subplot(1,2,1);
-        hold all
-        %th = title([MH.FormattedName, sprintf(' (DOI: %s)',PCIData.DOI)]);
-        ax(2) = subplot(1,2,2);
-        hold all
-        %title(MH.FormattedName)
-
-        % Find the max and min temperature from the data
-        Tmax = 0;
-        Tmin = 3000;
-
-        if ~isempty(PCIData.Abs)
-            Tmax = max([Tmax max([PCIData.Abs.T])]);
-            Tmin = min([Tmin min([PCIData.Abs.T])]);
-        end
-
-        if ~isempty(PCIData.Des)
-            Tmax = max([Tmax max([PCIData.Des.T])]);
-            Tmin = min([Tmin min([PCIData.Des.T])]);
-        end
-
-        % Make Van't Hoff plot
-        Tvh = linspace(Tmin-20, Tmax+50, 100);
-        Pabs = zeros(size(Tvh));
-        Pdes = zeros(size(Tvh));
-        for i = 1:length(Tvh)
-            Pabs(i) = MH.Peq(Tvh(i),0.5*MH.wMax,'abs')./1e5;
-            Pdes(i) = MH.Peq(Tvh(i),0.5*MH.wMax,'des')./1e5;
-        end
-
-        plot(ax(2),1000./Tvh, Pabs,'-k','LineWidth',2);
-        plot(ax(2),1000./Tvh, Pdes,'--k','LineWidth',2);
-
-        % Plot absorption
-        for na = 1:length(PCIData.Abs)
-            T = PCIData.Abs(na).T;
-            cs = max([1 round((T - Tmin) / (Tmax - Tmin) * 100)]);
-            PeqModel = MH.Peq(T,wvec,'abs') ./ 1e5;
-            plot(ax(1),wvec.*100,PeqModel,'Line','-','LineWidth',2,...
-                 'Color',colors(cs,:));
-            plot(ax(1),PCIData.Abs(na).w.*100, PCIData.Abs(na).Peq,'Marker','o',...
-                 'Color',colors(cs,:),'MarkerFaceColor',colors(cs,:),...
-                 'Line','None');
-
-            % Van't Hoff
-            [x,idx] = unique(PCIData.Abs(na).w./MH.wMax);
-            y = PCIData.Abs(na).Peq(idx);
-            Pmid = interp1(x,y,0.5);
-            plot(ax(2),1000./T,Pmid,'Marker','o',...
-                 'Color','k','MarkerFaceColor','k',...
-                 'Line','None');
-        end
-
-        % Plot desorption
-        for nd = 1:length(PCIData.Des)
-            T = PCIData.Des(nd).T;
-            cs = max([1 round((T - Tmin) / (Tmax - Tmin) * 100)]);
-            PeqModel = MH.Peq(T,wvec,'des') ./ 1e5;
-            plot(ax(1),wvec.*100,PeqModel,'Line','--','LineWidth',2,...
-                 'Color',colors(cs,:));
-            plot(ax(1),PCIData.Des(nd).w.*100, PCIData.Des(nd).Peq,'Marker','o',...
-                 'Color',colors(cs,:),'MarkerFaceColor','w','Line','None');
-
-            % Van't Hoff
-            [x,idx] = unique(PCIData.Des(nd).w./MH.wMax);
-            y = PCIData.Des(nd).Peq(idx);
-            Pmid = interp1(x,y,0.5);
-            plot(ax(2),1000./T,Pmid,'Marker','o',...
-                 'Color','k','MarkerFaceColor','w',...
-                 'Line','None');
-        end
-
-        % Format the axes
-        xlabel(ax(1),'w_H / w_M (%)')
-        ylabel(ax(1),'P (bar)')
-        xlabel(ax(2),'1000/T (K^{-1})')
-        ylabel(ax(2),'P (bar)')
-        set(ax(1),'XLim',[0 MH.wMax.*100]);
-        set(ax,'LineWidth',1,'Box','on','YScale','log');
-
-        set(ax(1),'Position',[.13 .18 .35 .75]);
-        set(ax(2),'Position',[.57 .18 .35 .75]);
-
         % Save the figure as a pdf
-        print(gcf,'-dpdf',fullfile(docPath,sprintf('fig%04d.pdf',f)));
+        print(hFig,'-dpdf',fullfile(docPath,sprintf('fig%04d.pdf',f)));
 
         % write the figure to the tex file
         texStr = sprintf(['  \\begin{center}\n',...
@@ -218,7 +117,7 @@ function WriteLaTeXSummary(showPlots)
                           '  \\captionof{figure}{Isotherms and Vant Hoff plot of $%s$ \\cite{%s}}\n',...
                           '  \\label{fig:%04d}\n',...
                           '  \\end{center}\n\n'],...
-                          f,MH.FormattedName,PCIData.DOI,f);
+                          f,MH.FormattedName,DOI,f);
 
         docStr = sprintf('%s%s',docStr,texStr);
     end

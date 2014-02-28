@@ -246,7 +246,7 @@ classdef Element
             % Make a name string for the hydride (e.g. 'LaNi5')
             cstr = Element.BuildString(elements,'','');
         end
-        
+                
         %------------------------------------------------------------------
         function cstr = MakeCompoundString(elements)
             % Make a name string for the hydride with '(' and ')' (e.g. 'LaNi(5)')

@@ -212,7 +212,7 @@ classdef MetalHydride
         
         %------------------------------------------------------------------
         % Write database summary LaTeX - function in separate file
-        WriteLaTeXSummary()
+        WriteLaTeXSummary(showPlots)
         
         %------------------------------------------------------------------
         % Print database statistics - function in separate file
@@ -369,6 +369,137 @@ classdef MetalHydride
                 mh.Name = Element.MakeNameString(mh.Elements);
             end
             
+        end
+        
+        %------------------------------------------------------------------
+        function [hFig,DOI] = ComparePCI(self, showPlot)
+            % Compare a hydride's Peq model with its isotherms, if available
+            %
+            % Call on a metal hydride to create a plot comparing any
+            % isotherms for that hydride with its Peq model. Returns a NaN
+            % figure handle if there are no isotherms to compare.
+            %
+            % Inputs:
+            %  showPlot  - Optional boolean to show plot or not (Defaults
+            %              to true)
+            %
+            % Outputs:
+            %  hFig  -  Handle to figure, or NaN if not PCI data
+            %  DOI   -  DOI for the PCI data, or a blank string
+            
+            [~,~,PCIpath,~] = MetalHydride.GetPaths();
+            [~,PCIfilename] = fileparts(self.SourceFile);
+            
+            if ~exist('showPlot','var')
+                showPlot = True;
+            end
+
+            if exist(fullfile(PCIpath,[PCIfilename,'_PCI.csv']),'file')
+                PCIData = MetalHydride.ReadPCIData(PCIfilename);
+                
+                wvec = linspace(0.01,0.97,100).*self.wMax;
+                colors = jet(100);
+                
+                hFig = figure;
+                set(hFig,...
+                    'Name',self.Name,...
+                    'Units','inches',...
+                    'Position',[2 2 6.5 2.75],...
+                    'PaperPositionMode','auto',...
+                    'PaperSize',[6.5 2.75],...
+                    'Visible','off');
+                
+                if showPlot
+                    set(hFig,'Visible','on');
+                end
+
+                % Make two axes
+                ax(1) = subplot(1,2,1);
+                hold all
+                ax(2) = subplot(1,2,2);
+                hold all
+
+                % Find the max and min temperature from the data
+                Tmax = 0;
+                Tmin = 3000;
+
+                if ~isempty(PCIData.Abs)
+                    Tmax = max([Tmax max([PCIData.Abs.T])]);
+                    Tmin = min([Tmin min([PCIData.Abs.T])]);
+                end
+
+                if ~isempty(PCIData.Des)
+                    Tmax = max([Tmax max([PCIData.Des.T])]);
+                    Tmin = min([Tmin min([PCIData.Des.T])]);
+                end
+
+                % Make Van't Hoff plot
+                Tvh = linspace(Tmin-20, Tmax+50, 100);
+                Pabs = zeros(size(Tvh));
+                Pdes = zeros(size(Tvh));
+                for i = 1:length(Tvh)
+                    Pabs(i) = self.Peq(Tvh(i),0.5*self.wMax,'abs')./1e5;
+                    Pdes(i) = self.Peq(Tvh(i),0.5*self.wMax,'des')./1e5;
+                end
+
+                plot(ax(2),1000./Tvh, Pabs,'-k','LineWidth',2);
+                plot(ax(2),1000./Tvh, Pdes,'--k','LineWidth',2);
+
+                % Plot absorption
+                for na = 1:length(PCIData.Abs)
+                    T = PCIData.Abs(na).T;
+                    cs = max([1 round((T - Tmin) / (Tmax - Tmin) * 100)]);
+                    PeqModel = self.Peq(T,wvec,'abs') ./ 1e5;
+                    plot(ax(1),wvec.*100,PeqModel,'Line','-','LineWidth',2,...
+                         'Color',colors(cs,:));
+                    plot(ax(1),PCIData.Abs(na).w.*100, PCIData.Abs(na).Peq,'Marker','o',...
+                         'Color',colors(cs,:),'MarkerFaceColor',colors(cs,:),...
+                         'Line','None');
+
+                    % Van't Hoff
+                    [x,idx] = unique(PCIData.Abs(na).w./self.wMax);
+                    y = PCIData.Abs(na).Peq(idx);
+                    Pmid = interp1(x,y,0.5);
+                    plot(ax(2),1000./T,Pmid,'Marker','o',...
+                         'Color','k','MarkerFaceColor','k',...
+                         'Line','None');
+                end
+
+                % Plot desorption
+                for nd = 1:length(PCIData.Des)
+                    T = PCIData.Des(nd).T;
+                    cs = max([1 round((T - Tmin) / (Tmax - Tmin) * 100)]);
+                    PeqModel = self.Peq(T,wvec,'des') ./ 1e5;
+                    plot(ax(1),wvec.*100,PeqModel,'Line','--','LineWidth',2,...
+                         'Color',colors(cs,:));
+                    plot(ax(1),PCIData.Des(nd).w.*100, PCIData.Des(nd).Peq,'Marker','o',...
+                         'Color',colors(cs,:),'MarkerFaceColor','w','Line','None');
+
+                    % Van't Hoff
+                    [x,idx] = unique(PCIData.Des(nd).w./self.wMax);
+                    y = PCIData.Des(nd).Peq(idx);
+                    Pmid = interp1(x,y,0.5);
+                    plot(ax(2),1000./T,Pmid,'Marker','o',...
+                         'Color','k','MarkerFaceColor','w',...
+                         'Line','None');
+                end
+
+                % Format the axes
+                xlabel(ax(1),'w_H / w_M (%)')
+                ylabel(ax(1),'P (bar)')
+                xlabel(ax(2),'1000/T (K^{-1})')
+                ylabel(ax(2),'P (bar)')
+                set(ax(1),'XLim',[0 self.wMax.*100]);
+                set(ax,'LineWidth',1,'Box','on','YScale','log');
+
+                set(ax(1),'Position',[.13 .18 .35 .75]);
+                set(ax(2),'Position',[.57 .18 .35 .75]);
+                
+                DOI = PCIData.DOI;
+            else
+                hFig = NaN;
+                DOI = '';
+            end
         end
         
         %------------------------------------------------------------------

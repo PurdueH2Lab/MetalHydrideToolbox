@@ -16,8 +16,12 @@
 *.log
 
 # Ignore database summary files and other generated files
-refs.txt
-references.txt
-dbSummary.xls
+*.txt
+*.tex
+*.bib
+dbSummary.*
+*.pdf
+*.xls
+*.xlsx
 Thumbs.db
 html

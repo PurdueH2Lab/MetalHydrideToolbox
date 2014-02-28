@@ -668,6 +668,14 @@ xlabel('w_H / w_M (%)')
 ylabel('P (bar)')
 
 %%
+% If the hydride has PCI curves available in the data/supporting folder,
+% you can plot the |Peq| model with the PCI data using the |ComparePCI|
+% function (which can return the figure handle and the DOI of the reference
+% the PCI data is from).
+
+A.CompareData();
+
+%%
 % *Solving ODEs with Hydride Rate Functions*
 %
 % You can use the hydride's reaction rate function and heating rate
