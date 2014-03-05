@@ -391,7 +391,7 @@ classdef MetalHydride
             [~,PCIfilename] = fileparts(self.SourceFile);
             
             if ~exist('showPlot','var')
-                showPlot = True;
+                showPlot = true;
             end
 
             if exist(fullfile(PCIpath,[PCIfilename,'_PCI.csv']),'file')

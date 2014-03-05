@@ -21,7 +21,8 @@
 % MetalHydrideToolbox folder to your path. If you have cloned or saved
 % the repository into your MATLAB user path, this line will be:
 
-addpath(fullfile(fileparts(userpath),'MATLAB','MetalHydrideToolbox'));
+%addpath(fullfile(fileparts(userpath),'MATLAB','MetalHydrideToolbox'));
+addpath('../')
 
 %%
 %%% 1.1 @Element
@@ -673,7 +674,7 @@ ylabel('P (bar)')
 % function (which can return the figure handle and the DOI of the reference
 % the PCI data is from).
 
-A.CompareData();
+A.ComparePCI();
 
 %%
 % *Solving ODEs with Hydride Rate Functions*
