@@ -21,8 +21,7 @@
 % MetalHydrideToolbox folder to your path. If you have cloned or saved
 % the repository into your MATLAB user path, this line will be:
 
-%addpath(fullfile(fileparts(userpath),'MATLAB','MetalHydrideToolbox'));
-addpath('../')
+addpath(fullfile(fileparts(userpath),'MATLAB','MetalHydrideToolbox'));
 
 %%
 %%% 1.1 @Element
