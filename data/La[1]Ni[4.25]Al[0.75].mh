@@ -8,13 +8,20 @@ Thermodynamics
     
     Dehydriding 
     { 
-        DH: -44100		# J/mol, ref sandrock or walker pp 324
-        DS: -117   		# J/mol.K, ref sandrock or walker pp 324
+        #DH: -44100		# J/mol, ref sandrock or walker pp 324
+        #DS: -117   		# J/mol.K, ref sandrock or walker pp 324
+        
+        DH: -38300    # J/mol, Kodama Table 1
+        DS: -106      # J/mol.K, Kodama Table 1
+        
         slope: 2.7      # Sandrock table 1
     } 
     Hydriding
     {
-        ln(Pa/Pd): 0.23   # Sandrock table 1
+        #ln(Pa/Pd): 0.23   # Sandrock table 1
+        
+        DH: -35900    # J/mol, Kodama Table 1
+        DS: -102.5    # J/mol.K, Kodama Table 1
     }
 }
  
@@ -40,6 +47,17 @@ Notes
         
 References
 {
+    Kodama
+    {
+        ID:      10.1016/S0925-8388(99)00173-5
+        Authors: T. Kodama
+        Title:   The thermodynamic parameters for the LaNi5-xAlx-H2 and MmNi5-xAlx-H2 systems
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  289
+        Pages:   207-212
+    }
+    
     Walker
     {
         ID:      1845692705

@@ -1,0 +1,54 @@
+Elements: [Mm:1, Ni:4.9, Fe:0.1]
+Type: AB5
+ 
+Thermodynamics
+{
+	Weight Percent: 1.66  # Singh Table 1
+    
+    Dehydriding 
+    { 
+        DH: -29430     # J/mol, Fit from Singh isotherms
+        DS: -101.7     # J/mol.K, Fit from Singh isotherms
+        slope: 0.7     # From Singh isotherms
+        
+        From isotherms: true
+    } 
+    Hydriding
+    {
+    }
+}
+ 
+Properties
+{
+}
+ 
+Kinetics
+{
+    Hydriding
+    {
+    }
+    
+    Dehydriding
+    {
+    }
+}
+ 
+Notes
+{ 
+}
+        
+References
+{
+    Singh
+    {
+        ID:      10.1016/j.jallcom.2003.11.005
+        Authors: Rajesh Kumar Singh, Bipin Kumar Gupta, M. V. Lototsky, O. N. Srivastava
+        Title:   On the synthesis and hydrogenation behaviour of MmNi5-xFex alloys and computer simulation of their P–C–T curves
+        Journal: Journal of Alloys and Compounds
+        Year:    2004
+        Volume:  373
+        Pages:   208-213
+    }
+}
+ 
+

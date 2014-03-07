@@ -1,0 +1,54 @@
+Elements: [Mm:0.5, La:0.5, Ni:4.7, Sn:0.3]
+Type: AB5
+ 
+Thermodynamics
+{
+    H/M: 5.5  # Khyzhun isotherms
+    
+    Dehydriding 
+    { 
+        DH: -33800       # J/mol, Khyzhun Table 3
+        DS: -111.2       # J/mol.K, Khyzhun Table 3
+        slope: 0.2       # Khyzhun isotherm fit
+        
+        From Isotherms: true
+    } 
+    Hydriding
+    {
+    }
+}
+ 
+Properties
+{
+}
+ 
+Kinetics
+{
+    Hydriding
+    {    
+    }
+    
+    Dehydriding
+    { 
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Khyzhun
+    {
+        ID:      10.1016/S0925-8388(03)00352-9
+        Authors: O. Yu. Khyzhun, M.V. Lototsky, A.B. Riabov, C. Rosenkilde, V.A. Yartys, S. Jorgensen, R.V. Denys
+        Title:   Sn-containing (La,Mm)Ni5-xSnxH5-6 intermetallic hydrides: thermodynamic, structural and kinetic properties
+        Journal: Journal of Alloys and Compounds
+        Year:    2003
+        Volume:  356-357
+        Pages:   773-778
+    }
+}
+ 
+

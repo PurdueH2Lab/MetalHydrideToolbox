@@ -222,6 +222,10 @@ classdef MetalHydride
         % Read PCI data from a csv file in data/supporting
         PCIdata = ReadPCIData(alloyName)
         
+        %------------------------------------------------------------------
+        % Read PCI data and fit key parameters to it
+        FitPCIData(alloyName,varargin)
+        
         % The following functions are for internal use only, but cannot be
         % private since the References and KineticsModel classes use them
         % too

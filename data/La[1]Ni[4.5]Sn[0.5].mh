@@ -1,22 +1,26 @@
-Elements: [La:1, Ni:4.6, Sn:0.4]
+Elements: [La:1, Ni:4.5, Sn:0.5]
 Type: AB5
  
 Thermodynamics
 {
-    H/M: 4.5  # Luo Fig 1 (walker pp 323 has 4.2)
+    H/M: 4.5  # Luo Fig 1
     
     Dehydriding 
     { 
-        DH: -40023    # J/mol, Luo isotherm fit
-        DS: -113.8    # J/mol.K,  Luo isotherm fit
-        slope: 0.2    # Luo isotherm fit
+        DH: -40600      # J/mol, Luo Table 2
+        DS: -110.6      # J/mol.K,  Luo isotherm fit
+        slope: 0.4      # Luo isotherm fit
         
         From Isotherms: true
     } 
     Hydriding
     { 
-        DH: -39250    # J/mol, Luo isotherm fit
-        DS: -112.4    # J/mol.K,  Luo isotherm fit
+        # Luo values result in infinite Tc
+        # DH: -40400      # J/mol, Luo Table 2
+        # DS: -110.3      # J/mol.K,  Luo Table 2 (changed from 110.4 to 110.3 to avoid indefined Tc)
+        
+        ln(Pa/Pd): 0.08   # Luo isotherm fit
+        T: 373            # Luo Table 1
         
         From Isotherms: true
     }
@@ -39,7 +43,6 @@ Kinetics
  
 Notes
 {
-    Walker pages 323 and 324 tables  
 }
         
 References
@@ -53,15 +56,6 @@ References
         Year:    1995
         Volume:  231
         Pages:   467-472
-    }
-    
-    Walker
-    {
-        ID:      1845692705
-        Authors: G. Walker
-        Title:   Solid State Hydrogen Storage: Materials and Chemistry
-        Year:    2008
-        Other:   Woodhead Publishing: Cambridge, England
     }
 }
  

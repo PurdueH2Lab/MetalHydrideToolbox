@@ -1,18 +1,28 @@
-Name: LaNi4.9Sn0.1
 Elements: [La:1,Ni:4.9,Sn:0.1]
 Type: AB5
 
 Thermodynamics
 {
-    Weight Percent: 1.30  # Filatova
+    H/M: 6  # Luo Figure 1
 
     Dehydriding
     {
-        DH:  -32000      # J/mol  Filatova
-        DS: -110.01      # J/mol.K  Filatova
+        DH: -32800      # J/mol  Luo Table 2 (listed per mol H)
+        DS: -109.3      # J/mol.K  Adjusted to fit Luo isotherms and Table 1 values
+        slope: 0.2      # Fit to Luo isotherm
+        
+        From Isotherms: true
     }
     Hydriding
     {
+        # Luo DH and DS values lead to negative Tc and are not consistent with their Fig 3
+        # DH: -32400      # J/mol  Luo Table 2 (listed per mol H)
+        # DS: -110.2      # J/mol.K  Luo Table 2 (listed per mol H)
+        
+        ln(Pa/Pd): 0.277  # Luo Table 1 - confirmed by isotherm
+        T: 373            # Luo Table 1 - confirmed by isotherm
+        
+        From Isotherms: true
     }
 }
 
@@ -37,14 +47,14 @@ Notes
 
 References
 {
-    Filatova
+    Luo
     {
-        ID:      SandiaDBRef1527
-        Authors: E.A. Filatova, N.A. Yakovleva, K.N. Semenenko
-        Title:   Calorimetrric study of LaNi4.9Al0.2-H2 and LaNi4.9Sn0.2-H2 systems
-        Journal: J. of General Chemistry (Russian)
-        Year:    2001
-        Volume:  71
-        Pages:   1084-1088
+        ID:      10.1016/0925-8388(95)01871-9
+        Authors: S. Luo, W. Luo, J. D. Clewley, Ted B. Flanagan, L. A. Wade
+        Title:   Thermodynamic studies of the LaNi5-xSnx-H system from x = 0 to 0.5
+        Journal: Journal of Alloys and Compounds
+        Year:    1995
+        Volume:  231
+        Pages:   467-472
     }
 }

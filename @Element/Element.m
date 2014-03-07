@@ -172,12 +172,30 @@ classdef Element
             
             sf = 0;
             
+            % First normalize alloy compositions so all elements are
+            % expressed as a fractional amount per formula unit. This is
+            % so that 'TiMn2' is recognized as the same as 'Ti2Mn4' and
+            % very similar to 'Ti10Mn20V0.1'
+            nA = sum([A.Mols]);
+            nB = sum([B.Mols]);
+            
+            for i = 1:length(A)
+                A(i).Mols = A(i).Mols / nA;
+            end
+            
+            for i = 1:length(B)
+                B(i).Mols = B(i).Mols / nB;
+            end
+            
+            % Then compare the alloy elements
             for i = 1:length(A)
                 Bid = find(B==A(i),1);
                 if ~isempty(Bid)
+                    % Element is in both, add difference in composition
                     sf = sf + abs(A(i).Mols - B(Bid).Mols);
                     B(Bid).Mols = 0;
                 else
+                    % Element is only in A, add it to the difference
                     sf = sf + A(i).Mols;
                 end
             end
@@ -185,7 +203,6 @@ classdef Element
             % add the elements in B that weren't in A
             sf = sf + sum([B.Mols]);
             
-            sf = sf / mean([length(A) length(B)]);
         end
         
         

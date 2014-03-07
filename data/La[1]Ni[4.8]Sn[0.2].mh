@@ -15,8 +15,10 @@ Thermodynamics
     } 
     Hydriding
     { 
-	    ln(Pa/Pd): 0.19   # Sandrock
-	    Tc:        500    # K, assumed for closure on Lexcellent isotherms
+	    ln(Pa/Pd): 0.17   # Luo Table 1, Sandrock has 0.19 and unspecified temperature
+        T:         373    # Luo Table 1
+        
+	    Tc:        500    # K, assumed for closure on Lexcellent isotherms, Luo isotherms support high Tc
     }
 }
  
@@ -82,6 +84,17 @@ References
         Year:    2007
         Volume:  15
         Pages:   934-944
+    }
+    
+    Luo
+    {
+        ID:      10.1016/0925-8388(95)01871-9
+        Authors: S. Luo, W. Luo, J. D. Clewley, Ted B. Flanagan, L. A. Wade
+        Title:   Thermodynamic studies of the LaNi5-xSnx-H system from x = 0 to 0.5
+        Journal: Journal of Alloys and Compounds
+        Year:    1995
+        Volume:  231
+        Pages:   467-472
     }
 }
  

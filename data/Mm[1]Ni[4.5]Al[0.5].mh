@@ -1,4 +1,3 @@
-Name: MmNi4.5Al0.5
 Elements: [Mm:1, Ni:4.5, Al:0.5]
 Type: AB5
  
@@ -8,13 +7,16 @@ Thermodynamics
     
     Dehydriding 
     { 
-        DH: -28000		# J/mol - Sandrock Table 1
-        DS: -105   		# J/mol.K - Sandrock Table 1
+        DH: -30500		# J/mol - Kodama Table 1
+        DS: -107.2   	# J/mol.K - Kodama Table 1
         slope: 0.36     # Sandrock Table 1
     } 
     Hydriding
     {
-        ln(Pa/Pd): 0.11  # Sandrock Table 1
+        #ln(Pa/Pd): 0.11  # Sandrock Table 1
+        
+        DH: -25700		# J/mol - Kodama Table 1
+        DS: -95.2  		# J/mol.K - Kodama Table 1
     }
 }
  
@@ -36,10 +38,22 @@ Kinetics
  
 Notes
 {
+    # TODO Kodama has isotherms
 }
         
 References
 {
+    Kodama
+    {
+        ID:      10.1016/S0925-8388(99)00173-5
+        Authors: T. Kodama
+        Title:   The thermodynamic parameters for the LaNi5-xAlx-H2 and MmNi5-xAlx-H2 systems
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  289
+        Pages:   207-212
+    }
+    
     Sandrock
     {
         ID:      10.1016/S0925-8388(99)00384-9

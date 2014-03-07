@@ -1,0 +1,53 @@
+Elements: [Mm:1,Ni:4,Al:1]
+Type: AB5
+
+Thermodynamics
+{
+    H/M: 4.2  # Kodama Fig 4
+
+    Dehydriding
+    {
+        DH:  -44900      # J/mol  Kodama Table 1
+        DS:  -118        # J/mol.K  Kodama Table 1
+        
+        # TODO Kodama has isotherms, highly sloped
+    }
+    Hydriding
+    {
+        DH:  -41100      # J/mol  Kodama Table 1
+        DS:  -110.2      # J/mol.K  Kodama Table 1
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    {
+    }
+
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Kodama
+    {
+        ID:      10.1016/S0925-8388(99)00173-5
+        Authors: T. Kodama
+        Title:   The thermodynamic parameters for the LaNi5-xAlx-H2 and MmNi5-xAlx-H2 systems
+        Journal: Journal of Alloys and Compounds
+        Year:    1999
+        Volume:  289
+        Pages:   207-212
+    }
+}
