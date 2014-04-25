@@ -15,10 +15,10 @@ Thermodynamics
     } 
     Hydriding
     { 
-	    ln(Pa/Pd): 0.17   # Luo Table 1, Sandrock has 0.19 and unspecified temperature
+        ln(Pa/Pd): 0.17   # Luo Table 1, Sandrock has 0.19 and unspecified temperature
         T:         373    # Luo Table 1
         
-	    Tc:        500    # K, assumed for closure on Lexcellent isotherms, Luo isotherms support high Tc
+        Tc:        500    # K, assumed for closure on Lexcellent isotherms, Luo isotherms support high Tc
     }
 }
  

@@ -1,18 +1,21 @@
-Name: CaNi3
-Elements: [Ca:1,Ni:3]
+Elements: [Ca:1, Ni:3]
 Type: AB3
 
 Thermodynamics
 {
-    H/M: 4.4  # Chen Section 3.3.2 text (1.1 * 4)
+    H/M: 3.8  # Chen Figure 5
 
     Dehydriding
     {
-        DH:  -35000      # J/mol  Chen - Table 5
-        DS: -112.1       # J/mol.K  Chen - Table 5
+        DH:  -20544      # J/mol  Chen - Figure 5 isotherm fit (differs from Table 5 significantly)
+        DS:  -64.0       # J/mol.K  Chen - Figure 5 isotherm fit (differs from Table 5 significantly)
+        slope: 2.0       # Chen Figure 5 isotherm fit
+        
+        From Isotherms: true
     }
     Hydriding
     {
+        Tc: 343  # Estimated based on narrowing of Chen isotherms
     }
 }
 
@@ -33,7 +36,6 @@ Kinetics
 
 Notes
 {
-    TODO: Chen has CaNi3 isotherm
 }
 
 References

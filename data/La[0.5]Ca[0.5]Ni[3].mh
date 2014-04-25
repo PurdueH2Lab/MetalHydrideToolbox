@@ -1,18 +1,21 @@
-Name: La.5Ca.5Ni3
 Elements: [La:0.5,Ca:0.5,Ni:3]
 Type: AB3
 
 Thermodynamics
 {
-    H/M: 4.4  # Chen section 3.3.3 text (1.1 * 4)
+    H/M: 3.8  # Chen isotherm fit (Figure 6)
 
     Dehydriding
     {
-        DH:  -43430      # J/mol  Chen - Table 5
-        DS: -114.6       # J/mol.K  Chen - Table 5
+        DH:  -33554      # J/mol  Chen - Figure 6 isotherm fit (differs from Table 5 significantly)
+        DS: -110.6       # J/mol.K  Chen - Figure 6 isotherm fit (differs from Table 5 significantly)
+        slope: 2.2       # Chen Figure 6 isotherm fit
+        
+        From Isotherms: true
     }
     Hydriding
     {
+        Tc: 343  # Estimated based on narrowing of Chen isotherms
     }
 }
 
@@ -33,7 +36,6 @@ Kinetics
 
 Notes
 {
-    TODO: Chen has PCI curves
 }
 
 References

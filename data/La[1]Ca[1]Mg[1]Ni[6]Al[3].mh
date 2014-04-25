@@ -1,25 +1,21 @@
-Elements: [La:0.5,Ca:1.5,Mg:1,Ni:9]
-Type: Misc
+Elements: [La:1,Ca:1,Mg:1,Ni:6,Al:3]
+Type: AB3
 
 Thermodynamics
 {
-    H/M: 12  # Chen section 3.3.4 text
+    H/M: 8  # Chen Figure 8a
 
     Dehydriding
     {
-        DH:  [-34639, -36682]      # J/mol  Chen isotherm fit (Fig 7b)
-        DS:  [-115.9, -130.1]      # J/mol.K  Chen isotherm fit (Fig 7b)
-        slope: [0.75, 0.5]         # Chen isotherm fit (Fig 7b)
+        DH:  -36863      # J/mol  Chen Figure 8a isotherm fit
+        DS: -118.2       # J/mol.K  Chen Figure 8a isotherm fit
+        slope: 2.4       # Chen Figure 8a isotherm fit
         
-        centers: [0.25, 0.75]   # Fit to Chen isotherm
-        widths: [0.5, 0.5]     # Fit to Chen isotherm
-        minSpans: [0.03]       # Fit to Chen isotherm
-        
-        From Isotherms:  True
+        From Isotherms: true
     }
     Hydriding
     {
-        Tc: [310, 340] # Estimated based on narrowing of Chen isotherms
+        Tc: 320  # Estimated based on narrowing of Chen isotherms
     }
 }
 

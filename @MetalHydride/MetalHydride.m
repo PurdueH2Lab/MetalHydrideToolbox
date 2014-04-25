@@ -765,7 +765,7 @@ classdef MetalHydride
             %  end
 
             istype = strcmpi({self.Type}, type);
-        end
+        end      
         
         %------------------------------------------------------------------
         function dH = dH(self, arg, w)
@@ -941,7 +941,7 @@ classdef MetalHydride
             %  Cp = A.Cp;
             %  Cp = A.Cp(A.wMax);
             %
-            % This uses the relationship between hydrogen capacity
+            % This uses the relationship between hydrogen content
             % and heat capacity measured by Dadson and Fluckiger and
             % supported by the Debye model, which is:
             %

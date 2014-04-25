@@ -1,17 +1,21 @@
 Elements: [La:1,Ca:1,Mg:1,Ni:6,Mn:3]
-Type: Misc
+Type: AB3
 
 Thermodynamics
 {
-    H/M: 13  # Chen Figure 8
+    H/M: 12  # Chen Figure 8b
 
     Dehydriding
     {
-        DH:  -32300      # J/mol  Chen Table 5
-        DS: -110.9       # J/mol.K  Chen Table 5
+        DH: -19018      # J/mol  Chen Figure 8b isotherm fit
+        DS: -67.7       # J/mol.K  Chen Figure 8b isotherm fit
+        slope: 1.2      # Chen Figure 8b isotherm fit
+        
+        From Isotherms: true
     }
     Hydriding
     {
+        Tc: 310  # Estimated based on narrowing of Chen isotherms
     }
 }
 
@@ -32,8 +36,6 @@ Kinetics
 
 Notes
 {
-    TODO: Chen has PCI curves
-    Chen also published in DOI 10.1149/1.1391115
 }
 
 References
