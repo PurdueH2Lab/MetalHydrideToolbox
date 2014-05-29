@@ -48,7 +48,7 @@ Element.ListElements()
 % The overall hydriding reaction rate is expressed as a product of three
 % terms:
 %
-% $$\frac{\partial w}{\partial t} = k(T) f_P(P,P_{eq}) f_w(w, w_{max}, P, P_{eq})$$
+% $$\frac{\partial w}{\partial t} = k(T) f_P(P,P_{eq}) f_w(w, w_{max}, P, P_{eq}, T)$$
 %
 % where $w$ is the weight fraction of hydrogen in the alloy,
 %
@@ -62,7 +62,11 @@ KineticsModel.ListPFcns()
 
 %%
 % and to add new options, modify
-% the |pFcnList| variable in |KineticsModel.m|.
+% the |pFcnList| variable in |KineticsModel.m|. To use a custom p function,
+% you can enter the function directly in the |*.mh| file in valid MATLAB
+% syntax, with inputs of |p| and |peq|. For example:
+%
+%   pFcn:  log(p/peq)^0.25
 %
 % Each option for $f_w$ must end with the word 'Hydriding' or
 % 'Dehydriding'. To show a list of available functions, use
@@ -71,7 +75,12 @@ KineticsModel.ListWFcns()
 
 %%
 % Further information on how to select these functions is
-% included in the section on |*.mh| files.
+% included in the section on |*.mh| files. As with the pressure function,
+% you can enter a custom function in the |.mh| file in valid MATLAB syntax
+% with inputs of |w|, |wmax|, |p|, |peq|, and |T|.
+% For example, to adjust the rate into two segments, you could use:
+%
+%   wFcn:  (w-wmax)*200*(p>2*peq) + (w-wmax)*(p<=2*peq)
 %
 %%% 1.3 @MetalHydride
 % This folder contains the class definition for the |MetalHydride| class,
@@ -439,8 +448,8 @@ MetalHydride.PrintStats();
 %          Ca: 9.57    # 1/s
 %          Ea: 16420   # J/mol
 % 
-%          pFcn: log
-%          wFcn: 1st Order
+%          pFcn: log(p/peq)^2
+%          wFcn: (w-wmax)*12*tanh(p-peq)
 %      }
 %  }
 % 
@@ -456,6 +465,9 @@ MetalHydride.PrintStats();
 %
 %   KineticsModel.ListPFcns();
 %   KineticsModel.ListWFcns();
+%
+% or simply enter a custom function directly, as done for the Dehydriding
+% case in the example above.
 %
 %%% 2.6 Example MH File - Notes
 % The notes section is not required and not read by the |MetalHydride|

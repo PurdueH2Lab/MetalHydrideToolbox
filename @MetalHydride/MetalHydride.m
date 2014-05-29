@@ -44,7 +44,6 @@ classdef MetalHydride
     properties (Dependent = true, SetAccess = private)
         kEff % Effective thermal conductivity (W/(m*K))
         rho  % Hydride density (kg/m^3)
-        Tc   % Critical temperature (K)
         Slope % Hydride plateau slope at 298 K
         Hysteresis % Hydride hysteresis values at 298 K
         ThermoLevel % Level of information in thermodynamics
@@ -73,6 +72,7 @@ classdef MetalHydride
         FormattedName % Formatted hydride name (e.g. 'LaNi_{5}')
         FormattedType % Formatted hydride type (e.g. 'AB_{5}')
         W    % Hydride molar mass (g/mol or kg/kmol)
+        Tc   % Critical temperature (K)
     end
     
     %----------------------------------------------------------------------
@@ -360,6 +360,7 @@ classdef MetalHydride
                 % Set the wMax, molar mass, and atomic H/M values
                 mh.wMax = mh.Thermo.WtPct/(1-mh.Thermo.WtPct);
                 mh.W = sum([mh.Elements.W].*[mh.Elements.Mols]);
+                mh.Tc = mh.Thermo.Tc;
                 mh.HM = mh.Thermo.WtPct/(1 - mh.Thermo.WtPct) * ...
                     mh.W/(1.008*sum([mh.Elements.Mols]));
                 
@@ -779,7 +780,8 @@ classdef MetalHydride
             %  w  -   Specific weight fraction to evaluate dH at. If
             %         omitted, this takes the average from all plateaus 
             %         weighted by the plateau width. This is only relevant
-            %         for multi-plateau hydrides.
+            %         for multi-plateau hydrides. This can also be an array
+            %         of two values between which dH is integrated.
             %
             % Output:
             %  dH - Absolute value of the reaction enthalpy
@@ -787,6 +789,8 @@ classdef MetalHydride
             % Example Usage:
             %  A = MetalHydride('La[1]Ni[5]');
             %  DH = A.dH('des');
+            %  DH = A.dH('abs',0.01);
+            %  DH = A.dH('abs',[0.005 0.01]);
             %  DH = A.dH(120.6);
             %  DH = A.dH(A.dwdt(300, 5e5, 0.5*A.wMax));
             %
@@ -824,7 +828,7 @@ classdef MetalHydride
                 otherwise
                     % Generate an error for any other type of input
                     error('MetalHydride:dH',...
-                          'Input must either be a cell/string or number');
+                          'First input must either be a cell/string or number');
                         
             end
             
@@ -842,16 +846,72 @@ classdef MetalHydride
                 x = w/self.wMax;
                 wgts = zeros(size(thermo.dH));
                 
-                if x < self.Thermo.centers(1)
-                    wgts(1) = 1;
-                elseif x > self.Thermo.centers(end)
-                    wgts(end) = 1;
-                else
-                    dist = 4./self.Thermo.widths.*abs(x-self.Thermo.centers)-1;
-                    dist(dist<1e-6) = 1e-6;
+                if length(x) == 1
+                    if x < self.Thermo.centers(1)
+                        wgts(1) = 1;
+                    elseif x > self.Thermo.centers(end)
+                        wgts(end) = 1;
+                    else
+                        % There can be gaps between plateaus. If the
+                        % specified value is in a gap, we have to get a
+                        % valid answer still. The inverse distance weighted
+                        % method accomplishes that, giving a linear
+                        % weighting between the two plateau values in the
+                        % gap.
+                        dist = 2./self.Thermo.widths.*abs(x-self.Thermo.centers)-1;
+                        dist(dist<1e-6) = 1e-6;
+
+                        wgts = 1./dist;
+                        wgts = wgts./sum(wgts);
+                    end
                     
-                    wgts = 1./dist;
-                    wgts = wgts./sum(wgts);
+                elseif length(x) == 2
+                    % If two values provided, consider it an integration
+                    % between the two values
+                    
+                    x = sort(x);
+                    xL = self.Thermo.centers-self.Thermo.widths/2;
+                    xR = self.Thermo.centers+self.Thermo.widths/2;
+
+                    for i = 1:length(thermo.dH)
+                        xpts = [-2e-6 -1e-6 0 1 1+1e-6 1+2e-6 0 0];
+                        ypts = [0 1 1 1 1 0 0 0];
+                        
+                        if i > 1
+                            xMid = mean([xR(i-1), xL(i)]);
+                            xSpan = max([self.Thermo.minSpans(i-1), xL(i)-xR(i-1)]);
+                            xpts(3) = xMid + xSpan/2;
+                            xpts(2) = xMid - xSpan/2;
+                            ypts(2) = 0;
+                        end
+
+                        if i < length(thermo.dH)
+                            xMid = mean([xR(i),xL(i+1)]);
+                            xSpan = max([self.Thermo.minSpans(i), xL(i+1)-xR(i)]);
+                            xpts(4) = xMid - xSpan/2;
+                            xpts(5) = xMid + xSpan/2;
+                            ypts(5) = 0;
+                        end
+                        
+                        y = interp1(xpts(1:6),ypts(1:6),x);
+                        xpts(7:8) = x;
+                        ypts(7:8) = y;
+
+                        [~,idx] = unique(xpts);
+                        xpts = xpts(idx);
+                        ypts = ypts(idx);
+
+                        idx = xpts>=x(1) & xpts<=x(2);
+                        xpts = xpts(idx);
+                        ypts = ypts(idx);
+
+                        wgts(i) = trapz(xpts,ypts);
+                    end
+
+                    wgts = wgts./(x(2)-x(1));
+                else
+                    error('MetalHydride:dH',...
+                          'w vector is too long');
                 end
             else
                 wgts = self.Thermo.widths ./ sum(self.Thermo.widths);
@@ -861,17 +921,7 @@ classdef MetalHydride
             % that J/kg-H is the same as J/kg-H2)
             dH = abs(sum(thermo.dH.*wgts).*1000./2.016);
         end
-           
-        %------------------------------------------------------------------
-        function Tc = get.Tc(self)
-            % Return the critical temperature (K)
-            if isnan(self)
-                Tc = [];
-            else
-                Tc = self.Thermo.Tc;
-            end
-        end
-        
+                   
         %------------------------------------------------------------------
         function slope = get.Slope(self)
             % Get the slope property

@@ -1,10 +1,9 @@
-Name: NaAl
-Elements: [Na:1, Al:1]
+Elements: [Na:1, Al:1, H: 1]
 Type: Complex
  
 Thermodynamics
 {
-    Weight Percent: 3.7
+    Weight Percent: 3.9
     
     Dehydriding 
     { 
@@ -25,11 +24,21 @@ Properties
 Kinetics
 {
     Hydriding
-    {    
+    {
+        Ca: 1.2e8
+        Ea: 83380
+        
+        pFcn: (p-peq)/peq
+        wFcn: 1st Order
     }
     
     Dehydriding
     { 
+        Ca: 9.57
+        Ea: 16420
+        
+        pFcn: log
+        wFcn: 1st Order
     }
 }
  
