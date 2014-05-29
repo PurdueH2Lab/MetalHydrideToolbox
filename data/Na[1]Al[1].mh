@@ -7,8 +7,12 @@ Thermodynamics
     
     Dehydriding 
     { 
-        DH: -37000		# J/mol
-        DS: -122   	# J/mol.K
+        DH: [-37000, -47000]		# J/mol Auluwalia 
+        DS: [-122, -126]   	# J/mol.K Auluwalia
+		
+		centers: [0.21, 0.72]	# fit to Ahluwalia isotherm
+		widths: [0.35, 0.51]	# fit to Ahluwalia isotherm
+		minSpans: [0.03]		# fit to Ahluwalia isotherm
     } 
     Hydriding
     {
@@ -17,8 +21,9 @@ Thermodynamics
  
 Properties
 {
-    # TODO: Find properties from Dedrick et al.
+    
     rho: 1240			# kg/m^3
+	keff: 0.42				# W/m.K, average of values in Fig 4 Dedrick 2005, given for catalyzed with Al 
 }
  
 Kinetics
@@ -57,6 +62,17 @@ References
         Year:    2007
         Volume:  32
         Pages:   1251-1261
+    }
+	
+	Dedrick
+    {
+        ID:     10.1016/j.jallcom.2004.08.007
+        Authors: D.E. Dedrick, M.P. Kanouff, B.C. Replogle, K.J. Gross
+        Title:   Thermal properties characterization of sodium alanates
+        Journal: Journal of Alloys and Compounds
+        Year:    2005	
+        Volume:  389
+        Pages:   299-305
     }
 }
  
