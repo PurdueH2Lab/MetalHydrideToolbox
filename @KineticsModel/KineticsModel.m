@@ -178,7 +178,7 @@ classdef KineticsModel
             if nargin > 0
                 
                 % Load dehydriding kinetics if present
-                readEntries = false;
+                readDesEntries = false;
                 if isfield(entryDicts, 'Dehydriding')
                     lines = entryDicts.Dehydriding.entryLines;
 
@@ -189,32 +189,20 @@ classdef KineticsModel
                         km.Dehydriding.Ea = MetalHydride.ReadNumber(lines,'Ea');
 
                         % Generate function handle
-                        fcnString = MetalHydride.ReadString(lines,'pFcn');
+                        desPfcnString = MetalHydride.ReadString(lines,'pFcn');
                         [km.Dehydriding.pFcn, km.Dehydriding.pFcnID] = ...
-                             KineticsModel.CreatePFcnHandle(fcnString);
+                             KineticsModel.CreatePFcnHandle(desPfcnString);
 
-                        fcnString = MetalHydride.ReadString(lines,'wFcn');
+                        desWfcnString = MetalHydride.ReadString(lines,'wFcn');
                         [km.Dehydriding.wFcn, km.Dehydriding.wFcnID] = ...
-                             KineticsModel.CreateWFcnHandle(fcnString,'Dehydriding');
+                             KineticsModel.CreateWFcnHandle(desWfcnString,'Dehydriding');
 
-                        readEntries = true;
+                        readDesEntries = true;
                     end
                 end
-
-                % If entries were not found, select defaults based on family
-                if ~readEntries
-                    km.Dehydriding = struct('Assumed',true,...
-                        'Ca',MetalHydride.GetTypeProperty('Ca Dehydriding',type),...
-                        'Ea',MetalHydride.GetTypeProperty('Ea Dehydriding',type));
-
-                    [km.Dehydriding.pFcn, km.Dehydriding.pFcnID] = ...
-                        KineticsModel.CreatePFcnHandle('log');
-                    [km.Dehydriding.wFcn, km.Dehydriding.wFcnID] = ...
-                        KineticsModel.CreateWFcnHandle('1st Order','Dehydriding');
-                end
-
+                
                 % Load hydriding kinetics if present
-                readEntries = false;
+                readAbsEntries = false;
                 if isfield(entryDicts,'Hydriding')
                     lines = entryDicts.Hydriding.entryLines;
 
@@ -225,28 +213,63 @@ classdef KineticsModel
                         km.Hydriding.Ea = MetalHydride.ReadNumber(lines,'Ea');
 
                         % Generate function handle
-                        fcnString = MetalHydride.ReadString(lines,'pFcn');
+                        absPfcnString = MetalHydride.ReadString(lines,'pFcn');
                         [km.Hydriding.pFcn, km.Hydriding.pFcnID] = ...
-                             KineticsModel.CreatePFcnHandle(fcnString);
+                             KineticsModel.CreatePFcnHandle(absPfcnString);
 
-                        fcnString = MetalHydride.ReadString(lines,'wFcn');
+                        absWfcnString = MetalHydride.ReadString(lines,'wFcn');
                         [km.Hydriding.wFcn, km.Hydriding.wFcnID] = ...
-                             KineticsModel.CreateWFcnHandle(fcnString,'Hydriding');
+                             KineticsModel.CreateWFcnHandle(absWfcnString,'Hydriding');
 
-                        readEntries = true;
+                        readAbsEntries = true;
+                    end
+                end
+                
+                % If entries were not found, select defaults based on family
+                if ~readDesEntries
+                    if ~readAbsEntries
+                        km.Dehydriding = struct('Assumed',true,...
+                            'Ca',MetalHydride.GetTypeProperty('Ca Dehydriding',type),...
+                            'Ea',MetalHydride.GetTypeProperty('Ea Dehydriding',type));
+
+                        [km.Dehydriding.pFcn, km.Dehydriding.pFcnID] = ...
+                            KineticsModel.CreatePFcnHandle('log');
+                        [km.Dehydriding.wFcn, km.Dehydriding.wFcnID] = ...
+                            KineticsModel.CreateWFcnHandle('1st Order','Dehydriding');
+                    else
+                        km.Dehydriding = struct('Assumed',true,...
+                            'Ca',km.Hydriding.Ca,...
+                            'Ea',km.Hydriding.Ea);
+
+                        [km.Dehydriding.pFcn, km.Dehydriding.pFcnID] = ...
+                            KineticsModel.CreatePFcnHandle(absPfcnString);
+                        [km.Dehydriding.wFcn, km.Dehydriding.wFcnID] = ...
+                            KineticsModel.CreateWFcnHandle(absWfcnString,'Dehydriding');
                     end
                 end
 
-                % If entries were not found, select defaults based on family
-                if ~readEntries
-                    km.Hydriding = struct('Assumed',true,...
-                        'Ca',MetalHydride.GetTypeProperty('Ca Hydriding',type),...
-                        'Ea',MetalHydride.GetTypeProperty('Ea Hydriding',type));
 
-                    [km.Hydriding.pFcn, km.Hydriding.pFcnID] = ...
-                        KineticsModel.CreatePFcnHandle('log');
-                    [km.Hydriding.wFcn, km.Hydriding.wFcnID] = ...
-                        KineticsModel.CreateWFcnHandle('1st Order','Hydriding');
+                % If entries were not found, select defaults based on family
+                if ~readAbsEntries
+                    if ~readDesEntries
+                        km.Hydriding = struct('Assumed',true,...
+                            'Ca',MetalHydride.GetTypeProperty('Ca Hydriding',type),...
+                            'Ea',MetalHydride.GetTypeProperty('Ea Hydriding',type));
+
+                        [km.Hydriding.pFcn, km.Hydriding.pFcnID] = ...
+                            KineticsModel.CreatePFcnHandle('log');
+                        [km.Hydriding.wFcn, km.Hydriding.wFcnID] = ...
+                            KineticsModel.CreateWFcnHandle('1st Order','Hydriding');
+                    else
+                        km.Hydriding = struct('Assumed',true,...
+                            'Ca',km.Dehydriding.Ca,...
+                            'Ea',km.Dehydriding.Ea);
+
+                        [km.Hydriding.pFcn, km.Hydriding.pFcnID] = ...
+                            KineticsModel.CreatePFcnHandle(desPfcnString);
+                        [km.Hydriding.wFcn, km.Hydriding.wFcnID] = ...
+                            KineticsModel.CreateWFcnHandle(desWfcnString,'Hydriding');
+                    end
                 end
             end
         end

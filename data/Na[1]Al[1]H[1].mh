@@ -13,6 +13,8 @@ Thermodynamics
         centers: [0.2, 0.72]   # fit to Ahluwalia isotherm (4 mol% Ti)
         widths:  [0.4, 0.51]   # fit to Ahluwalia isotherm (4 mol% Ti)
         minSpans: [0.02]       # fit to Ahluwalia isotherm (4 mol% Ti)
+        
+        From Isotherms:  True
     } 
     Hydriding
     {
