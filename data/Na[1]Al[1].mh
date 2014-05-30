@@ -8,8 +8,8 @@ Thermodynamics
     
     Dehydriding 
     { 
-        DH: [-37000, -47000]		# J/mol Auluwalia 
-        DS: [-122, -126]   	# J/mol.K Auluwalia
+        DH: [-47000, -37000]		# J/mol Auluwalia 
+        DS: [-126, -122]   	# J/mol.K Auluwalia
 		
 		centers: [0.21, 0.72]	# fit to Ahluwalia isotherm
 		widths: [0.35, 0.51]	# fit to Ahluwalia isotherm
