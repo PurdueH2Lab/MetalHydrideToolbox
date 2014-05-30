@@ -10,17 +10,17 @@ Thermodynamics
         DH: [-47000, -37000]    # J/mol Ahluwalia (4 mol% Ti)
         DS: [-126, -122]        # J/mol.K Ahluwalia (4 mol% Ti)
 		
-        centers: [0.2, 0.72]   # fit to Ahluwalia isotherm (4 mol% Ti)
-        widths:  [0.4, 0.51]   # fit to Ahluwalia isotherm (4 mol% Ti)
-        minSpans: [0.02]       # fit to Ahluwalia isotherm (4 mol% Ti)
+        centers: [0.2, 0.72]   # fit to Streukens isotherm (4 mol% Ti)
+        widths:  [0.4, 0.51]   # fit to Streukens isotherm (4 mol% Ti)
+        minSpans: [0.02]       # fit to Streukens isotherm (4 mol% Ti)
         
         From Isotherms:  True
     } 
     Hydriding
     {
-        Tc:        [2000,  3000 ]  # Abritrary large numbers to give sharp plateau to fit Ahluwalia isotherm (4 mol% Ti)
-        ln(Pa/Pd): [0.159, 0.159]  # fit to Ahluwalia isotherm (4 mol% Ti)
-        T:         433             # Ahluwalia isotherm (4 mol% Ti)
+        Tc:        [2000,  3000 ]  # Abritrary large numbers to give sharp plateau to fit Streukens isotherm (4 mol% Ti)
+        ln(Pa/Pd): [0.159, 0.159]  # fit to Streukens isotherm (4 mol% Ti)
+        T:         433             # Streukens isotherm (4 mol% Ti)
     }
 }
  
@@ -59,6 +59,17 @@ Notes
         
 References
 {
+    Streukens
+    {
+        ID:      10.1039/b603268k
+        Authors: G. Streukens, B. Bogdanovic, M. Felderhoff, F. Schuth
+        Title:   Dependence of dissociation pressure upon doping level of Ti-doped sodium alanate—a possibility for "thermodynamic tailoring" of the system
+        Journal: Physical Chemistry Chemical Physics
+        Year:    2006
+        Volume:  8
+        Pages:   2889-2892
+    }
+    
     Ahluwalia
     {
         ID:      10.1016/j.ijhydene.2006.07.027
