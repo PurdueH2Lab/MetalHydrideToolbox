@@ -61,12 +61,10 @@ classdef KineticsModel
         % handle that takes four arguments (w, wmax, P, and Peq)
         % The 'Chaise' functions are from Chaise et al. 
         % (IJHE Vol 35 p 6311)
-        wFcnList = [struct('Name','1st Order Hydriding','Handle',@(w,wmax,p,peq) (wmax-w));...
-                    struct('Name','1st Order Dehydriding','Handle',@(w,wmax,p,peq) (w));...
-                    struct('Name','0th Order Hydriding','Handle',@(w,wmax,p,peq) (wmax));...
-                    struct('Name','0th Order Dehydriding','Handle',@(w,wmax,p,peq) (wmax));...
-                    struct('Name','Chaise Hydriding','Handle',@(w,wmax,p,peq) (((w-wmax)/(2*log(1-max([1e-6 w])/wmax)))*(p>2*peq) + (wmax-w)*(p<=2*peq)));...
-                    struct('Name','Chaise Dehydriding','Handle',@(w,wmax,p,peq) (w/sqrt(-log(max([1e-6 w])/wmax))));];
+        wFcnList = [struct('Name','1st Order Hydriding','Handle',  @(w,wmax,p,peq,T) (wmax-w));...
+                    struct('Name','1st Order Dehydriding','Handle',@(w,wmax,p,peq,T) (w));...
+                    struct('Name','0th Order Hydriding','Handle',  @(w,wmax,p,peq,T) (wmax));...
+                    struct('Name','0th Order Dehydriding','Handle',@(w,wmax,p,peq,T) (wmax));];
     end
     
     methods(Static = true, Access = private)
@@ -83,31 +81,47 @@ classdef KineticsModel
             ID = find(cellfun(@(s) strcmpi(s,ss),pFcnNames));
             
             if isempty(ID)
-                error('KineticsModel:CreatePFcnHandle',...
-                      'Pressure function type "%s" not recognized',ss);
+                try
+                    fh = str2func(['@(p,peq) ',lower(ss)]);
+                    fh(10,12); % Test function evaluation
+                catch err
+                    disp(err)
+                    error('KineticsModel:CreatePFcnHandle',...
+                          'Pressure function "%s" not recognized',ss);
+                end
+
+            else
+                fh = KineticsModel.pFcnList(ID).Handle;
             end
             
-            fh = KineticsModel.pFcnList(ID).Handle;
+            
         end
         
         %------------------------------------------------------------------
         % Create the function for the w-portion of the kinetics model
-        function [fh,ID] = CreateWFcnHandle(str)
+        function [fh,ID] = CreateWFcnHandle(str,mode)
             if iscell(str)
                 str = str{1};
             end
             ss = strtrim(str);
+            fcnStr = [ss,' ',mode];
             wList = KineticsModel.wFcnList;
             
             wFcnNames = {wList.Name};
-            ID = find(cellfun(@(s) strcmpi(s,ss),wFcnNames));
+            ID = find(cellfun(@(s) strcmpi(s,fcnStr),wFcnNames));
             
             if isempty(ID)
-                error('KineticsModel:CreateWFcnHandle',...
-                      'W function type "%s" not recognized',ss);
+                try
+                    fh = str2func(['@(w,wmax,p,peq,t) ',lower(ss)]);
+                    fh(0,0.01,10,12,300); % Test function evaluation
+                catch err
+                    disp(err)
+                    error('KineticsModel:CreateWFcnHandle',...
+                          'W function "%s" not recognized',ss);
+                end
+            else
+                fh = KineticsModel.wFcnList(ID).Handle;
             end
-            
-            fh = KineticsModel.wFcnList(ID).Handle;
         end
     end
     
@@ -140,14 +154,14 @@ classdef KineticsModel
             
             % Set column widths (in characters)
             c1 = 25;
-            c2 = 88;
+            c2 = 50;
             
             fprintf('+-%s-+-%s-+\n','-'*ones(1,c1),'-'*ones(1,c2));
             fprintf('| Name %s | Function %s |\n',...
                 ' '*ones(1,c1-5),' '*ones(1,c2-9));
             fprintf('+-%s-+-%s-+\n','-'*ones(1,c1),'-'*ones(1,c2));
             for i = 1:length(KineticsModel.wFcnList)
-                fprintf('| %-25s | %-88s |\n',...
+                fprintf('| %-25s | %-50s |\n',...
                     KineticsModel.wFcnList(i).Name, ...
                     func2str(KineticsModel.wFcnList(i).Handle));
             end
@@ -164,7 +178,7 @@ classdef KineticsModel
             if nargin > 0
                 
                 % Load dehydriding kinetics if present
-                readEntries = false;
+                readDesEntries = false;
                 if isfield(entryDicts, 'Dehydriding')
                     lines = entryDicts.Dehydriding.entryLines;
 
@@ -175,32 +189,20 @@ classdef KineticsModel
                         km.Dehydriding.Ea = MetalHydride.ReadNumber(lines,'Ea');
 
                         % Generate function handle
-                        fcnString = MetalHydride.ReadString(lines,'pFcn');
+                        desPfcnString = MetalHydride.ReadString(lines,'pFcn');
                         [km.Dehydriding.pFcn, km.Dehydriding.pFcnID] = ...
-                             KineticsModel.CreatePFcnHandle(fcnString);
+                             KineticsModel.CreatePFcnHandle(desPfcnString);
 
-                        fcnString = MetalHydride.ReadString(lines,'wFcn');
+                        desWfcnString = MetalHydride.ReadString(lines,'wFcn');
                         [km.Dehydriding.wFcn, km.Dehydriding.wFcnID] = ...
-                             KineticsModel.CreateWFcnHandle([fcnString,' Dehydriding']);
+                             KineticsModel.CreateWFcnHandle(desWfcnString,'Dehydriding');
 
-                        readEntries = true;
+                        readDesEntries = true;
                     end
                 end
-
-                % If entries were not found, select defaults based on family
-                if ~readEntries
-                    km.Dehydriding = struct('Assumed',true,...
-                        'Ca',MetalHydride.GetTypeProperty('Ca Dehydriding',type),...
-                        'Ea',MetalHydride.GetTypeProperty('Ea Dehydriding',type));
-
-                    [km.Dehydriding.pFcn, km.Dehydriding.pFcnID] = ...
-                        KineticsModel.CreatePFcnHandle('log');
-                    [km.Dehydriding.wFcn, km.Dehydriding.wFcnID] = ...
-                        KineticsModel.CreateWFcnHandle('1st Order Dehydriding');
-                end
-
+                
                 % Load hydriding kinetics if present
-                readEntries = false;
+                readAbsEntries = false;
                 if isfield(entryDicts,'Hydriding')
                     lines = entryDicts.Hydriding.entryLines;
 
@@ -211,28 +213,63 @@ classdef KineticsModel
                         km.Hydriding.Ea = MetalHydride.ReadNumber(lines,'Ea');
 
                         % Generate function handle
-                        fcnString = MetalHydride.ReadString(lines,'pFcn');
+                        absPfcnString = MetalHydride.ReadString(lines,'pFcn');
                         [km.Hydriding.pFcn, km.Hydriding.pFcnID] = ...
-                             KineticsModel.CreatePFcnHandle(fcnString);
+                             KineticsModel.CreatePFcnHandle(absPfcnString);
 
-                        fcnString = MetalHydride.ReadString(lines,'wFcn');
+                        absWfcnString = MetalHydride.ReadString(lines,'wFcn');
                         [km.Hydriding.wFcn, km.Hydriding.wFcnID] = ...
-                             KineticsModel.CreateWFcnHandle([fcnString,' Hydriding']);
+                             KineticsModel.CreateWFcnHandle(absWfcnString,'Hydriding');
 
-                        readEntries = true;
+                        readAbsEntries = true;
+                    end
+                end
+                
+                % If entries were not found, select defaults based on family
+                if ~readDesEntries
+                    if ~readAbsEntries
+                        km.Dehydriding = struct('Assumed',true,...
+                            'Ca',MetalHydride.GetTypeProperty('Ca Dehydriding',type),...
+                            'Ea',MetalHydride.GetTypeProperty('Ea Dehydriding',type));
+
+                        [km.Dehydriding.pFcn, km.Dehydriding.pFcnID] = ...
+                            KineticsModel.CreatePFcnHandle('log');
+                        [km.Dehydriding.wFcn, km.Dehydriding.wFcnID] = ...
+                            KineticsModel.CreateWFcnHandle('1st Order','Dehydriding');
+                    else
+                        km.Dehydriding = struct('Assumed',true,...
+                            'Ca',km.Hydriding.Ca,...
+                            'Ea',km.Hydriding.Ea);
+
+                        [km.Dehydriding.pFcn, km.Dehydriding.pFcnID] = ...
+                            KineticsModel.CreatePFcnHandle(absPfcnString);
+                        [km.Dehydriding.wFcn, km.Dehydriding.wFcnID] = ...
+                            KineticsModel.CreateWFcnHandle(absWfcnString,'Dehydriding');
                     end
                 end
 
-                % If entries were not found, select defaults based on family
-                if ~readEntries
-                    km.Hydriding = struct('Assumed',true,...
-                        'Ca',MetalHydride.GetTypeProperty('Ca Hydriding',type),...
-                        'Ea',MetalHydride.GetTypeProperty('Ea Hydriding',type));
 
-                    [km.Hydriding.pFcn, km.Hydriding.pFcnID] = ...
-                        KineticsModel.CreatePFcnHandle('log');
-                    [km.Hydriding.wFcn, km.Hydriding.wFcnID] = ...
-                        KineticsModel.CreateWFcnHandle('1st Order Hydriding');
+                % If entries were not found, select defaults based on family
+                if ~readAbsEntries
+                    if ~readDesEntries
+                        km.Hydriding = struct('Assumed',true,...
+                            'Ca',MetalHydride.GetTypeProperty('Ca Hydriding',type),...
+                            'Ea',MetalHydride.GetTypeProperty('Ea Hydriding',type));
+
+                        [km.Hydriding.pFcn, km.Hydriding.pFcnID] = ...
+                            KineticsModel.CreatePFcnHandle('log');
+                        [km.Hydriding.wFcn, km.Hydriding.wFcnID] = ...
+                            KineticsModel.CreateWFcnHandle('1st Order','Hydriding');
+                    else
+                        km.Hydriding = struct('Assumed',true,...
+                            'Ca',km.Dehydriding.Ca,...
+                            'Ea',km.Dehydriding.Ea);
+
+                        [km.Hydriding.pFcn, km.Hydriding.pFcnID] = ...
+                            KineticsModel.CreatePFcnHandle(desPfcnString);
+                        [km.Hydriding.wFcn, km.Hydriding.wFcnID] = ...
+                            KineticsModel.CreateWFcnHandle(desWfcnString,'Hydriding');
+                    end
                 end
             end
         end
@@ -246,12 +283,12 @@ classdef KineticsModel
             if P > Peq_abs && w < wmax
                 % Hydriding
                 r = self.Hydriding.Ca*exp(-self.Hydriding.Ea/(R*T))*...
-                    self.Hydriding.wFcn(w,wmax,P,Peq_abs) * ...
+                    self.Hydriding.wFcn(w,wmax,P,Peq_abs,T) * ...
                     self.Hydriding.pFcn(P,Peq_abs);
             elseif P < Peq_des && w > 0
                 % Dehydriding
                 r = self.Dehydriding.Ca*exp(-self.Dehydriding.Ea/(R*T))*...
-                    self.Dehydriding.wFcn(w,wmax,P,Peq_des) * ...
+                    self.Dehydriding.wFcn(w,wmax,P,Peq_des,T) * ...
                     self.Dehydriding.pFcn(P,Peq_des);
             else
                 % Not reacting
@@ -318,9 +355,17 @@ classdef KineticsModel
             pList = KineticsModel.pFcnList;
             pFcnNames = {pList.Name};
             if strcmpi(type,'abs')
-                pfName = pFcnNames{self.Hydriding.pFcnID};
+                if ~isempty(self.Hydriding.pFcnID)
+                    pfName = pFcnNames{self.Hydriding.pFcnID};
+                else
+                    pfName = 'Custom';
+                end
             elseif strcmpi(type,'des')
-                pfName = pFcnNames{self.Dehydriding.pFcnID};
+                if ~isempty(self.Dehydriding.pFcnID)
+                    pfName = pFcnNames{self.Dehydriding.pFcnID};
+                else
+                    pfName = 'Custom';
+                end
             else
                 error('KineticsModel:pFcnName',...
                       ['Type field must be either "abs" or "des"',...
@@ -337,9 +382,17 @@ classdef KineticsModel
             wList = KineticsModel.wFcnList;
             wFcnNames = {wList.Name};
             if strcmpi(type,'abs')
-                wfName = wFcnNames{self.Hydriding.wFcnID};
+                if ~isempty(self.Hydriding.wFcnID)
+                    wfName = wFcnNames{self.Hydriding.wFcnID};
+                else
+                    wfName = 'Custom';
+                end
             elseif strcmpi(type,'des')
-                wfName = wFcnNames{self.Dehydriding.wFcnID};
+                if ~isempty(self.Dehydriding.wFcnID)
+                    wfName = wFcnNames{self.Dehydriding.wFcnID};
+                else
+                    wfName = 'Custom';
+                end
             else
                 error('KineticsModel:wFcnName',...
                       ['Type field must be either "abs" or "des"',...

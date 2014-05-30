@@ -1,0 +1,138 @@
+Elements: [Na:1, Al:1, H: 1]
+Type: Complex
+ 
+Thermodynamics
+{
+    Weight Percent: 3.9  # Capacity reduced by catalyst from theoretical full capacity of 5.6 wt%, Martinez and Ahluwalia
+    
+    Dehydriding 
+    { 
+        DH: [-47000, -37000]    # J/mol Ahluwalia (4 mol% Ti)
+        DS: [-126, -122]        # J/mol.K Ahluwalia (4 mol% Ti)
+		
+        centers: [0.2, 0.72]   # fit to Streukens isotherm (4 mol% Ti)
+        widths:  [0.4, 0.51]   # fit to Streukens isotherm (4 mol% Ti)
+        minSpans: [0.02]       # fit to Streukens isotherm (4 mol% Ti)
+        
+        From Isotherms:  True
+    } 
+    Hydriding
+    {
+        Tc:        [2000,  3000 ]  # Abritrary large numbers to give sharp plateau to fit Streukens isotherm (4 mol% Ti)
+        ln(Pa/Pd): [0.159, 0.159]  # fit to Streukens isotherm (4 mol% Ti)
+        T:         433             # Streukens isotherm (4 mol% Ti)
+    }
+}
+ 
+Properties
+{
+    Cp:  1075   # J/kg-K, Dedrick Table 1 for desorbed state with Ti Catalyst (increases on absorption)
+    rho: 1800   # kg/m^3, Lozano Figure 1 (desorbed state, decreases to 1200 upon absorption of H)
+    keff: 0.42  # W/m.K, average of values in Dedrick Fig 4
+}
+ 
+Kinetics
+{
+    # Kinetics fit to data from Lozano IJHE papers and thesis for both hydriding and dehydriding
+    Hydriding
+    {
+        Ca: 2e9
+        Ea: 91520
+        
+        pFcn: (p-peq)/peq
+        wFcn: (wmax-w)*((tanh(5000*(w-0.017))+1)*0.5*0.95+0.05)
+    }
+    
+    Dehydriding
+    { 
+        Ca: 1.8e9
+        Ea: 93070
+        
+        pFcn: (p-peq)/peq
+        wFcn: w*((tanh(5000*(w-0.017))+1)*0.5*0.9+0.1)
+    }
+}
+ 
+Notes
+{
+}
+        
+References
+{
+    Streukens
+    {
+        ID:      10.1039/b603268k
+        Authors: G. Streukens, B. Bogdanovic, M. Felderhoff, F. Schuth
+        Title:   Dependence of dissociation pressure upon doping level of Ti-doped sodium alanate—a possibility for "thermodynamic tailoring" of the system
+        Journal: Physical Chemistry Chemical Physics
+        Year:    2006
+        Volume:  8
+        Pages:   2889-2892
+    }
+    
+    Ahluwalia
+    {
+        ID:      10.1016/j.ijhydene.2006.07.027
+        Authors: R. Ahluwalia
+        Title:   Sodium alanate hydrogen storage system for automotive fuel cells
+        Journal: International Journal of Hydrogen Energy
+        Year:    2007
+        Volume:  32
+        Pages:   1251-1261
+    }
+	
+	Dedrick
+    {
+        ID:      10.1016/j.jallcom.2004.08.007
+        Authors: D.E. Dedrick, M.P. Kanouff, B.C. Replogle, K.J. Gross
+        Title:   Thermal properties characterization of sodium alanates
+        Journal: Journal of Alloys and Compounds
+        Year:    2005	
+        Volume:  389
+        Pages:   299-305
+    }
+    
+    LozanoThesis
+    {
+        ID:      101084945X
+        Authors: G.A. Lozano
+        Title:   Development of hydrogen storage systems using sodium alanate
+        Year:    2010
+        Other:   Ph.D. Dissertation, Hamburg University of Technology
+    }
+    
+    LozanoIJHE1
+    {
+        ID:      10.1016/j.ijhydene.2010.04.080
+        Authors: G.A. Lozano, C.N. Ranong, J.M.B. Von Colbe, R. Bormann, G. Fieg, J. Hapke, M. Dornheim
+        Title:   Empirical kinetic model of sodium alanate reacting system (I). Hydrogen absorption
+        Journal: International Journal of Hydrogen Energy
+        Year:    2010
+        Volume:  35
+        Pages:   6763-6772
+    }
+    
+    LozanoIJHE2
+    {
+        ID:      10.1016/j.ijhydene.2010.04.142
+        Authors: G.A. Lozano, C.N. Ranong, J.M.B. Von Colbe, R. Bormann, G. Fieg, J. Hapke, M. Dornheim
+        Title:   Empirical kinetic model of sodium alanate reacting system (II). Hydrogen desorption
+        Journal: International Journal of Hydrogen Energy
+        Year:    2010
+        Volume:  35
+        Pages:   7539-7546
+    }
+    
+    LozanoJPS
+    {
+        ID:      10.1016/j.jpowsour.2011.07.053
+        Authors: G.A. Lozano, J.M. Bellosta von Colbe, R. Bormann, T. Klassen, M. Dornheim
+        Title:   Enhanced volumetric hydrogen density in sodium alanate by compaction
+        Journal: Journal of Power Sources
+        Year:    2011
+        Volume:  196
+        Pages:   9254-9259
+    }
+}
+ 
+

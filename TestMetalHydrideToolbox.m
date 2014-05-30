@@ -26,6 +26,7 @@
 
 clear all
 close all
+clear classes
 clc
 
 

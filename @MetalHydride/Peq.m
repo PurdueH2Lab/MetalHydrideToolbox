@@ -92,7 +92,7 @@ function peq = Peq(self, T, w, type)
 
     for j = 1:length(T)
         % Determine thermo parameters (dH, dS, and A) for each plateau
-        subcrit = T(j) < self.Tc;
+        subcrit = T(j) < self.Thermo.Tc;
 
         dHsuper = 0.5*(self.Thermo.Hydriding.dH + ...
                      self.Thermo.Dehydriding.dH);

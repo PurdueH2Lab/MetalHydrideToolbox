@@ -26,7 +26,12 @@ Properties
 Kinetics
 {
     Hydriding
-    {
+    { # Fit to data from Chen Figure 2
+        Ca: 24.4
+        Ea: 25730
+        
+        pFcn: log
+        wFcn: 1st Order
     }
 
     Dehydriding
@@ -36,7 +41,6 @@ Kinetics
 
 Notes
 {
-    TODO: Chen has kinetics (fig 2)
 }
 
 References

@@ -1,4 +1,3 @@
-Name: Mg
 Elements: [Mg:1]
 Type: Mg
  
@@ -33,8 +32,8 @@ Kinetics
         Ca:  9.8e9    # 1/s Chaise, value from 1 MPa Table 1
         Ea:  132000   # J/mol, Chaise, value from 1 MPa Table 1
         
-        pFcn:  Normalized Linear
-        wFcn:  Chaise
+        pFcn:  (p-peq)/peq
+        wFcn:  ((w-wmax)/(2*log(1-max([1e-6 w])/wmax)))*(p>2*peq) + (wmax-w)*(p<=2*peq)
     }
     
     Dehydriding
@@ -42,8 +41,8 @@ Kinetics
         Ca:  10       # 1/s Chaise, value from Table 1
         Ea:  41000    # J/mol, Chaise, value from Table 1
         
-        pFcn:  Log
-        wFcn:  Chaise
+        pFcn:  log(p/peq)
+        wFcn:  w/sqrt(-log(max([1e-6 w])/wmax))
     }
 }
  

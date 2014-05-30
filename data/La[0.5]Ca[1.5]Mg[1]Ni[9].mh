@@ -1,5 +1,9 @@
 Elements: [La:0.5,Ca:1.5,Mg:1,Ni:9]
+<<<<<<< HEAD
 Type: Misc
+=======
+Type: AB3
+>>>>>>> ed39200da032f5d6c6b2e8ea03c5daa9ef28b3ba
 
 Thermodynamics
 {
@@ -12,6 +16,7 @@ Thermodynamics
         slope: [0.75, 0.5]         # Chen isotherm fit (Fig 7b)
         
         centers: [0.25, 0.75]   # Fit to Chen isotherm
+
         widths: [0.5, 0.5]     # Fit to Chen isotherm
         minSpans: [0.03]       # Fit to Chen isotherm
         
