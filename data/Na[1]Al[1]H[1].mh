@@ -21,6 +21,8 @@ Thermodynamics
         Tc:        [2000,  3000 ]  # Abritrary large numbers to give sharp plateau to fit Streukens isotherm (4 mol% Ti)
         ln(Pa/Pd): [0.159, 0.159]  # fit to Streukens isotherm (4 mol% Ti)
         T:         433             # Streukens isotherm (4 mol% Ti)
+        
+        From Isotherms:  True
     }
 }
  

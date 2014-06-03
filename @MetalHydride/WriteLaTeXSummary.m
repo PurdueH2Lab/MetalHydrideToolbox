@@ -133,7 +133,7 @@ function WriteLaTeXSummary(showPlots)
 
 
     %% Part 2 - Generate a summary of the entire database
-    hydrides = MetalHydride.LoadDatabase();
+    hydrides = MetalHydride.LoadDatabase(true);
 
     hydStr = sprintf(...
        ['\\section{Hydride Database Summary}\n\n',...
@@ -273,8 +273,11 @@ function WriteLaTeXSummary(showPlots)
             pFcnStr = func2str(MH.Kinetics.Dehydriding.pFcn);
             wFcnStr = func2str(MH.Kinetics.Dehydriding.wFcn);
 
-            pFcnStr = pFcnStr(10:end-1);
-            wFcnStr = wFcnStr(17:end-1);
+            pFs = find(pFcnStr==')',1,'first');
+            wFs = find(wFcnStr==')',1,'first');
+            
+            pFcnStr = pFcnStr(pFs+1:end);
+            wFcnStr = wFcnStr(wFs+1:end);
 
             pFcnStr = strrep(pFcnStr,'log','ln');
             pFcnStr = strrep(pFcnStr,'peq','p_{eq}');
@@ -285,7 +288,7 @@ function WriteLaTeXSummary(showPlots)
             wFcnStr = strrep(wFcnStr,'Peq','P_{eq}');
             wFcnStr = strrep(wFcnStr,'wmax','w_{max}');
 
-            desKinStr = sprintf([' & $k_0$ = %5.1f \\\\\n',...
+            desKinStr = sprintf([' & $k_0$ = %5.3e \\\\\n',...
                                  '&& $E$ = %5.0f \\\\\n',...
                                  '&& $f_p$ = $%s$ \\\\\n',...
                                  '&& $f_w$ = $%s$ \\\\\n'],...
@@ -304,8 +307,11 @@ function WriteLaTeXSummary(showPlots)
             pFcnStr = func2str(MH.Kinetics.Hydriding.pFcn);
             wFcnStr = func2str(MH.Kinetics.Hydriding.wFcn);
 
-            pFcnStr = pFcnStr(10:end-1);
-            wFcnStr = wFcnStr(17:end-1);
+            pFs = find(pFcnStr==')',1,'first');
+            wFs = find(wFcnStr==')',1,'first');
+            
+            pFcnStr = pFcnStr(pFs+1:end);
+            wFcnStr = wFcnStr(wFs+1:end);
 
             pFcnStr = strrep(pFcnStr,'log','ln');
             pFcnStr = strrep(pFcnStr,'peq','p_{eq}');
@@ -316,8 +322,7 @@ function WriteLaTeXSummary(showPlots)
             wFcnStr = strrep(wFcnStr,'Peq','P_{eq}');
             wFcnStr = strrep(wFcnStr,'wmax','w_{max}');
 
-
-            absKinStr = sprintf([' & $k_0$ = %5.1f \\\\\n',...
+            absKinStr = sprintf([' & $k_0$ = %5.3e \\\\\n',...
                                  '&& $E$ = %5.0f \\\\\n',...
                                  '&& $f_p$ = $%s$ \\\\\n',...
                                  '&& $f_w$ = $%s$ \\\\\n'],...
