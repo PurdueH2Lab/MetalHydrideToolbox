@@ -23,17 +23,28 @@ Thermodynamics
  
 Properties
 {
-    rho: 6500	# kg/m^3   TODO REF
+    rho: 6500	# kg/m^3   Sandrock Table 3
+    Cp: 502     # J/kg-K   Huston Table 3 (alloy 103)
 }
  
 Kinetics
-{
+{ # Kinetics from Bershadsky Table 1
     Hydriding
-    {    
+    {
+        Ca:  5.7e5
+        Ea:  52300
+        
+        pFcn: (p-peq)/peq
+        wFcn: 1st Order
     }
     
     Dehydriding
     { 
+        Ca:  680
+        Ea:  37237.6
+        
+        pFcn: (p-peq)/peq
+        wFcn: 1st Order
     }
 }
  
@@ -43,9 +54,20 @@ Notes
         
 References
 {
+    Bershadsky
+    {
+        ID:      10.1016/0360-3199(93)E0011-9
+        Authors: E. Bershadsky, A. Klyuch, M. Ron
+        Title:   Hydrogen absorption and desorption kinetics of TiFe0.8Ni0.2H
+        Journal: International Journal of Hydrogen Energy
+        Year:    1995
+        Volume:  20
+        Pages:   29-33
+    }
+    
     Mintz
     {
-        ID:      10.1063/1.329808  
+        ID:      10.1063/1.329808
         Authors: M. H. Mintz, S. Vaknin, S. Biderman, Z. Hadari
         Title:   Hydrides of Ternary TiFexM1-x (M=Cr,Mn,Co,Ni) Intermetallics
         Journal: J. Appl. Phys.

@@ -3,19 +3,20 @@ Type: AB5
 
 Thermodynamics
 {
-    Weight Percent: 1.87   #ref sandrock, different in Liang (1.5 wt%)
+    Weight Percent: 1.15   #Liang Fig 5 reversible capacity
     
     Dehydriding 
     { 
-        DH: -31900		# J/mol, ref sandrock
-        DS: -101   		# J/mol.K, ref sandrock, slightly different in Liang
-        slope: 0.19     # Sandrock table 1
+        DH: -29716  # J/mol, Liang Figure 5
+        DS: -92.9   # J/mol.K, Liang Figure 5
+        slope: 0.1  # Liang Figure 5
+        
+        From Isotherms: true
     } 
     Hydriding
     {
-        ln(Pa/Pd): 0.16  # Sandrock Table 1
-        
-        # TODO: Liang has PCI curves
+        ln(Pa/Pd): 0.45  # Liang Figure 5
+        T: 353           # Liang Figure 5
     }
 }
  

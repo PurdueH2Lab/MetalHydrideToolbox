@@ -7,10 +7,11 @@ Thermodynamics
 
     Dehydriding
     {
-        DH: -27000      # J/mol  Yu Table 2
-        DS: -100.7      # J/mol.K  Yu Table 2
+        DH: -26323      # J/mol  Yu isotherm fit (Figure 3)
+        DS: -105.1      # J/mol.K  Yu isotherm fit (Figure 3)
+        slope:  4       # Yu isotherm fit (Figure 3)
         
-        # TODO Yu has isotherms (fig 2), highly sloping
+        From isotherms: true
     }
     Hydriding
     {
@@ -23,19 +24,27 @@ Properties
 
 Kinetics
 {
-    # TODO Yu has kinetics
     Hydriding
     {
+        Ca:  153    # Fit to Yu Figure 7 with assumed Ea and P/Peq = 2
+        Ea:  20000  # Assumed
+        
+        pFcn: log
+        wFcn: 1st Order
     }
 
     Dehydriding
     {
+        Ca:  75.3   # Fit to Yu Figure 7 with assumed Ea and P/Peq = 2
+        Ea:  20000  # Assumed
+        
+        pFcn: log
+        wFcn: 1st Order
     }
 }
 
 Notes
 {
-    WARNING: Suspect authors. Take with a grain of salt.
 }
 
 References

@@ -27,15 +27,23 @@ Properties
 }
 
 Kinetics
-{
-    # TODO Pourarian has kinetics at one T
-    
+{ # Kinetics from Pourarian Figure 9, Ea assumed same as for CeNi4.25Mn0.75    
     Hydriding
     {
+        Ca:  4406   # 1/s
+        Ea:  33000  # J/mol
+        
+        pFcn: log
+        wFcn: 1st Order
     }
 
     Dehydriding
     {
+        Ca:  11375   # 1/s
+        Ea:  33000   # J/mol
+        
+        pFcn: log
+        wFcn: 1st Order
     }
 }
 

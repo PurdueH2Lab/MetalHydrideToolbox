@@ -23,24 +23,13 @@ Properties
 }
  
 Kinetics
-{ # TODO: NEED REFERENCES FOR KINETICS
-
+{
     Hydriding
     {
-        Ca: 150    # 1/s
-        Ea: 20700  # J/mol
-        
-        pFcn: log
-        wFcn: 1st Order
     }
     
     Dehydriding
-    { 
-        Ca: 150    # 1/s
-        Ea: 20700  # J/mol
-        
-        pFcn: log
-        wFcn: 1st Order
+    {
     }
 }
  

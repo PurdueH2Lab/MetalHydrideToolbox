@@ -30,13 +30,18 @@ Properties
 }
  
 Kinetics
-{ #TODO - get kinetics from Voskuilen
+{ # Kinetics from VoskuilenAIAA
     Hydriding
-    {    
+    {
+        Ca:  39400  # 1/s
+        Ea:  23800  # J/mol
+        
+        pFcn: log
+        wFcn: 1st Order
     }
     
     Dehydriding
-    { 
+    {
     }
 }
  
@@ -46,6 +51,16 @@ Notes
         
 References
 {
+    VoskuilenAIAA
+    {
+        ID:      10.2514/6.2009-4502
+        Authors: T. Voskuilen, Y. Zheng, T. Pourpoint
+        Title:   An Analysis of the Hydrogen Sorption Kinetics of TiCrMn
+        Journal: 7th International Energy Conversion Engineering Conference
+        Year:    2009
+        Other:   AIAA 2009-4502
+    }
+    
     Voskuilen
     {
         ID:      10.1016/j.ijhydene.2010.07.169

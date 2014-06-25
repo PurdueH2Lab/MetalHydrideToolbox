@@ -23,8 +23,7 @@ Properties
 }
  
 Kinetics
-{ # TODO: Look up Ron 1999 for kinetics
-
+{
     Hydriding
     {    
     }

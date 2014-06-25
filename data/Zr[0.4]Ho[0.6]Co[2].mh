@@ -1,25 +1,25 @@
-Elements: [Zr:0.6, Ho:0.4, Co:2]
+Elements: [Ho:0.6, Zr:0.4, Co:2]
 Type: AB2
 
 Thermodynamics
 {
-    H/M: 2.7  # Ramesh figure 1, adjusted to accommodate second plateau to capture beta phase
+    H/M: 2.7 # Ramesh figure 2, adjusted to accommodate high pressure plateau
 
     Dehydriding
     {
-        DH:  [-32807, -68750]   # J/mol  Ramesh isotherm fit
-        DS:  [-107.7,  -243]    # J/mol.K  Ramesh isotherm fit
-        slope: [1,  1]          # Ramesh isotherm fit
+        DH:  [-31135, -65411]    # J/mol  Ramesh isotherm fit
+        DS:  [-83, -230.9]       # J/mol.K  Ramesh isotherm fit
+        slope: [0.5, 2]          # Ramesh isotherm fit
         
-        centers:  [0.35, 0.96]  # Ramesh isotherm fit
-        widths:   [0.7, 0.08]   # Ramesh isotherm fit
-        minSpans:  [0.05]       # Ramesh isotherm fit
+        centers:  [0.3, 0.96]  # Ramesh isotherm fit
+        widths:   [0.6, 0.08]  # Ramesh isotherm fit
+        minSpans:  [0.05]      # Ramesh isotherm fit
         
         From isotherms: true
     }
     Hydriding
     {
-        Tc:  [400,  NaN]        # Ramesh isotherm fit
+        Tc: [360, 400]          # Ramesh isotherm fit
     }
 }
 
@@ -30,14 +30,14 @@ Properties
 Kinetics
 {
     Hydriding
-    { # Ramesh Figure 5
-        Ca: 99.7   # 1/s
-        Ea: 31940  # J/mol
+    { # Ramesh Figure 6
+        Ca: 0.56   # 1/s
+        Ea: 20499  # J/mol
         
         pFcn: log
         wFcn: 1st Order
     }
-
+    
     Dehydriding
     {
     }

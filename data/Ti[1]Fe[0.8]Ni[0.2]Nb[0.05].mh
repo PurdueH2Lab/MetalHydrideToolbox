@@ -1,0 +1,66 @@
+Elements: [Ti:1, Fe:0.8, Ni:0.2, Nb:0.05]
+Type: AB
+
+Thermodynamics
+{
+    Weight Percent: 1.1  # Oguro
+
+    Dehydriding
+    {
+        DH: -42252      # J/mol  Oguro - fit from isotherm
+        DS: -117.8      # J/mol.K  Oguro - fit from isotherm
+        slope: 0.5
+        
+        From isotherms: true
+    }
+    Hydriding
+    {
+        DH: -41853      # J/mol  Oguro - fit from isotherm
+        DS: -117        # J/mol.K  Oguro - fit from isotherm
+        
+        From isotherms: true
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{ # Kinetics from Oguro Figure 6
+    Hydriding
+    {
+        Ca:  99.3    # 1/s
+        Ea:  27775  # J/mol
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+
+    Dehydriding
+    {
+        Ca:  14.5    # 1/s
+        Ea:  23084   # J/mol
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Oguro
+    {
+        ID:      10.1016/0022-5088(83)90280-1
+        Authors: K. Oguro, Y. Osumi, H. Suzuki, A. Kato, Y. Imamura, H. Tanaka
+        Title:   Hydrogen Storage Properties of TiFe1-xNiyMz Alloys
+        Journal: Journal of Less-Common Metals
+        Year:    1983
+        Volume:  89
+        Pages:   275-279
+    }
+}
