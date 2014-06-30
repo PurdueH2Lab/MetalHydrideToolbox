@@ -1,9 +1,7 @@
 Elements: [La:0.5,Ca:1.5,Mg:1,Ni:9]
-<<<<<<< HEAD
-Type: Misc
-=======
+
 Type: AB3
->>>>>>> ed39200da032f5d6c6b2e8ea03c5daa9ef28b3ba
+
 
 Thermodynamics
 {
