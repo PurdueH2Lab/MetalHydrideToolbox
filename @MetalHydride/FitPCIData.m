@@ -147,7 +147,7 @@ function FitPCIData(alloyName, varargin)
         for na = 1:length(PCIData.Abs)
             [x,idx] = unique(PCIData.Abs(na).w./wMax);
             y = PCIData.Abs(na).Peq(idx);
-            Pmid = interp1(x,y,inputs.PlateauCenter);
+            Pmid = interp1(x,y,inputs.PlateauCenter,'linear','extrap');
             
             xA(na) = 1000./PCIData.Abs(na).T;
             yA(na) = log(Pmid);
@@ -165,7 +165,7 @@ function FitPCIData(alloyName, varargin)
         for nd = 1:length(PCIData.Des)
             [x,idx] = unique(PCIData.Des(nd).w./wMax);
             y = PCIData.Des(nd).Peq(idx);
-            Pmid = interp1(x,y,inputs.PlateauCenter);
+            Pmid = interp1(x,y,inputs.PlateauCenter,'linear','extrap');
             
             xD(nd) = 1000./PCIData.Des(nd).T;
             yD(nd) = log(Pmid);

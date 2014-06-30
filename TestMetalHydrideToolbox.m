@@ -57,4 +57,3 @@ toc
 %% Test 4
 % Print a summary of the loaded hydrides
 MetalHydride.PrintStats();
-

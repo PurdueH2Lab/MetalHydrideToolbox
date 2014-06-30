@@ -1,5 +1,4 @@
-Name: Hydralloy C1
-Elements: [Ti: 1, Mn: 1.66, Vf: 0.34]  # From GfE brochure, very approximate
+Elements: [Ti: 1, Mn: 1.66, Vf: 0.34]  # From GfE brochure, very approximate, Hydralloy C1
 Type: AB2
 
 Thermodynamics

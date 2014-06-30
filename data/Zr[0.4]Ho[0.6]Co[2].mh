@@ -1,0 +1,62 @@
+Elements: [Ho:0.6, Zr:0.4, Co:2]
+Type: AB2
+
+Thermodynamics
+{
+    H/M: 2.7 # Ramesh figure 2, adjusted to accommodate high pressure plateau
+
+    Dehydriding
+    {
+        DH:  [-31135, -65411]    # J/mol  Ramesh isotherm fit
+        DS:  [-83, -230.9]       # J/mol.K  Ramesh isotherm fit
+        slope: [0.5, 2]          # Ramesh isotherm fit
+        
+        centers:  [0.3, 0.96]  # Ramesh isotherm fit
+        widths:   [0.6, 0.08]  # Ramesh isotherm fit
+        minSpans:  [0.05]      # Ramesh isotherm fit
+        
+        From isotherms: true
+    }
+    Hydriding
+    {
+        Tc: [360, 400]          # Ramesh isotherm fit
+    }
+}
+
+Properties
+{
+}
+
+Kinetics
+{
+    Hydriding
+    { # Ramesh Figure 6
+        Ca: 0.56   # 1/s
+        Ea: 20499  # J/mol
+        
+        pFcn: log
+        wFcn: 1st Order
+    }
+    
+    Dehydriding
+    {
+    }
+}
+
+Notes
+{
+}
+
+References
+{
+    Ramesh
+    {
+        ID:      10.1016/0925-8388(93)90278-U
+        Authors: R. Ramesh, K. V. S. Rama Rao
+        Title:   Hydrogen absorption characteristics of the Zr1-xHoxCo2 system in the pressure range 0-40 bar
+        Journal: J. of Alloys and Compounds
+        Year:    1993
+        Volume:  191
+        Pages:   101-105
+    }
+}

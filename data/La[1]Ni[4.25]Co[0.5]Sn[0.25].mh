@@ -1,4 +1,3 @@
-Name: LaNi4.25Co.5Sn.25
 Elements: [La:1,Ni:4.25,Co:0.5,Sn:0.25]
 Type: AB5
 
@@ -22,7 +21,6 @@ Properties
 
 Kinetics
 {
-    # TODO Zhang has kinetics
     Hydriding
     {
     }

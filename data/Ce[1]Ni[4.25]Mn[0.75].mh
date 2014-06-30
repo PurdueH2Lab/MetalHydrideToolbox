@@ -27,15 +27,23 @@ Properties
 }
 
 Kinetics
-{
-    # TODO Pourarian has kinetics at two temperatures
-    
+{ # Kinetics from Pourarian Figure 10
     Hydriding
     {
+        Ca:  38411  # 1/s
+        Ea:  33285  # J/mol  Assumed same as dehydriding
+        
+        pFcn: log
+        wFcn: 1st Order
     }
 
     Dehydriding
     {
+        Ca:  2846    # 1/s
+        Ea:  33285   # J/mol
+        
+        pFcn: log
+        wFcn: 1st Order
     }
 }
 

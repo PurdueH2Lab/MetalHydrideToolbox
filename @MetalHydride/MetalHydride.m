@@ -297,19 +297,19 @@ classdef MetalHydride
             % stops execution and displays a relevant message
             
             if nargin > 0
-                % Locate the source file name (checks if it exists too)
-                mh.SourceFile = MetalHydride.GetFilename(inputStr);
-                       
-                % Read the file into a cell array, one line per cell
-                lines = MetalHydride.ReadFile(mh.SourceFile);
-                
-                % Parse the lines into a structure. Each zone has a list
-                % of line strings and an array of subDict structures.
-                % They are nested, so the subDict is a "zone", and has
-                % its own list of line strings and array of subDicts.
-                data = MetalHydride.ReadZones(lines);
-                
                 try
+                    % Locate the source file name (checks if it exists too)
+                    mh.SourceFile = MetalHydride.GetFilename(inputStr);
+
+                    % Read the file into a cell array, one line per cell
+                    lines = MetalHydride.ReadFile(mh.SourceFile);
+
+                    % Parse the lines into a structure. Each zone has a list
+                    % of line strings and an array of subDict structures.
+                    % They are nested, so the subDict is a "zone", and has
+                    % its own list of line strings and array of subDicts.
+                    data = MetalHydride.ReadZones(lines);
+
                     % Read top-level entries (Type and Elements)
                     mh.Type = MetalHydride.ReadString(...
                         data.entryLines,'type');

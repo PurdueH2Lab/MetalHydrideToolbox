@@ -7,16 +7,16 @@ Thermodynamics
     
     Dehydriding 
     { 
-        DH: -28400      # J/mol from Herbrig (does not match PCI data though, need to fix), Vanhanan gives 29.9 kJ/mol
-        DS: -112        # J/mol.K from Herbrig (does not match PCI data though, need to fix), Vanhanan gives 115 J/mol.K
+        DH: -28400      # J/mol from Herbrig, Vanhanan gives 29.9 kJ/mol
+        DS: -112        # J/mol.K from Herbrig, Vanhanan gives 115 J/mol.K
         slope: 0.99     # vanhanen, value is an average of 0.4 and 0.7
         
         From isotherms: true
     } 
     Hydriding
     {
-        DH: -22300      # J/mol from Herbrig (does not match PCI data though, need to fix), Vanhanan gives 24.6 kJ/mol
-        DS: -95.3       # J/mol.K from Herbrig (does not match PCI data though, need to fix), Vanhanan gives 101.9 J/mol.K
+        DH: -22300      # J/mol from Herbrig, Vanhanan gives 24.6 kJ/mol
+        DS: -95.3       # J/mol.K from Herbrig, Vanhanan gives 101.9 J/mol.K
         
         From isotherms: true
     }
@@ -30,24 +30,18 @@ Properties
 }
  
 Kinetics
-{ # TODO All kinetics from Herbrig, I do not trust them, 6e6 is insanely fast
-
+{
     Hydriding
-    {    
-        Ea 40045     # J/mol
-        Ca 6e6       # 1/s
+    { # Kinetics from Herbrig
+        Ea: 40045     # J/mol
+        Ca: 6e6       # 1/s
         
-        pFcn linear
-        wFcn 1st Order
+        pFcn: Normalized Linear
+        wFcn: 1st Order
     }
     
     Dehydriding
-    { 
-        Ea 40045     # J/mol
-        Ca 6e6       # 1/s
-        
-        pFcn linear
-        wFcn 1st Order
+    {
     }
 }
  

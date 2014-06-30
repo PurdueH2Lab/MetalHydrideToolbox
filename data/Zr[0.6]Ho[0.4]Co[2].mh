@@ -3,15 +3,23 @@ Type: AB2
 
 Thermodynamics
 {
-    H/M: 2.5  # Ramesh figure 1
+    H/M: 2.7  # Ramesh figure 1, adjusted to accommodate second plateau to capture beta phase
 
     Dehydriding
     {
-        DH:  -29300      # J/mol  Ramesh Table 2 value at y = 0.8 - see note
-        DS:  -97       # J/mol.K  Ramesh Table 2 value at y = 0.8 - see note
+        DH:  [-32807, -68750]   # J/mol  Ramesh isotherm fit
+        DS:  [-107.7,  -243]    # J/mol.K  Ramesh isotherm fit
+        slope: [1,  1]          # Ramesh isotherm fit
+        
+        centers:  [0.35, 0.96]  # Ramesh isotherm fit
+        widths:   [0.7, 0.08]   # Ramesh isotherm fit
+        minSpans:  [0.05]       # Ramesh isotherm fit
+        
+        From isotherms: true
     }
     Hydriding
     {
+        Tc:  [400,  NaN]        # Ramesh isotherm fit
     }
 }
 
@@ -21,9 +29,13 @@ Properties
 
 Kinetics
 {
-    # TODO: Ramesh has kinetics
     Hydriding
-    {
+    { # Ramesh Figure 5
+        Ca: 99.7   # 1/s
+        Ea: 31940  # J/mol
+        
+        pFcn: log
+        wFcn: 1st Order
     }
 
     Dehydriding
@@ -33,13 +45,6 @@ Kinetics
 
 Notes
 {
-    TODO: Ramesh has a lot of very nice isotherms with a phase diagram (Fig 1)
-    TODO: Ramesh also has Zr0.2Ho0.8Co2 isotherms
-    
-    Note on Ramesh reported values:
-        The values in all tables are listed as per mol-H, not per mol-H2.
-        However, spot checking them against the isotherm values, the appear to
-        actually be per mol-H2.
 }
 
 References
