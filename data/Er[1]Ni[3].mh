@@ -7,11 +7,27 @@ Thermodynamics
 
     Dehydriding
     {
-        DH: -23800      # J/mol  Verbetsky abstract
-        DS: -103.0      # J/mol.K  Verbetsky abstract
+        DH: [-30120, -25300]      # J/mol  Xie Table 2
+        DS: [-109.26, -107.49]      # J/mol.K  Xie Table 2
+		slope: [0.9, 0.45]
+        centers: [0.25, 0.8]         # fit to Xie isotherm
+
+        widths: [0.28, 0.3]          # fit to Xie isotherm
+        minSpans: [0.03]            # fit to Xie isotherm
+
+        From Isotherms: True
     }
+
     Hydriding
     {
+        DH: [-27420, -23510]      # J/mol  Xie Table 2
+        DS: [-105.74, -104.46]      # J/mol.K  Xie Table 2
+
+        centers: [0.25, 0.8]         # fit to Xie isotherm
+        widths: [0.28, 0.3]          # fit to Xie isotherm
+        minSpans: [0.03]            # fit to Xie isotherm
+
+        From Isotherms: True
     }
 }
 
@@ -46,5 +62,16 @@ References
         Year:    1996
         Volume:  21
         Pages:   997-1000
+    }
+
+    Xie
+    {
+        ID:      10.1016/j.jallcom.2013.09.153
+        Authors: S. C. Xie, Z. L. Chen, Y. T. Li, T. Z. Si, D. M. Liu, Q. A. Zhang
+        Title:   Hydrogen absorption - desorption features and degradation mechanism of ErNi3 compound
+        Journal: Journal of Alloys and Compounds
+        Year:    2014
+        Volume:  585
+        Pages:   650-655
     }
 }

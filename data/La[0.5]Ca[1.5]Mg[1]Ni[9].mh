@@ -1,6 +1,7 @@
 Elements: [La:0.5,Ca:1.5,Mg:1,Ni:9]
 Type: AB3
 
+
 Thermodynamics
 {
     H/M: 12  # Chen section 3.3.4 text
