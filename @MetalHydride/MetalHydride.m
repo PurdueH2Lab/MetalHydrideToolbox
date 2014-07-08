@@ -1002,6 +1002,11 @@ classdef MetalHydride
                 F = 0;
             else
                 F = w ./ [self.wMax];
+                
+                if max(F) > 2
+                    error('MetalHydride:Cp',...
+                     'Input weight fraction is too high for this hydride');
+                end
             end
             
             props = [self.Props];
