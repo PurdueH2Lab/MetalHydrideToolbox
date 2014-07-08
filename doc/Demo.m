@@ -804,7 +804,7 @@ NoTiHydrides = hydrides( ~hydrides.HasElement('Ti') );
 % To find the distribution of non-assumed slopes of all AB2 hydrides, 
 % you can do
 
-AB2 = hydrides( hydrides.IsType('AB2') & ~[hydrides.SlopeAssumed]);
+AB2 = hydrides( hydrides.IsType('AB2') & ~[hydrides.SlopeAssumed] & [hydrides.NumPlateaus] == 1);
 AB2slopes = [AB2.Slope];
 
 figure;
@@ -812,6 +812,23 @@ histfit(AB2slopes(AB2slopes>0),10,'lognormal')
 xlim([0 4])
 xlabel('AB_2 Slope')
 ylabel('Count')
+
+%%
+% *Dealing with Multi-Plateau Hydrides
+%
+% Using logical indexing can result in errors for multi-plateau hydrides.
+% To re-do the analysis above of AB2 hydride slopes, using the mean slope
+% for multi-plateau hydrides, you can use a cell and cellfun, as
+
+AB2 = hydrides( hydrides.IsType('AB2') & ~[hydrides.SlopeAssumed]);
+AB2slopes = cellfun(@mean,{AB2.Slope});
+
+figure;
+histfit(AB2slopes(AB2slopes>0),10,'lognormal')
+xlim([0 4])
+xlabel('AB_2 Slope')
+ylabel('Count')
+
 
 %%
 % *Generating the Database Summary Files*
