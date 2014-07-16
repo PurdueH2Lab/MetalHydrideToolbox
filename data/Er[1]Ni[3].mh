@@ -9,10 +9,10 @@ Thermodynamics
     {
         DH: [-30120, -25300]      # J/mol  Xie Table 2
         DS: [-109.26, -107.49]      # J/mol.K  Xie Table 2
-		slope: [0.9, 0.45]
-        centers: [0.25, 0.8]         # fit to Xie isotherm
+		slope: [0, 0]
+        centers: [0.2, 0.8]         # fit to Xie isotherm
 
-        widths: [0.28, 0.3]          # fit to Xie isotherm
+        widths: [0.4, 0.4]          # fit to Xie isotherm
         minSpans: [0.03]            # fit to Xie isotherm
 
         From Isotherms: True
@@ -23,9 +23,6 @@ Thermodynamics
         DH: [-27420, -23510]      # J/mol  Xie Table 2
         DS: [-105.74, -104.46]      # J/mol.K  Xie Table 2
 
-        centers: [0.25, 0.8]         # fit to Xie isotherm
-        widths: [0.28, 0.3]          # fit to Xie isotherm
-        minSpans: [0.03]            # fit to Xie isotherm
 
         From Isotherms: True
     }
