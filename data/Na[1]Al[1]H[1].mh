@@ -9,6 +9,7 @@ Thermodynamics
     { 
         DH: [-47000, -37000]    # J/mol Ahluwalia (4 mol% Ti)
         DS: [-126, -122]        # J/mol.K Ahluwalia (4 mol% Ti)
+        slope: [0, 0]           # from isotherms
 		
         centers: [0.2, 0.72]   # fit to Streukens isotherm (4 mol% Ti)
         widths:  [0.4, 0.51]   # fit to Streukens isotherm (4 mol% Ti)

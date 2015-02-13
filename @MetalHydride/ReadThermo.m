@@ -152,16 +152,16 @@ function thermo = ReadThermo(thermoStruct, elements, name, type)
             thermo.Dehydriding.A = ...
                 MetalHydride.ReadNumber(lines,'slope').*R.*Ts;
             
-            % Set NaNs to default value. Even though this means some
-            % defaults were used, we will treat this as slope not being
-            % assumed, since this is only the case in multiplateau
-            % hydrides, which almost always come from an isotherm anyway.
+            % Identify which slopes are assumed
+            thermo.SlopeAssumed = isnan(thermo.Dehydriding.A);
+            
+            % Set NaNs to default value.
             thermo.Dehydriding.A(isnan(thermo.Dehydriding.A)) = ...
                 MetalHydride.GetTypeProperty('Slope',type)*R*Tref;
         else 
             thermo.Dehydriding.A = ...
                 MetalHydride.GetTypeProperty('Slope',type)*R*Tref*basis;
-            thermo.SlopeAssumed = true;
+            thermo.SlopeAssumed = true.*basis;
         end
 
     else
@@ -225,7 +225,7 @@ function thermo = ReadThermo(thermoStruct, elements, name, type)
                   'Hydriding thermodynamics are over-specified for %s',...
                   name);
         else
-            thermo.Level = min(Nd);
+            thermo.Level = Nd;
         end
         
         % Generate a unique ID number for each possible combination of data

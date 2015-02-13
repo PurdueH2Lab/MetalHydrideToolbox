@@ -50,6 +50,7 @@ classdef MetalHydride
         RefList % Cell of compiled citations for this hydride
         TcAssumed  % Whether Tc was assumed
         SlopeAssumed % Whether the plateau slope was assumed (boolean/logical)
+        NumPlateaus % Number of plateaus
         HysteresisAssumed % Whether the hysteresis was assumed (boolean/logical)
         AbsKineticsAssumed % Whether the absorption kinetics were assumed (boolean/logical)
         DesKineticsAssumed % Whether the desorption kinetics were assumed (boolean/logical)
@@ -1001,6 +1002,11 @@ classdef MetalHydride
                 F = 0;
             else
                 F = w ./ [self.wMax];
+                
+                if max(F) > 1.1
+                    error('MetalHydride:Cp',...
+                     'Input weight fraction is too high for this hydride');
+                end
             end
             
             props = [self.Props];
@@ -1117,7 +1123,7 @@ classdef MetalHydride
             if isnan(self)
                 level = [];
             else
-                level = self.Thermo.Level;
+                level = min(self.Thermo.Level);
             end
         end
         
@@ -1126,7 +1132,7 @@ classdef MetalHydride
             if isnan(self)
                 assumed = [];
             else
-                assumed = self.Thermo.TcAssumed;
+                assumed = any(self.Thermo.TcAssumed);
             end
         end
         
@@ -1135,7 +1141,16 @@ classdef MetalHydride
             if isnan(self)
                 assumed = [];
             else
-                assumed = self.Thermo.SlopeAssumed;
+                assumed = any(self.Thermo.SlopeAssumed);
+            end
+        end
+        
+        %------------------------------------------------------------------
+        function np = get.NumPlateaus(self)
+            if isnan(self)
+                np = [];
+            else
+                np = length(self.Thermo.Dehydriding.dH);
             end
         end
         
@@ -1144,7 +1159,7 @@ classdef MetalHydride
             if isnan(self)
                 assumed = [];
             else
-                assumed = self.Thermo.HysteresisAssumed;
+                assumed = any(self.Thermo.HysteresisAssumed);
             end
         end
         

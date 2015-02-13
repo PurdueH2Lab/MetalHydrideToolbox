@@ -51,6 +51,11 @@ function PrintStats()
     NpartialThermo = sum([hydrides.ThermoLevel] == 1);
     NnoHydThermo = sum([hydrides.ThermoLevel] == 0);
     
+    % Determine how many PCI curves have been digitized
+    [~,~,PCIpath,~] = MetalHydride.GetPaths();
+    PCIfiles = dir(fullfile(PCIpath,'*.csv'));
+    NPCI = length(PCIfiles);
+    
     % Get type information
     types = {hydrides.Type};
     utypes = unique(types);
@@ -87,6 +92,7 @@ function PrintStats()
     fprintf('    Full thermodynamics          %3d (two entries for hydriding)\n',NfullThermo);
     fprintf('    Partial thermodynamics       %3d (one entry for hydriding)\n',NpartialThermo);
     fprintf('    No hydriding thermodynamics  %3d (no entries for hydriding)\n',NnoHydThermo);
+    fprintf('    Hydrides with PCI curves     %3d\n',NPCI);
      
     fprintf('\n- Thermophysical Properties %s\n','-'*ones(1,52));
     fprintf('    Thermal Conductivity %3d hydrides\n',sum(~[hydrides.kEffAssumed]));
