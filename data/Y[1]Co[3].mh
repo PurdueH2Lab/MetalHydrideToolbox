@@ -3,23 +3,23 @@ Type: AB3
 
 Thermodynamics
 {
-    Weight percent: 1.6  # Yamaguchi reversible B-y portion from fig 2
+    Weight percent: 1.5  # Yamaguchi reversible B-y portion from fig 2
 
     Dehydriding
     {
-        DH: [-55455, -44570, -52540]   # J/mol  Fit to Yamaguchi isotherm
-        DS: [-118.97, -121.2, -176]    # J/mol.K  Fit to Yamaguchi isotherm
-        slope: [0, 0, 1]               # Fit to Yamaguchi isotherm
+        DH: [-55455, -44570, -39000]   # J/mol  Fit to Yamaguchi isotherm
+        DS: [-118.97, -121.2, -124]    # J/mol.K  Fit to Yamaguchi isotherm
+        slope: [0.1, 0, 3.3]             # Fit to Yamaguchi isotherm
         
-        centers: [0.13, 0.6, 0.95]   # Fit to Yamaguchi isotherm
-        widths: [0.26, 0.4, 0.1]     # Fit to Yamaguchi isotherm
-        minSpans: [0.08, 0.08]       # Fit to Yamaguchi isotherm
+        centers: [0.18, 0.64, 0.93]   # Fit to Yamaguchi isotherm
+        widths: [0.31, 0.42, 0.14]    # Fit to Yamaguchi isotherm
+        minSpans: [0.08, 0.008]        # Fit to Yamaguchi isotherm
         
         From Isotherms:  True
     }
     Hydriding
     {
-        Tc: [423, 550, 300]  # Approximated from isotherm fitting
+        Tc: [423, 550, 575]  # Approximated from isotherm fitting
     }
 }
 

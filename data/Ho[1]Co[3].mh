@@ -7,8 +7,15 @@ Thermodynamics
 
     Dehydriding
     {
-        DH:  -36000      # J/mol  Wallace
-        DS: -111.37      # J/mol.K  Wallace
+        DH:  [-47195, -39144]      # J/mol  Wallace
+        DS: [-121.29, -119.90]     # J/mol.K  Wallace
+		slope: [0.1,0.1]
+		centers: [.12, 0.6]
+		
+		widths: [0.24,0.65]
+		minSpans: [0.03]
+        
+        From Isotherms: true
     }
     Hydriding
     {
@@ -38,12 +45,12 @@ References
 {
     Wallace
     {
-        ID:      SandiaDBRef0439
+        ID:      10.1021/ba-1970-0186.ch012
         Authors: W. E. Wallace, R. S. Craig, V. U. S. Rao
         Title:   Hydrogen Absorption by Intermetallic Compounds
         Journal: Solid State Chemistry: A Contemporary Overview, Adv. in Chemistry Series, S. L. Holt, J. B. Milstein, and M. Robbins, Eds., ACS
         Year:    1980
-        Volume:  186
+        Volume:  N/A (Book)
         Pages:   207-240
     }
 }

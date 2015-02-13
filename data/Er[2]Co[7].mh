@@ -7,8 +7,15 @@ Thermodynamics
 
     Dehydriding
     {
-        DH:  -29600      # J/mol  Goudy
-        DS: -108.89      # J/mol.K  Goudy
+        DH:  [-35500, -32500, -29600, -28250]      # J/mol  Goudy
+        DS: [-104, -106, -108.89, -115]      # J/mol.K  Goudy
+		slope: [0.25, 0.4, 0.33, 0.4]
+		centers: [0.17, 0.41, 0.71, 0.95]
+		
+		widths: [0.30, 0.13, 0.21, 0.05]
+		minSpans: [0.03, 0.03, 0.03]
+		
+		From Isotherms: true
     }
     Hydriding
     {

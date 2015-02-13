@@ -3,14 +3,19 @@ Type: AB3
 
 Thermodynamics
 {
-    H/M: 2   # Kierstead figure 1, 2nd plateau only
+    H/M: 3   # Kierstead figure 1
     
     Dehydriding
     {
-        DH:  -31614      # J/mol  Kierstead, Table 1, 2nd plateau
-        DS: -122.04      # J/mol.K  Kierstead, Table 1, 2nd plateau
+        DH:  [-36819, -31614]      # J/mol  Kierstead, Table 1
+        DS: [-124.24, -122.04]      # J/mol.K  Kierstead, Table 1
+		slope: [0.2,0.1]
+		centers: [0.22, 0.68]
+		
+		widths: [0.43,0.64]
+		minSpans: [0.02]
         
-        # TODO Kierstead has isotherms, with 2 plateaus (fig 1)
+        From Isotherms: true
     }
     Hydriding
     {

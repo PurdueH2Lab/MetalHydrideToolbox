@@ -7,21 +7,21 @@ Thermodynamics
 
     Dehydriding
     {
-        DH: [-30120, -25300]      # J/mol  Xie Table 2
-        DS: [-109.26, -107.49]      # J/mol.K  Xie Table 2
-		slope: [0, 0]
-        centers: [0.2, 0.8]         # fit to Xie isotherm
+        DH: [-30720, -25300]      # J/mol  Xie Table 2
+        DS: [-110.26, -107.49]      # J/mol.K  Xie Table 2
+		slope: [2.1, 0.98]
+        centers: [0.25, 0.73]         # fit to Xie isotherm
 
-        widths: [0.4, 0.4]          # fit to Xie isotherm
+        widths: [0.4, 0.5]          # fit to Xie isotherm
         minSpans: [0.03]            # fit to Xie isotherm
 
-        From Isotherms: True
+        From Isotherms: True 
     }
 
     Hydriding
     {
-        DH: [-27420, -23510]      # J/mol  Xie Table 2
-        DS: [-105.74, -104.46]      # J/mol.K  Xie Table 2
+        DH: [-26720, -23080]      # J/mol  Xie Table 2
+        DS: [-104.46, -106.20]      # J/mol.K  Xie Table 2
 
 
         From Isotherms: True

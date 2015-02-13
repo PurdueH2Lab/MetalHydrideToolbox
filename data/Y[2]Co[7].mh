@@ -3,14 +3,21 @@ Type: A2B7
 
 Thermodynamics
 {
-    H/M:  3  # Yamaguchi reversible B-y portion from fig 1
+    H/M:  8  # Yamaguchi, fig 1
 
     Dehydriding
     {
-        DH: -38000     # J/mol  Yamaguchi Table 2 (B-y phase)
-        DS: -118       # J/mol.K  Yamaguchi Table 2 (B-y phase)
+        DH: [-48500, -38500, -32000]     # J/mol  Yamaguchi Table 2 
+        DS: [-111, -117, -121]       # J/mol.K  Yamaguchi Table 2 
+		slope: [0.2, 0.4, 1.2]
+		centers: [0.11, 0.58, 0.9]
+		
+		widths: [0.2, 0.33, 0.16]
+		minSpans: [0.03, 0.03]
+		
+		From Isotherms: true
         
-        # TODO Yamaguchi has isotherms, multiple plateaus
+        
     }
     Hydriding
     {
